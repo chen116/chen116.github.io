@@ -11,7 +11,7 @@ app.component('content-display', {
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark sub-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark sub-navbar ">
     <div class="container-fluid">
         <ul class="list-group list-group-horizontal">
         <!--<h4> 公司治理 </h4>-->
