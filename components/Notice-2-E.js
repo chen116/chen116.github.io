@@ -9,7 +9,7 @@ app.component('notice-2-E', {
     /*html*/
     `
     <div class="test2-frame">
-       <h1>yooyoo2E</h1>
+       <h1>yooyoo2EE</h1>
     </div>
   `,
   data() {
