@@ -37,7 +37,7 @@ h5 {
 
 .footer {
   width: 100%;
-  height: 80px;
+  height: 50px;
   color: aliceblue;
   background-image: linear-gradient( rgb(10, 125, 192),rgb(33, 18, 99));
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -47,7 +47,7 @@ h5 {
 .content {
 margin: 100px;
 margin-top: 25px;
-margin-bottom: 25px;
+margin-bottom: 70px;
 }
 
 .banner {
