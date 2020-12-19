@@ -18,7 +18,7 @@ const app = Vue.createApp({
             // this.$refs[id+'-1'].setAttribute('class', 'dropdown-menu ')
 
         },
-        drop(id){
+        mouseOver(id){
 
             // console.log(id)
             // console.log(this.$refs[id])
