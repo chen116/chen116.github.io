@@ -15,6 +15,8 @@ app.component('content-display', {
     <div class="container-fluid">
         <ul class="list-group list-group-horizontal">
         <!--<h4> 公司治理 </h4>-->
+        <span>&nbsp;&nbsp;&nbsp;</span>
+
         <li class="nav-item" v-for="(page,index) in pages">
                
             <a class="nav-link" v-on:click="focusThisPage(page)" href="javascript:void(0);" >{{pageChineseNames[index]}}</a>
