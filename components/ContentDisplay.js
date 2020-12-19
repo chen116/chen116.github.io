@@ -14,7 +14,7 @@ app.component('content-display', {
     <nav class="navbar navbar-expand-lg navbar-dark sub-navbar">
     <div class="container-fluid">
         <ul class="list-group list-group-horizontal">
-        <h4> 公司治理 </h4>
+        <!--<h4> 公司治理 </h4>-->
         <li class="nav-item" v-for="(page,index) in pages">
                
             <a class="nav-link" v-on:click="focusThisPage(page)" href="javascript:void(0);" >{{pageChineseNames[index]}}</a>
@@ -40,11 +40,7 @@ app.component('content-display', {
       return {
           pages: ['notice-2','notice-2-E','notice-2-1','notice-2-2','notice-2-3','notice-2-4','notice-2-5','notice-2-7','notice-2-8','notice-2-10','notice-2-9','notice-2-6'], 
           pageChineseNames: ['董事會','董事會(Board of Director)','薪酬委員會','組織及職掌','規章','內部稽核','企業社會責任','供應商管理','客戶服務','投資人關係','人力資源','與利害關係人對話'],
-
           focusedPage: ''
-
-
-
       }
     },
     methods: {
@@ -52,6 +48,8 @@ app.component('content-display', {
 
             this.focusedPage = page;
             console.log("focus this page",this.focusedPage)
+            // window.location.search = '?'+page
+            console.log(window.location)
 
         },
         showPage(){
@@ -75,6 +73,7 @@ app.component('content-display', {
     beforeMount(){
         this.focusedPage = this.focused_page;
         console.log(this.focusedPage);
+        console.log("gonna mount");
  
 
         // this.getName()
