@@ -32,7 +32,7 @@ app.component('content-display', {
   </nav>
   
 
-    <notice-2  v-if="focusedPage === 'notice-2'" ></notice-2>
+    <notice-2  v-if="focusedPage === 'notice-2' ||  !focusedPage" ></notice-2>
     <notice-2-E  v-if="focusedPage === 'notice-2-E'"></notice-2-E>
 
     </div>`,
