@@ -14,9 +14,6 @@ app.component('notice-2', {
       <img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span> 本公司之董事、監察人含2名女性、7名男性；分別在電子零組件或周邊產品業、橡膠業、銀行業、光電業、玻璃陶瓷業、通信網路業、水泥工業、證券業、電信業等，具有行銷企劃、經營管理、領導決策、產業知識、財務會計之專業經驗與素養。
       </h5>
 
-
-
-
       <div class="accordion " id="accordionFlushExample">
       <div class="accordion-item">
         <h2 class="accordion-header " id="flush-headingOne">
@@ -206,16 +203,17 @@ app.component('notice-2', {
     </li>
     
     <li class="list-group-item">四、績效評估結果： 
-    
-    <ul class="list-group list-group-flush ">
-    <li class="list-group-item">108年度 : <a href="./assets/docs/board.pdf" target="_blank">  董事會 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-  </svg></a> <span>&nbsp;</span>  <a href="./assets/docs/payout_member.pdf" target="_blank"> 薪酬委員會 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-</svg></a></li>
-  </ul>
+      <ul class="list-group list-group-flush ">
+        <li class="list-group-item">108年度 :
+          <a href="./assets/docs/board.pdf" target="_blank">  董事會 
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a> 
+          <span>&nbsp;</span>  
+          <a href="./assets/docs/payout_member.pdf" target="_blank"> 薪酬委員會 
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+        </li>
+      </ul>
     </li>
     
 
