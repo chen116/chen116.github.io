@@ -51,7 +51,7 @@ app.component('content-display', {
             this.focusedPage = page;
             console.log("focus this page",this.focusedPage)
             // window.location.search = '?'+page
-            console.log(window.location)
+            // console.log(window.location)
 
         },
         showPage(){
