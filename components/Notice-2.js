@@ -27,7 +27,7 @@ app.component('notice-2', {
         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
           <div class="accordion-body">
 
- 
+ <!-- https://css-tricks.com/complete-guide-table-element/ -->
           <table  class="table table-bordered table-hover">
              <thead>
                <tr>
