@@ -2,22 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Taisol</title>
+    <title>Vue Mastery</title>
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
-    <link rel="SHORTCUT ICON" href="./assets/images/logo.ico"   />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>    <!-- Import Vue.js -->
-   
     <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+  
 
-
-
+  
   </head>
   <body>
-    <div id="app">
-
+    <div id="taisolapp">
       <div class="nav-bar"></div>
       <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container-fluid">
@@ -52,8 +49,10 @@
       </nav>
 
     <!-- Import App -->
+    <script src="./main.js"></script>
 
-<content-display :focused_page="focused_page"></content-display>
+    <frame-comp :req="req"></frame-comp>
+
 
 
 
@@ -85,18 +84,11 @@
     
     
     </div>
-    <script src="./main.js"></script>
-
-    <script   src="./components/Notice-2.js"></script>
-    <script src="./components/Notice-2-E.js"></script>
-    <script src="./components/ContentDisplay.js"></script>
-
-
 
 
     <!-- Mount App -->
     <script>
-      const mountedApp = app.mount('#app')
+      const mountedApp = app.mount('#taisolapp')
     </script>
   </body>
 </html>

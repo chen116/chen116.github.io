@@ -21,7 +21,7 @@ app.component('notice-2', {
       <div class="accordion-item">
         <h2 class="accordion-header " id="flush-headingOne">
           <button   class=" accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          董事(含獨立董事)及監察人資料(1)
+          <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 董事(含獨立董事)及監察人資料(1)
           </button>
         </h2>
         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -109,7 +109,7 @@ app.component('notice-2', {
       <div class="accordion-item">
       <h2 class="accordion-header " id="flush-headingOne">
       <button     class=" accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-      董事(含獨立董事)及監察人資料(2)
+      <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 董事(含獨立董事)及監察人資料(2)
       </button>
     </h2>
         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" >
