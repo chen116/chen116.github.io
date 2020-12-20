@@ -17,7 +17,7 @@ app.component('notice-2', {
       <div class="accordion " id="accordionFlushExample">
       <div class="accordion-item">
         <h2 class="accordion-header " id="flush-headingOne">
-          <button  v-on:click="readFile"  table_id="table1" class=" accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          <button  v-on:click="writeTable"  table_id="table1" class=" accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
           <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 董事(含獨立董事)及監察人資料(1)
           </button>
         </h2>
@@ -105,7 +105,7 @@ app.component('notice-2', {
       </div>
       <div class="accordion-item">
       <h2 class="accordion-header " id="flush-headingOne">
-      <button     class=" accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+      <button  class=" accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
       <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 董事(含獨立董事)及監察人資料(2)
       </button>
     </h2>
@@ -222,15 +222,8 @@ app.component('notice-2', {
       return {
 
   
+        table1: [],
 
-        table1: [
-          { title: '1', from: '2', name: '3', sex: '4' ,start_date:'5', duration: '6', first_start_date: '7', stock1: '8', stock_per1:'9',stock2: '10', stock_per2:'11' ,stock3: '12', stock_per3:'13' ,stock4: '14', stock_per4:'15' ,exp:'16',other_title: '17',relative_title:'18',relative_name:'19',relative_relation:'20'},
-          { title: '1', from: '2', name: '3', sex: '4' ,start_date:'5', duration: '6', first_start_date: '7', stock1: '8', stock_per1:'9',stock2: '10', stock_per2:'11' ,stock3: '12', stock_per3:'13' ,stock4: '14', stock_per4:'15' ,exp:'16',other_title: '17',relative_title:'18',relative_name:'19',relative_relation:'20'},
-          { title: '1', from: '2', name: '3', sex: '4' ,start_date:'5', duration: '6', first_start_date: '7', stock1: '8', stock_per1:'9',stock2: '10', stock_per2:'11' ,stock3: '12', stock_per3:'13' ,stock4: '14', stock_per4:'15' ,exp:'16',other_title: '17',relative_title:'18',relative_name:'19',relative_relation:'20'},
-          { title: '1', from: '2', name: '3', sex: '4' ,start_date:'5', duration: '6', first_start_date: '7', stock1: '8', stock_per1:'9',stock2: '10', stock_per2:'11' ,stock3: '12', stock_per3:'13' ,stock4: '14', stock_per4:'15' ,exp:'16',other_title: '17',relative_title:'18',relative_name:'19',relative_relation:'20'},
-          { title: '1', from: '2', name: '3', sex: '4' ,start_date:'5', duration: '6', first_start_date: '7', stock1: '8', stock_per1:'9',stock2: '10', stock_per2:'11' ,stock3: '12', stock_per3:'13' ,stock4: '14', stock_per4:'15' ,exp:'16',other_title: '17',relative_title:'18',relative_name:'19',relative_relation:'20'}
-         
-      ],
 
       table2: [
         ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'],
@@ -257,42 +250,54 @@ app.component('notice-2', {
       }
     },
     methods: {
-      readFile(e) {
+      writeTable(e) {
         console.log(e.currentTarget.getAttribute('table_id'))
         table_id = e.currentTarget.getAttribute('table_id')
+        console.log( this.tables_data)
+       
+       
+        this.tables_data.then( data => {
 
-        this[table_id] = this.tables[table_id]
+          this.$nextTick(() =>{
+
+        this[table_id] = data[table_id]
+        console.log(  this[table_id])
+
+          })
+
+
+        })
         // table_id = e.currentTarget.getAttribute('table_id')
         // // console.log("var data id",this.{{table_id}})
         // fetch('https://chen116.github.io/assets/data/notice-2.json')
         // .then(response => response.json())
         // .then(tables_data => {console.log(tables_data[table_id]);this[table_id]= tables_data[table_id];} )
       },
-       fillTableData(){
-        fetch('https://chen116.github.io/assets/data/notice-2.json')
+       async fillTableData(){
+        data = await fetch('https://chen116.github.io/assets/data/notice-2.json')
         .then(response => response.json())
-        .then(tables_data => {
-          console.log(tables_data)     ;  
+        // .then(function(data)  {
+        //   // this.tables_data=data;
+        //   // console.log(this.tables_data)  ;
+        //   return data
 
-            this.tables_data = tables_data;   
-            console.log(this.tables_data)     ;  
+        // })
 
-        })
+        return data
+
         // tables_data.forEach(element => {
         //  console.log(element); 
         // });
 
         // const res = await fetch('https://chen116.github.io/assets/data/notice-2.json');
-        // const data =  await res.json();
-        // data.forEach(element => {
-        //   console.log(element)
-          
-        // });
+        // const tables_data =  await res.json();
+        // this.tables_data = await tables_data;  
+        // await console.log("tables_Date",this.tables_data);
 
         }
       },
       beforeMount() {
-        this.fillTableData()
+        this.tables_data =  this.fillTableData()
         // const res =  fetch('https://chen116.github.io/assets/data/notice-2.json');
         // const data =  res.json();
         // data.forEach(element => {
