@@ -17,7 +17,7 @@ app.component('notice-2', {
       <div class="accordion " id="accordionFlushExample">
       <div class="accordion-item">
         <h2 class="accordion-header " id="flush-headingOne">
-          <button   class=" accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          <button  v-on:click="readFile"  data_id="table1" class=" accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
           <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 董事(含獨立董事)及監察人資料(1)
           </button>
         </h2>
@@ -64,28 +64,28 @@ app.component('notice-2', {
               
               <tbody>
               
-              <tr v-for="user in users1" :key="user.id">
-
-              <td>{{user.title}}</td>
-              <td>{{user.from}}</td>
-              <td>{{user.name}}</td>
-              <td>{{user.sex}}</td>
-              <td>{{user.start_date}}</td>
-              <td>{{user.duration}}</td>
-              <td>{{user.first_start_date}}</td>
-              <td>{{user.stock1}}</td>
-              <td>{{user.stock_per1}}</td>
-              <td>{{user.stock2}}</td>
-              <td>{{user.stock_per2}}</td>
-              <td>{{user.stock3}}</td>
-              <td>{{user.stock_per3}}</td>
-              <td>{{user.stock4}}</td>
-              <td>{{user.stock_per4}}</td>
-              <td>{{user.exp}}</td>
-              <td>{{user.other_title}}</td>
-              <td>{{user.relative_title}}</td>
-              <td>{{user.relative_name}}</td>
-              <td>{{user.relative_relation}}</td>
+              <tr v-for="user in table1_data" :key="user.name">
+                    <td v-for="key in Object.keys(user)">{{ user[key] }}</td>
+                  <!--<td>{{user.title}}</td>
+                  <td>{{user.from}}</td>
+                  <td>{{user.name}}</td>
+                  <td>{{user.sex}}</td>
+                  <td>{{user.start_date}}</td>
+                  <td>{{user.duration}}</td>
+                  <td>{{user.first_start_date}}</td>
+                  <td>{{user.stock1}}</td>
+                  <td>{{user.stock_per1}}</td>
+                  <td>{{user.stock2}}</td>
+                  <td>{{user.stock_per2}}</td>
+                  <td>{{user.stock3}}</td>
+                  <td>{{user.stock_per3}}</td>
+                  <td>{{user.stock4}}</td>
+                  <td>{{user.stock_per4}}</td>
+                  <td>{{user.exp}}</td>
+                  <td>{{user.other_title}}</td>
+                  <td>{{user.relative_title}}</td>
+                  <td>{{user.relative_name}}</td>
+                  <td>{{user.relative_relation}}</td>-->
               </tr> 
               </tbody>
               </table>
@@ -146,24 +146,8 @@ app.component('notice-2', {
               
               <tbody>
               
-              <tr v-for="user in users1" :key="user.id">
-
-              <td>{{user.title}}</td>
-              <td>{{user.from}}</td>
-              <td>{{user.name}}</td>
-              <td>{{user.sex}}</td>
-              <td>{{user.start_date}}</td>
-              <td>{{user.duration}}</td>
-              <td>{{user.first_start_date}}</td>
-              <td>{{user.stock1}}</td>
-              <td>{{user.stock_per1}}</td>
-              <td>{{user.stock2}}</td>
-              <td>{{user.stock_per2}}</td>
-              <td>{{user.stock3}}</td>
-              <td>{{user.stock_per3}}</td>
-              <td>{{user.stock4}}</td>
-              <td>{{user.stock_per4}}</td>
-
+              <tr v-for="user in table2_data">
+                  <td v-for="entry in user">{{ entry }}</td>
               </tr> 
               </tbody>
               </table>
@@ -239,26 +223,19 @@ app.component('notice-2', {
 
   
 
-        users1: [
-          { title: '2ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: '-', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
-          { title: 'ti', from: 'fr', name: 'na', sex: 'se' ,start_date:'sd', duration: 'du', first_start_date: 'fsd', stock1: 's1', stock_per1:'p1',stock2: 's2', stock_per2:'p2' ,stock3: 's3', stock_per3:'p3' ,stock4: 's4', stock_per4:'p4' ,exp:'exp',other_title: 'ot',relative_title:'rt',relative_name:'rn',relative_relation:'rr'},
+        table1_data: [
+          { title: '1', from: '2', name: '3', sex: '4' ,start_date:'5', duration: '6', first_start_date: '7', stock1: '8', stock_per1:'9',stock2: '10', stock_per2:'11' ,stock3: '12', stock_per3:'13' ,stock4: '14', stock_per4:'15' ,exp:'16',other_title: '17',relative_title:'18',relative_name:'19',relative_relation:'20'},
+          { title: '1', from: '2', name: '3', sex: '4' ,start_date:'5', duration: '6', first_start_date: '7', stock1: '8', stock_per1:'9',stock2: '10', stock_per2:'11' ,stock3: '12', stock_per3:'13' ,stock4: '14', stock_per4:'15' ,exp:'16',other_title: '17',relative_title:'18',relative_name:'19',relative_relation:'20'},
+          { title: '1', from: '2', name: '3', sex: '4' ,start_date:'5', duration: '6', first_start_date: '7', stock1: '8', stock_per1:'9',stock2: '10', stock_per2:'11' ,stock3: '12', stock_per3:'13' ,stock4: '14', stock_per4:'15' ,exp:'16',other_title: '17',relative_title:'18',relative_name:'19',relative_relation:'20'},
+          { title: '1', from: '2', name: '3', sex: '4' ,start_date:'5', duration: '6', first_start_date: '7', stock1: '8', stock_per1:'9',stock2: '10', stock_per2:'11' ,stock3: '12', stock_per3:'13' ,stock4: '14', stock_per4:'15' ,exp:'16',other_title: '17',relative_title:'18',relative_name:'19',relative_relation:'20'},
+          { title: '1', from: '2', name: '3', sex: '4' ,start_date:'5', duration: '6', first_start_date: '7', stock1: '8', stock_per1:'9',stock2: '10', stock_per2:'11' ,stock3: '12', stock_per3:'13' ,stock4: '14', stock_per4:'15' ,exp:'16',other_title: '17',relative_title:'18',relative_name:'19',relative_relation:'20'}
+         
+      ],
+
+      table2_data: [
+        ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'],
+        ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'],
+        ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
         
       ]
 
@@ -277,9 +254,11 @@ app.component('notice-2', {
       }
     },
     methods: {
-      readFile() {
-        fetch('./assets/data/notice-2.json')
+      readFile(e) {
+        console.log(e.currentTarget.getAttribute('data_id'))
+        fetch('https://chen116.github.io/assets/data/notice-2.json')
         .then(response => response.json())
+        .then(data => {console.log(data);this.table1_data = data.table1;} )
       }
       },
 
