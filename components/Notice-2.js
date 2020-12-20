@@ -64,7 +64,7 @@ app.component('notice-2', {
               
               <tbody>
               
-              <tr v-for="user in table1_data" :key="user.name">
+              <tr v-for="user in table1" :key="user.name">
                     <td v-for="key in Object.keys(user)">{{ user[key] }}</td>
                   <!--<td>{{user.title}}</td>
                   <td>{{user.from}}</td>
@@ -146,7 +146,7 @@ app.component('notice-2', {
               
               <tbody>
               
-              <tr v-for="user in table2_data">
+              <tr v-for="user in table2">
                   <td v-for="entry in user">{{ entry }}</td>
               </tr> 
               </tbody>
@@ -223,7 +223,7 @@ app.component('notice-2', {
 
   
 
-        table1_data: [
+        table1: [
           { title: '1', from: '2', name: '3', sex: '4' ,start_date:'5', duration: '6', first_start_date: '7', stock1: '8', stock_per1:'9',stock2: '10', stock_per2:'11' ,stock3: '12', stock_per3:'13' ,stock4: '14', stock_per4:'15' ,exp:'16',other_title: '17',relative_title:'18',relative_name:'19',relative_relation:'20'},
           { title: '1', from: '2', name: '3', sex: '4' ,start_date:'5', duration: '6', first_start_date: '7', stock1: '8', stock_per1:'9',stock2: '10', stock_per2:'11' ,stock3: '12', stock_per3:'13' ,stock4: '14', stock_per4:'15' ,exp:'16',other_title: '17',relative_title:'18',relative_name:'19',relative_relation:'20'},
           { title: '1', from: '2', name: '3', sex: '4' ,start_date:'5', duration: '6', first_start_date: '7', stock1: '8', stock_per1:'9',stock2: '10', stock_per2:'11' ,stock3: '12', stock_per3:'13' ,stock4: '14', stock_per4:'15' ,exp:'16',other_title: '17',relative_title:'18',relative_name:'19',relative_relation:'20'},
@@ -232,7 +232,7 @@ app.component('notice-2', {
          
       ],
 
-      table2_data: [
+      table2: [
         ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'],
         ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'],
         ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
@@ -256,9 +256,10 @@ app.component('notice-2', {
     methods: {
       readFile(e) {
         console.log(e.currentTarget.getAttribute('data_id'))
+        data_id = e.currentTarget.getAttribute('data_id')
         fetch('https://chen116.github.io/assets/data/notice-2.json')
         .then(response => response.json())
-        .then(data => {console.log(data);this.table1_data = data.table1;} )
+        .then(total_data => {console.log(total_data.$data_id);this.$data_id = total_data.$data_id;} )
       }
       },
 
