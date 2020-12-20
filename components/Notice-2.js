@@ -17,7 +17,7 @@ app.component('notice-2', {
       <div class="accordion " id="accordionFlushExample">
       <div class="accordion-item">
         <h2 class="accordion-header " id="flush-headingOne">
-          <button  v-on:click="readFile"  data_id="table1" class=" accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          <button  v-on:click="readFile"  table_id="table1" class=" accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
           <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 董事(含獨立董事)及監察人資料(1)
           </button>
         </h2>
@@ -240,7 +240,7 @@ app.component('notice-2', {
       ]
       , 
 
-      total_data :[]
+      tables_data :{}
 
     }
 
@@ -258,21 +258,27 @@ app.component('notice-2', {
     },
     methods: {
       readFile(e) {
-        console.log(e.currentTarget.getAttribute('data_id'))
-        // data_id = e.currentTarget.getAttribute('data_id')
-        // // console.log("var data id",this.{{data_id}})
+        console.log(e.currentTarget.getAttribute('table_id'))
+        table_id = e.currentTarget.getAttribute('table_id')
+
+        this[table_id] = this.tables[table_id]
+        // table_id = e.currentTarget.getAttribute('table_id')
+        // // console.log("var data id",this.{{table_id}})
         // fetch('https://chen116.github.io/assets/data/notice-2.json')
         // .then(response => response.json())
-        // .then(total_data => {console.log(total_data[data_id]);this[data_id]= total_data[data_id];} )
+        // .then(tables_data => {console.log(tables_data[table_id]);this[table_id]= tables_data[table_id];} )
       },
        fillTableData(){
         fetch('https://chen116.github.io/assets/data/notice-2.json')
         .then(response => response.json())
-        .then(total_data => {
-            console.log(total_data[0])     ;  
-            this.total_data = total_data;   
+        .then(tables_data => {
+          console.log(tables_data)     ;  
+
+            this.tables_data = tables_data;   
+            console.log(this.tables_data)     ;  
+
         })
-        // total_data.forEach(element => {
+        // tables_data.forEach(element => {
         //  console.log(element); 
         // });
 
