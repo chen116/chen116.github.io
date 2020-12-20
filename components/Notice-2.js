@@ -226,7 +226,7 @@ app.component('notice-2', {
 
 
       table2: [
-        ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'],
+        ['1','embedded','3','4','5','6','7','8','9','10','11','12','13','14','15'],
         ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'],
         ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
         
@@ -254,59 +254,21 @@ app.component('notice-2', {
         console.log(e.currentTarget.getAttribute('table_id'))
         table_id = e.currentTarget.getAttribute('table_id')
         console.log( this.tables_data)
-       
-       
         this.tables_data.then( data => {
-
           this.$nextTick(() =>{
-
-        this[table_id] = data[table_id]
-        console.log(  this[table_id])
-
+            this[table_id] = data[table_id]
+            console.log(  this[table_id])
           })
-
-
         })
-        // table_id = e.currentTarget.getAttribute('table_id')
-        // // console.log("var data id",this.{{table_id}})
-        // fetch('https://chen116.github.io/assets/data/notice-2.json')
-        // .then(response => response.json())
-        // .then(tables_data => {console.log(tables_data[table_id]);this[table_id]= tables_data[table_id];} )
       },
-       async fillTableData(){
+      async fillTablesData(){
         data = await fetch('https://chen116.github.io/assets/data/notice-2.json')
         .then(response => response.json())
-        // .then(function(data)  {
-        //   // this.tables_data=data;
-        //   // console.log(this.tables_data)  ;
-        //   return data
-
-        // })
-
-        return data
-
-        // tables_data.forEach(element => {
-        //  console.log(element); 
-        // });
-
-        // const res = await fetch('https://chen116.github.io/assets/data/notice-2.json');
-        // const tables_data =  await res.json();
-        // this.tables_data = await tables_data;  
-        // await console.log("tables_Date",this.tables_data);
-
+          return data
         }
       },
       beforeMount() {
-        this.tables_data =  this.fillTableData()
-        // const res =  fetch('https://chen116.github.io/assets/data/notice-2.json');
-        // const data =  res.json();
-        // data.forEach(element => {
-        //   console.log(element)
-          
-        // });
-     
-
-      
+        this.tables_data =  this.fillTablesData()
     }
 
   })
