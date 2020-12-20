@@ -238,6 +238,9 @@ app.component('notice-2', {
         ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
         
       ]
+      , 
+
+      total_data :[]
 
     }
 
@@ -256,11 +259,43 @@ app.component('notice-2', {
     methods: {
       readFile(e) {
         console.log(e.currentTarget.getAttribute('data_id'))
-        data_id = e.currentTarget.getAttribute('data_id')
+        // data_id = e.currentTarget.getAttribute('data_id')
+        // // console.log("var data id",this.{{data_id}})
+        // fetch('https://chen116.github.io/assets/data/notice-2.json')
+        // .then(response => response.json())
+        // .then(total_data => {console.log(total_data[data_id]);this[data_id]= total_data[data_id];} )
+      },
+       fillTableData(){
         fetch('https://chen116.github.io/assets/data/notice-2.json')
         .then(response => response.json())
-        .then(total_data => {console.log(total_data.$data_id);this.$data_id = total_data.$data_id;} )
-      }
+        .then(total_data => {
+            console.log(total_data[0])     ;  
+            this.total_data = total_data;   
+        })
+        // total_data.forEach(element => {
+        //  console.log(element); 
+        // });
+
+        // const res = await fetch('https://chen116.github.io/assets/data/notice-2.json');
+        // const data =  await res.json();
+        // data.forEach(element => {
+        //   console.log(element)
+          
+        // });
+
+        }
       },
+      beforeMount() {
+        this.fillTableData()
+        // const res =  fetch('https://chen116.github.io/assets/data/notice-2.json');
+        // const data =  res.json();
+        // data.forEach(element => {
+        //   console.log(element)
+          
+        // });
+     
+
+      
+    }
 
   })
