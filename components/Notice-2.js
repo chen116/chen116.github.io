@@ -225,7 +225,7 @@ app.component('notice-2', {
         table1: [],
 
 
-      table2: [
+        table2: [
         ['1','embedded','3','4','5','6','7','8','9','10','11','12','13','14','15'],
         ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'],
         ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
@@ -253,18 +253,16 @@ app.component('notice-2', {
       writeTable(e) {
         console.log(e.currentTarget.getAttribute('table_id'))
         table_id = e.currentTarget.getAttribute('table_id')
-        console.log( this.tables_data)
         this.tables_data.then( data => {
-          this.$nextTick(() =>{
+          this.$nextTick( () =>{
             this[table_id] = data[table_id]
             console.log(  this[table_id])
           })
         })
       },
       async fillTablesData(){
-        data = await fetch('https://chen116.github.io/assets/data/notice-2.json')
-        .then(response => response.json())
-          return data
+        data = await fetch('https://chen116.github.io/assets/data/notice-2.json').then(response => response.json())
+        return data
         }
       },
       beforeMount() {
