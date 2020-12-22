@@ -1,0 +1,167 @@
+app.component('notice-2-6', {
+  data() {
+    return {
+
+
+
+      table1:[
+          {person: "sss", topic:"sqqs", job:"qqq",results:[{txt:"eeew",href:"http://www.taisol.com.tw/news?lang=zh"}]},
+          {person: "sss", topic:"sqqs", job:"qqq",results:[{txt:"eeew",href:"http://w3.taisol.com.tw/important/notice-2-9.html"}]},
+          {person: "sss", topic:"sqqs", job:"qqq",results:[]},
+          {person: "sss", topic:"sqqs", job:"qqq",results:[{txt:"eeew",href:"http://w3.taisol.com.tw/important/notice-2-5.html"}, {txt:"eeew2",href:"http://w3.taisol.com.tw/important/EMS-ARES-ISO14001.pdf"} ]},
+      ],
+
+      list1:[
+
+        {
+          title:"一、本公司為落實誠信經營政策，積極防範不誠信的行為，已設立檢舉信箱機制，嚴格禁止任何違反從業道德之行為及情事，如有違反各營運所在相關法令或本公司各項從業道德行為準則，一律秉公處理，絕不寬貸。", 
+          content:[]
+        },
+        {
+          title:"二、本公司提供檢舉之獎勵：糾正或檢舉違反廉潔守則情事，凡經查證屬實者，將予適當之獎勵。另針對違反從業道德之行為，除所獲取之各項不正當利益均應追繳發還被索取人或公司外，並依情節之大小，予以處分或合併處分。",
+          content:[]
+        },
+        {
+          title:"三、檢舉方式如下:",
+          content:["檢舉信箱 : 如下方所示"]
+        },
+        {
+          title:"四、檢舉人應至少提供下列資訊始得成立檢舉案件：",
+          content: 
+          [
+            "內部員工 : (1)廠別(2)工號(3)姓名。",
+　　        "外部人 : (1)姓名(2)身分證字號。",
+　　        "可聯絡到檢舉人之地址、電話、電子信箱。",
+　　        "被檢舉人之姓名或其他足資識別被檢舉人身分特徵之資料。",
+　　        "可供調查之具體事證。"
+          ]
+        },
+        {
+          title:"五、本公司依檢舉人及檢舉事項、對象，接受檢舉之窗口分別為管理部吳小姐或發言人郭副總，　　如下方所示。對於檢舉人之身份與所檢舉之內容，除依法律之規定要求外，絕對會予以保密　　，並承諾保護檢舉人及酌予適當獎勵。 ",
+          content:[]
+        },
+        {
+          title:"六、本公司對於檢舉案件一經成立即指派專人進行調查。　　其相關紙本文件、電子檔案等，除提供予司法檢調等單位外，將由專責人員上鎖、加密，妥　　善保管之。",
+                    content:[]
+        },
+        {
+          title:"七、作業流程：",
+          content:["受理窗口→董事長／總經理→管理部／稽核室→董事／監察人。" ,  "管理部／稽核室→委任律師／司法及檢調等單位 。 "]
+        }
+
+      ],
+
+      list2:[
+        "1. 您所提供的個人資料，包含姓名、電話、電子郵件地址，泰碩 公司於調查期間，得為調查舉報事項與聯繫用途而處理利用； 調查若有必要，泰碩公司得傳遞您必要的個人資訊予公司內部 及司法檢調等相關單位。",
+        "2. 不得明知不實而故意捏造事實，倘舉報事後被證明是出於惡意 或有故意捏造虛偽陳述之情事，您必須自負相關法律責任。",
+        "3. 為能盡早調查與解決問題，請您務必提供所有可能的相關具體 資訊與文件，若相關資訊與文件不齊備，泰碩公司將無法進行 調查。",
+        "4. 泰碩公司提供予您的相關聯絡內容，其全部或一部分皆不可向 任何人揭露。除依法律之規定要求外，您不得以泰碩公司與您 之間的聯絡內容提出訴訟或以該聯絡內容作為訴訟相關資料。",
+        
+      ],
+
+
+    }
+  },
+  props: {},
+  template:
+  /*html*/
+  `
+  <div class="content">
+
+
+
+  <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>與利害關係人對話 </h5>
+
+<p>企業追求永續發展，必須瞭解利害關係人的想法。透明的溝通不僅會減少公司內部管理成本，亦是追求永續發展的重要參考。我們相信，開放、無障礙的溝通方式，更能充分瞭解利害關係人的需求。
+  </p>
+
+
+  <table  class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th rowspan="1">利害關係人</th>
+        <th rowspan="1">關切的議題</th>
+        <th rowspan="1">我們的責任</th>
+        <th rowspan="1">我們的努力</th>
+    </tr>
+
+    </thead>
+    <tbody>
+    <tr v-for="row in table1">
+        <td> {{row.person}}</td>
+        <td> {{row.topic}}</td>
+        <td> {{row.job}}</td>
+        <td> 
+          <ul class="list-group list-group-flush" v-for="result in row.results">
+            <li class="list-group-item list-group-flush" >
+              <a :href="result.href" >{{result.txt}} </a>
+            </li>
+          </ul>
+        </td>
+
+    </td>
+    </tr> 
+    </tbody>
+  </table>
+
+
+
+  <p><span>&nbsp;&nbsp;</span></p>
+  <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span> 檢舉信箱作業辦法</h5>
+
+  <ul class="list-group list-group-flush" >
+      <li class="list-group-item list-group-flush" v-for="item in list1">
+        {{item.title}}
+          <li class="list-group-item list-group-flush" v-for="sub_item in item.content">
+            <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>{{sub_item}}
+          </li>
+      </li>
+  </ul>
+
+
+  <p><span>&nbsp;&nbsp;</span></p>
+  <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>員工申訴中心 </h5>
+
+
+  <p>員工是公司主要的利害關係人之一，更是泰碩珍視的資產。
+  </p>
+  <p>基於對員工的承諾，泰碩相信每位員工皆應受到公平的對待與尊重； 保障國際公認人權，致力維護與尊重聯合國世界人權宣言和國際勞動 組織基本公約的核心勞動標準。 
+  </p>
+  <p>為了保障您的權益、讓您更安心工作，泰碩特別設置提供專責的員工 意見申訴管道。
+  </p>
+
+  <p>E-Mail: <a href="mailto:sales@taisol.com">sales@taisol.com</a> </p>
+  
+  <p><span>&nbsp;&nbsp;</span></p>
+  <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>客戶及供應商投訴中心 </h5>
+  <p><span>&nbsp;&nbsp;</span></p>
+
+  <h6><b>違反從業道德行為舉報系統</b></h6>
+
+  <p>在泰碩電子股份有限公司，誠信正直是公司文化最重要之核心價值， 也是公司經營理念之首。泰碩公司一向承諾以誠信從事所有業務活動 ，絕不允許貪污及任何形式之舞弊行為。
+  </p>
+  <p>若您發現泰碩公司員工或任何代表泰碩公司的相關人士進行可疑行為 或可能違反泰碩公司的道德行為準則時，請告訴我們。
+  您的舉報事項，我們將交由公司副總經理直接處理。
+  </p>
+  <p>除法律另有規定外，對於您提供關於您的個人資料，我們將予以保密 ，並依法採取適當之保護措施，保護您的個人資料及隱私。 
+  </p>
+  <p><span>&nbsp;&nbsp;</span></p>
+
+  <h6><b>提醒您：</b></h6>
+  
+  <ul class="list-group list-group-flush" >
+    <li class="list-group-item" v-for="item in list2">
+      {{item}}
+    </li>
+    <li  class="list-group-item">   郭尚仁 先生
+    (副總經理暨發言人)
+    E-Mail：<a href="mailto:sales@taisol.com">sales@taisol.com</a>
+    </li>
+  </ul>
+  </div>
+  `,
+  computed: {},
+  methods: {},
+  beforeMount() {}
+
+})
