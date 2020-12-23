@@ -56,7 +56,7 @@ app.component('notice-2-5', {
   `
   <div class="content">
   
-  <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span> 企業社會責任</h5>
+  <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>企業社會責任</h5>
   <p><span>&nbsp;&nbsp;</span></p>  
   <h6><b>環境永續:</b></h6>
   <ul class="list-group list-group-flush" >

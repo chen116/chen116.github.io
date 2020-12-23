@@ -80,7 +80,7 @@ app.component('notice-2-9', {
 
 
 
-  <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>投資人關係 </h5>
+  <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>人力資源 </h5>
 
   <p><span>&nbsp;&nbsp;</span></p>  
   <h6><b>福利制度:</b></h6>

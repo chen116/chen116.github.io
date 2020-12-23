@@ -18,11 +18,12 @@ app.component('notice-2-10', {
   <div class="content">
 
 
-
-  <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>股權結構 </h5>
+  <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>投資人關係 </h5>
   <p><span>&nbsp;&nbsp;</span></p>
 
-  <h6><b>本公司股權比例占前十大之股東：   </b></h6>
+  <h6 ><b>股權結構   </b></h6>
+
+  <h6><span>&nbsp;&nbsp;</span>本公司股權比例占前十大之股東： </h6>
 
   <p style="text-align:right;">109 年 4 月 7 日  單位：股</p>
 
