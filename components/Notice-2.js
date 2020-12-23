@@ -56,24 +56,24 @@ app.component('notice-2', {
             {{ showExpandedTableButton }}
             </button> 
               <table  class="table table-bordered table-hover"  ><!-- https://css-tricks.com/complete-guide-table-element/ -->
-                <thead >
+                <thead :style="tableStyle">
                   <tr>
                     <th rowspan="2" style="width: 1%">職稱（註一）</th>
-                    <th rowspan="2" style="width: 1%">國籍或註冊地</th>
+                    <th rowspan="2" style="width: 3%">國籍或註冊地</th>
                     <th rowspan="2" style="">姓名</th>
                     <th rowspan="2" style="">性別</th>
                     <th rowspan="2" style="width: 1%">選(就)任日期</th>
                     <th rowspan="2" style="width: 1%">任期</th>
                     <th rowspan="2" style="width: 1%">初次選任日期（註二）</th>
-                    <th colspan="2" style="width: 3%">選任時持有股份</th>
-                    <th colspan="2" style="width: 3%">現在持有股份</th>
-                    <th colspan="2" style="width: 3%">配偶,未成年子女現在持有股份</th>
-                    <th colspan="2" style="width: 3%">利用他人名義持有股份</th>
+                    <th colspan="2" style="width: 5%">選任時持有股份</th>
+                    <th colspan="2" style="width: 5%">現在持有股份</th>
+                    <th colspan="2" style="width: 5%">配偶,未成年子女現在持有股份</th>
+                    <th colspan="2" style="width: 5%">利用他人名義持有股份</th>
                     <th rowspan="2" style="">主要經（學）歷（註三）</th>
                     <th rowspan="2" style="">目前兼任本公司及其他公司之職務
 
                     </th>
-                    <th colspan="3" style="width: 1%">具配偶或二親等以內關係之其他主管,董事或監察人</th>
+                    <th colspan="3" style="width: 10%">具配偶或二親等以內關係之其他主管,董事或監察人</th>
                   </tr>
                   <tr>
                   <th>股數</th>
