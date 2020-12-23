@@ -58,7 +58,7 @@ app.component('notice-2-5', {
   
   <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>企業社會責任</h5>
   <p><span>&nbsp;&nbsp;</span></p>  
-  <h6><b>環境永續:</b></h6>
+  <h5><b>環境永續:</b></h5>
   <ul class="list-group list-group-flush" >
       <li class="list-group-item" >
         <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span><b>ISO14001 環境管理體系</b> 
