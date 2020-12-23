@@ -12,14 +12,20 @@ app.component('notice-2-2', {
             },
             {   "name": " 稽核室", 
                 "summary" : "執行內部控制制度的稽核工作，檢查並評估公司的營運記錄有無缺失並提出改善建議。",
-                "details" : ["meow","woof"] 
+                "details" : ["(1)meow","(2)woof"] 
                 
             },
             {   "name": "財管處",
                 "summary" : "秉承總經理之命令，掌管公司之財務、人事、總務、公關等事宜。下設財務部、管理部。主要內容為：",
-                "details" : ["規劃公司的營運方針並執行董事會的決議，建立公司營運體制及監督日常運作。","處理公司對內及對外公共關係及跨部門之溝通與協調情事。"] 
+                "details" : ["通訊研發部：","(1)規劃公司的營運方針並執行董事會的決議，建立公司營運體制及監督日常運作。","(2)處理公司對內及對外公共關係及跨部門之溝通與協調情事。","熱傳研發部：","(1)散熱器設計及相關零件之承認。"] 
                 
-            }
+            },
+            {   
+                "name": " 稽核室", 
+                "summary" : "",
+                "details" : ["(1)meow","(2)woof"] 
+            
+            },
 
 
           
@@ -90,7 +96,7 @@ app.component('notice-2-2', {
                                 <td> 
                                     <ul class="list-group list-group-flush ">{{department.summary}}
                                         <li class="list-group-item" v-for="(detail,index) in department.details">
-                                        ({{index+1}}) {{detail}}
+                                        {{detail}}
                                         </li>
                                     </ul>
                                 </td>

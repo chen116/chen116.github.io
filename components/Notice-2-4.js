@@ -2,7 +2,7 @@ app.component('notice-2-4', {
   data() {
     return {
       table1 : [
-        {date: "109.06.05", type: "sss", items: ["1. hii","2. koko"], results:["1. rrr", "2. rrrkk"]},
+        {date: "109.06.05", type: "sss", items: ["1. hii","2. koko"], results:["rrrrr444"]},
         {date: "109.06.05", type: "sss", items: ["1. hii","2. koko"], results:["1. rrr", "2. rrrkk"]},
       ]
     }
