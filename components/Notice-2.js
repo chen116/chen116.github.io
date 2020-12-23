@@ -281,12 +281,12 @@ app.component('notice-2', {
       if (this.showExpandedTable<=0)
       {
         // this.tableStyle.fontSize = '13px'
-        this.showExpandedTableButton ='展開'//+this.showExpandedTable
+        this.showExpandedTableButton ='全部展開'//+this.showExpandedTable
       }
       else
       {
         // this.tableStyle.fontSize = '13px'
-        this.showExpandedTableButton='收起'//+this.showExpandedTable
+        this.showExpandedTableButton='全部收起'//+this.showExpandedTable
 
       }
 
