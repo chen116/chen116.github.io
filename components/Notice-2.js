@@ -2,11 +2,16 @@ app.component('notice-2', {
   data() {
     return {
       table1 : [
-        { "title": "write", "from": "from", "name": "json", "sex": "file" ,"start_date":"sd", "duration": "du", "first_start_date": "fsd", "stock1": "s1", "stock_per1":"p1","stock2": "s2", "stock_per2":"p2" ,"stock3": "s3", "stock_per3":"p3" ,"stock4": "s4", "stock_per4":"p4" ,"exps":["exp1","exp2"],"other_titles": ["ot","eee"],"relative_title":"rt","relative_name":"rn","relative_relation":"rr"},
-        { "title": "write", "from": "from", "name": "json", "sex": "file" ,"start_date":"sd", "duration": "du", "first_start_date": "fsd", "stock1": "s1", "stock_per1":"p1","stock2": "s2", "stock_per2":"p2" ,"stock3": "s3", "stock_per3":"p3" ,"stock4": "s4", "stock_per4":"p4" ,"exps":["exp1","exp2"],"other_titles": ["ot","eee"],"relative_title":"rt","relative_name":"rn","relative_relation":"rr"},
-        { "title": "write", "from": "from", "name": "json", "sex": "file" ,"start_date":"sd", "duration": "du", "first_start_date": "fsd", "stock1": "s1", "stock_per1":"p1","stock2": "s2", "stock_per2":"p2" ,"stock3": "s3", "stock_per3":"p3" ,"stock4": "s4", "stock_per4":"p4" ,"exps":["exp1","exp2"],"other_titles": ["ot","eee"],"relative_title":"rt","relative_name":"rn","relative_relation":"rr"},
-        { "title": "write", "from": "from", "name": "json", "sex": "file" ,"start_date":"sd", "duration": "du", "first_start_date": "fsd", "stock1": "s1", "stock_per1":"p1","stock2": "s2", "stock_per2":"p2" ,"stock3": "s3", "stock_per3":"p3" ,"stock4": "s4", "stock_per4":"p4" ,"exps":["exp1","exp2"],"other_titles": ["ot","eee"],"relative_title":"rt","relative_name":"rn","relative_relation":"rr"},
-
+          {"title":"董事長","from":"臺灣","name":"余清松","sex":"男","start_date":"107.06.19","duration":"3年","first_start_date":"88.11.06","stock1":"11,799,516","stock_per1":"16.9","stock2":"14,155,046","stock_per2":"16.37","stock3":"773.431","stock_per3":"0.89","stock4":"3151000","stock_per4":"3.64","exps":["大同工學院工商管理系畢"],"other_titles":["泰碩電子(香港)有限公司 董事","世窗電子(香港)有限公司 董事","TAISOL ELEC. JAPAN 董事","衡國企業(股)公司 董事長"],"relative_title":"-","relative_name":"-","relative_relation":"-"},
+          {"title":"董  事","from":"臺灣","name":"林展列","sex":"男","start_date":"107.06.19","duration":"3年","first_start_date":"102.04.22","stock1":"-","stock_per1":"-","stock2":"104.000","stock_per2":"0.12","stock3":"-","stock_per3":"-","stock4":"-","stock_per4":"-","exps":["台南高工機械工程科","萬旭電業股份有限公司 總經理","萬旭電業股份有限公司 董事"],"other_titles":["萬旭電業股份有限公司 顧問","萬旭電業股份有限公司 董事","胡連精密股份有限公司 獨立董事","泗陽泰碩電子有限公司 董事兼法人代表","泰碩電子(股)公司 董事/營運長","蘇州泰碩電子有限公司 董事","TAISOL ELEC. JAPAN 董事","鈺邦科技股份有限公司 監察人"],"relative_title":"-","relative_name":"-","relative_relation":"-"},
+          {"title":"董  事","from":"臺灣","name":"梁竣興","sex":"男","start_date":"107.06.19","duration":"3年","first_start_date":"107.06.19","stock1":"38000","stock_per1":"0.05","stock2":"98.813","stock_per2":"0.11","stock3":"-","stock_per3":"-","stock4":"-","stock_per4":"-","exps":["東海大學經濟系","信邦電子(股)公司 總經理/營運長/顧問"],"other_titles":["東莞泰碩電子有限公司 董事","泰碩電子(股)公司 總經理","泗陽泰碩電子有限公司 董事"],"relative_title":"-","relative_name":"-","relative_relation":"-"},
+          {"title":"董  事","from":"日本","name":"蘆原錦吾","sex":"男","start_date":"107.06.19","duration":"3年","first_start_date":"107.06.19","stock1":"-","stock_per1":"-","stock2":"-","stock_per2":"-","stock3":"-","stock_per3":"-","stock4":"-","stock_per4":"-","exps":["中興大學地政系","信邦電子(股)公司 董事"],"other_titles":["Oriental Computer Inc.  President"],"relative_title":"-","relative_name":"-","relative_relation":"-"},
+          {"title":"獨立董事","from":"臺灣","name":"張文添","sex":"男","start_date":"107.06.19","duration":"3年","first_start_date":"102.04.22(註4)","stock1":"-","stock_per1":"-","stock2":"-","stock_per2":"-","stock3":"-","stock_per3":"-","stock4":"-","stock_per4":"-","exps":["文化大學企業管理研究所碩士","交通銀行副理","泰豐輪胎(股)公司 副總經理兼發言人","寶華銀行協理、研發處長、管理部經理、祕書處長","文化大學、逢甲大學 兼任講師","實踐大學企管系 兼任講師"],"other_titles":["李洲科技(股)公司 獨立董事"],"relative_title":"-","relative_name":"-","relative_relation":"-"},
+          {"title":"獨立董事","from":"臺灣","name":"曾天運","sex":"男","start_date":"107.06.19","duration":"3年","first_start_date":"107.06.19","stock1":"-","stock_per1":"-","stock2":"-","stock_per2":"-","stock3":"-","stock_per3":"-","stock4":"-","stock_per4":"-","exps":["中興大學科技法律研究所碩士","冠軍建材股份有限公司 財務副總","萬泰科技股份有限公司 財務副總"],"other_titles":["大哲聯合會計師事務所 合夥會計師","中華民國仲裁協會 仲裁人","萬旭電業股份有限公司 薪酬委員"],"relative_title":"-","relative_name":"-","relative_relation":"-"},
+          {"title":"獨立董事","from":"臺灣","name":"陳志弘","sex":"男","start_date":"107.06.19","duration":"3年","first_start_date":"107.06.19","stock1":"-","stock_per1":"-","stock2":"-","stock_per2":"-","stock3":"-","stock_per3":"-","stock4":"-","stock_per4":"-","exps":["大同工學院事業經營系","東南水泥股份有限公司","副董事長室特別助理/駐廠董事室主任兼品保部經理/高雄廠行政副廠長/高雄廠廠長/駐廠董事長室特別助理"],"other_titles":["澎湖有線電視股份有限公司 總經理"],"relative_title":"-","relative_name":"-","relative_relation":"-"},
+          {"title":"監察人","from":"臺灣","name":"謝君山","sex":"男","start_date":"107.06.19","duration":"3年","first_start_date":"102.04.22(註5)","stock1":"1205197","stock_per1":"1.73","stock2":"1,571,276","stock_per2":"1.82","stock3":"288466","stock_per3":"0.33","stock4":"-","stock_per4":"-","exps":["省立台南高級工業職業學校","原價屋電腦有限公司 顧問","泰碩電子股份有限公司 董事"],"other_titles":["無"],"relative_title":"-","relative_name":"-","relative_relation":"-"},
+          {"title":"監察人","from":"臺灣","name":"林千雅","sex":"女","start_date":"107.06.19","duration":"3年","first_start_date":"104.05.15(註6)","stock1":"1818316","stock_per1":"2.6","stock2":"2,074,321","stock_per2":"2.4","stock3":"-","stock_per3":"-","stock4":"-","stock_per4":"-","exps":["文化大學土地資源學系畢","富邦證券 財務部襄理"],"other_titles":["隆昕實業股份有限公司 財務部襄理"],"relative_title":"-","relative_name":"-","relative_relation":"-"},
+          {"title":"監察人","from":"臺灣","name":"張敏君","sex":"女","start_date":"107.06.19","duration":"3年","first_start_date":"102.07.05","stock1":"-","stock_per1":"-","stock2":"-","stock_per2":"-","stock3":"-","stock_per3":"-","stock4":"-","stock_per4":"-","exps":["台大商學院國際企業組碩士","宏達電子HTC日本分公司社長/全球行銷處處長"],"other_titles":["拓連科技股份有限公司 營運長"],"relative_title":"-","relative_name":"-","relative_relation":"-"}
       ],
       table2 : [
         {"name":"a","pro_exp1":"b","pro_exp2":"c","pro_exp3":"d","fit_item1":"1","fit_item2":"2","fit_item3":"3","fit_item4":"4","fit_item5":"5","fit_item6":"6","fit_item7":"7","fit_item8":"8","fit_item9":"9","fit_item10":"10","num_company":"z"},
@@ -14,6 +19,17 @@ app.component('notice-2', {
         {"name":"a","pro_exp1":"b","pro_exp2":"c","pro_exp3":"d","fit_item1":"1","fit_item2":"2","fit_item3":"3","fit_item4":"4","fit_item5":"5","fit_item6":"6","fit_item7":"7","fit_item8":"8","fit_item9":"9","fit_item10":"10","num_company":"z"},
         {"name":"a","pro_exp1":"b","pro_exp2":"c","pro_exp3":"d","fit_item1":"1","fit_item2":"2","fit_item3":"3","fit_item4":"4","fit_item5":"5","fit_item6":"6","fit_item7":"7","fit_item8":"8","fit_item9":"9","fit_item10":"10","num_company":"z"}
       ]
+      ,
+      tableStyle:
+      {
+        fontSize:'13px',
+        zIndex:-999
+      },
+      showExpandedTable: -1
+      ,
+      showExpandedTableButton: '展開',
+      expandList:{}
+
     }
   },
   props: {},
@@ -36,26 +52,32 @@ app.component('notice-2', {
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
-              <table  class="table table-bordered table-hover"><!-- https://css-tricks.com/complete-guide-table-element/ -->
-                <thead>
+            <button style="float: left;" v-on:click="expandTable('table1',2)" class="btn btn-secondary" type="button" >
+            {{ showExpandedTableButton }}
+            </button> 
+              <table  class="table table-bordered table-hover"  ><!-- https://css-tricks.com/complete-guide-table-element/ -->
+                <thead >
                   <tr>
-                    <th rowspan="2">職稱（註一）</th>
-                    <th rowspan="2">國籍或註冊地</th>
-                    <th rowspan="2">姓名</th>
-                    <th rowspan="2">性別</th>
-                    <th rowspan="2">選(就)任日期</th>
-                    <th rowspan="2">任期</th>
-                    <th rowspan="2">初次選任日期（註二）</th>
-                    <th colspan="2">選任時持有股份</th>
-                    <th colspan="2">現在持有股份</th>
-                    <th colspan="2">配偶,未成年子女現在持有股份</th>
-                    <th colspan="2">利用他人名義持有股份</th>
-                    <th rowspan="2">主要經（學）歷（註三）</th>
-                    <th rowspan="2">目前兼任本公司及其他公司之職務</th>
-                    <th colspan="3">具配偶或二親等以內關係之其他主管,董事或監察人</th>
+                    <th rowspan="2" style="width: 1%">職稱（註一）</th>
+                    <th rowspan="2" style="width: 1%">國籍或註冊地</th>
+                    <th rowspan="2" style="">姓名</th>
+                    <th rowspan="2" style="">性別</th>
+                    <th rowspan="2" style="width: 1%">選(就)任日期</th>
+                    <th rowspan="2" style="width: 1%">任期</th>
+                    <th rowspan="2" style="width: 1%">初次選任日期（註二）</th>
+                    <th colspan="2" style="width: 3%">選任時持有股份</th>
+                    <th colspan="2" style="width: 3%">現在持有股份</th>
+                    <th colspan="2" style="width: 3%">配偶,未成年子女現在持有股份</th>
+                    <th colspan="2" style="width: 3%">利用他人名義持有股份</th>
+                    <th rowspan="2" style="">主要經（學）歷（註三）</th>
+                    <th rowspan="2" style="">目前兼任本公司及其他公司之職務
+
+                    </th>
+                    <th colspan="3" style="width: 1%">具配偶或二親等以內關係之其他主管,董事或監察人</th>
                   </tr>
                   <tr>
-                    <th>股數</th>
+                  <th>股數</th>
+
                     <th>持股比率(%)</th>
                     <th>股數</th>
                     <th>持股比率(%)</th>
@@ -68,8 +90,8 @@ app.component('notice-2', {
                     <th>關係</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr v-for="user in table1" :key="user.name">
+                <tbody v-bind:style="tableStyle">
+                  <tr v-for="(user,index) in table1" :key="user.name">
                     <!--<td v-for="key in Object.keys(user)">{{ user[key] }}</td>-->
                     <td>{{user.title}}</td>
                     <td>{{user.from}}</td>
@@ -87,15 +109,58 @@ app.component('notice-2', {
                     <td>{{user.stock4}}</td>
                     <td>{{user.stock_per4}}</td>
                     <td>   
-                      <ul class="list-group list-group-flush " v-for="exp in user.exps">
-                        <li class="list-group-item">{{exp}}</li>
+        
+                     <button class="accordion-button collapsed " style="padding: none;" :id="'sub_entry1-1_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">
+                      <p :style="tableStyle">{{user.exps[0]}}...</p>
+                      </button>
+
+                      <!--<div v-bind:style="tableStyle" :id="'sub_entry1-1_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">
+                      {{user.exps[0]}}...<img style="z-index: -999;" class="rounded" src="./assets/images/menu01.jpg"/></div> -->
+                      <ul class="list-group list-group-flush"  v-for="exp in user.exps"  v-if=" user.exps.length<2" >
+                        <li  class="list-group-item">{{exp}}</li>
                       </ul>
+                      <ul class="list-group list-group-flush"   v-on:click="sub_entry_list_toggle" v-for="exp in user.exps"  v-if=" expandMe('sub_entry1-1_' + index)">
+                        <li class="list-group-item" :id="'sub_entry1-1_' + index" >{{exp}}</li>
+                      </ul>
+                      <!--<ul class="list-group list-group-flush " v-for="exp in user.exps">
+                        <li class="list-group-item">{{exp}}</li>
+                      </ul>-->
+
+
                     </td>
-                    <td>   
-                      <ul class="list-group list-group-flush " v-for="other_title in user.other_titles">
+                    <td>
+                      <button class="accordion-button collapsed " :id="'sub_entry1-2_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">
+                      <p :style="tableStyle">{{user.other_titles[0]}}...</p>
+                      </button>
+                      <!--<p v-bind:style="tableStyle" :id="'sub_entry1-2_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">
+                      {{user.other_titles[0]}}...<img class="rounded" src="./assets/images/menu01.jpg"/></p> -->
+                      <ul class="list-group list-group-flush"  v-for="other_title in user.other_titles"  v-if=" user.other_titles.length<2">
                         <li class="list-group-item">{{other_title}}</li>
                       </ul>
+                      <ul class="list-group list-group-flush"   v-on:click="sub_entry_list_toggle" v-for="other_title in user.other_titles"  v-if=" expandMe('sub_entry1-2_' + index)">
+                        <li class="list-group-item" :id="'sub_entry1-2_' + index" >{{other_title}}</li>
+                      </ul>
+
+
+      
                     </td>
+                    <!--<td>   
+                      <div class="accordion accordion-flush" id="accordionFlushExample2">
+                        <div class="accordion-item">
+                          <p class="accordion-header" id="flush-heading2-1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2-1" aria-expanded="false" aria-controls="flush-collapse2-1">
+   ...
+                            </button>
+                          </p>
+                          <div id="flush-collapse2-1" class="accordion-collapse collapse" aria-labelledby="flush-heading2-1" data-bs-parent="#accordionFlushExample2">
+                            <div class="accordion-body">
+                              <ul class="list-group list-group-flush " v-for="other_title in user.other_titles">
+                                <li class="list-group-item">{{other_title}}</li>
+                              </ul>
+                            </div>
+                        </div>
+                      
+                    </td> -->
                     <td>{{user.relative_title}}</td>
                     <td>{{user.relative_name}}</td>
                     <td>{{user.relative_relation}}</td>
@@ -189,8 +254,73 @@ app.component('notice-2', {
       </ul>
     </div>
   `,
-  computed: {},
-  methods: {},
+  computed: {
+ 
+
+  },
+  methods: {
+    expandMe(id){
+      if (this.expandList[id]==null)
+      {
+        this.expandList[id]==true
+      }
+      console.log("expandMe",id, this.expandList[id])
+      return this.expandList[id]
+  
+    },
+    expandTable(table,numCols){
+      tableNum=table.split("table")[1]
+
+
+
+      showing=true
+      if (this.showExpandedTable==-1){ this.showExpandedTable=1;showing=true}
+      else if (this.showExpandedTable==0){ this.showExpandedTable=1;showing=true}
+      else if (this.showExpandedTable==1){ this.showExpandedTable=0;showing=false}
+
+      if (this.showExpandedTable<=0)
+      {
+        // this.tableStyle.fontSize = '13px'
+        this.showExpandedTableButton ='展開'//+this.showExpandedTable
+      }
+      else
+      {
+        // this.tableStyle.fontSize = '13px'
+        this.showExpandedTableButton='收起'//+this.showExpandedTable
+
+      }
+
+      allSubEntries=document.querySelectorAll('[id^="sub_entry"]')
+
+      while (numCols>0)
+      {
+        prefix = tableNum+"-"+numCols
+        regex = new RegExp(`^sub_entry${prefix}`);
+        realindex=0
+        for (let index = 0; index < allSubEntries.length; index++) {
+          if (regex.test(allSubEntries[index].id)) { // or whatever attribute you want to search
+            this.expandList["sub_entry"+prefix+"_"+realindex]=showing
+            console.log('toggle:'+"sub_entry"+prefix+"_"+realindex,this.expandList["sub_entry"+prefix+"_"+realindex]);
+            realindex++
+          }
+        }
+        numCols-=1
+      }
+
+
+    }
+    ,
+    sub_entry_list_toggle(e){
+
+      id = e.target.id//.split("-")[0]
+      console.log(e, this.expandList[id],  this.expandList[id]==null)
+      this.expandList[id]=! this.expandList[id]
+      console.log(id,this.expandList[id])
+
+    }
+
+
+  },
   beforeMount() {}
 
 })
