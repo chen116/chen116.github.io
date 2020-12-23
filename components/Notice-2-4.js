@@ -14,6 +14,8 @@ app.component('notice-2-4', {
   <div class="content">
 
   <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>內部稽核 </h5>
+  <p><span>&nbsp;&nbsp;</span></p>  
+
   <h6>本公司設置隸屬於董事會之內部稽核單位，並依公司規模、業務情況、管理需要及其他有關法令之規定，配置適任及適當人數之專任內部稽核人員。</h6>
 
   <img class="rounded" src="./assets/images/IR-internal.gif"/>

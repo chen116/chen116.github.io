@@ -13,7 +13,7 @@ app.component('notice-2-5', {
       ],
       list2 : [
         {title:"溫室氣體資訊管理程序",href:"http://w3.taisol.com.tw/file/%E6%BA%AB%E5%AE%A4%E6%B0%A3%E9%AB%94%E8%B3%87%E8%A8%8A%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F.pdf"},
-      {title:"溫室氣體管理手冊",href:"http://w3.taisol.com.tw/file/%E6%BA%AB%E5%AE%A4%E6%B0%A3%E9%AB%94%E7%AE%A1%E7%90%86%E6%89%8B%E5%86%8A.pdf"},
+        {title:"溫室氣體管理手冊",href:"http://w3.taisol.com.tw/file/%E6%BA%AB%E5%AE%A4%E6%B0%A3%E9%AB%94%E7%AE%A1%E7%90%86%E6%89%8B%E5%86%8A.pdf"},
         {title:"溫室氣體報告管理程序",href:"http://w3.taisol.com.tw/file/%E6%BA%AB%E5%AE%A4%E6%B0%A3%E9%AB%94%E5%A0%B1%E5%91%8A%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F.pdf"}, 
         {title:"溫室氣體清單說明管理程序",href:"http://w3.taisol.com.tw/file/%E6%BA%AB%E5%AE%A4%E6%B0%A3%E9%AB%94%E6%B8%85%E5%96%AE%E8%AA%AA%E6%98%8E%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F.pdf"},
         {title:"溫室氣體內部查證程序",href:"http://w3.taisol.com.tw/file/%E6%BA%AB%E5%AE%A4%E6%B0%A3%E9%AB%94%E5%85%A7%E9%83%A8%E6%9F%A5%E8%AD%89%E7%A8%8B%E5%BA%8F.pdf"},
@@ -55,9 +55,10 @@ app.component('notice-2-5', {
   /*html*/
   `
   <div class="content">
-
-  <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>環境永續 </h5>
-
+  
+  <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span> 企業社會責任</h5>
+  <p><span>&nbsp;&nbsp;</span></p>  
+  <h6><b>環境永續:</b></h6>
   <ul class="list-group list-group-flush" >
       <li class="list-group-item" >
         <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span><b>ISO14001 環境管理體系</b> 
@@ -82,24 +83,34 @@ app.component('notice-2-5', {
       <li class="list-group-item" v-for="item in list1">
         <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>{{item}}
       </li>
-
-
-
-
-
-
   </ul>
   <p><span>&nbsp;&nbsp;</span></p>
 
   <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>相關作業辦法 </h5>
-  <ul class="list-group list-group-flush" >
-    <li class="list-group-item" v-for="item in list2">
+
+      
+  <div class="col-12 container" >
+  <ul class="list-unstyled row">
+    <li class="list-item list-unstyled  col-4 border-bottom py-2 " v-for="item in list2">
       <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>
-        <a :href="item.href" target="_blank">   
-          {{item.title}}<img class="rounded" src="./assets/images/investor04_7.jpg"/>
-        </a> 
+      <a :href="item.href" target="_blank">   
+        {{item.title}}<img class="rounded" src="./assets/images/investor04_7.jpg"/>
+      </a> 
     </li>
-  </ul>
+
+    </ul>
+  </div>
+
+  <!--  <ul class="list-group list-group-flush" >
+      <li class="list-group-item" v-for="item in list2">
+        <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>
+          <a :href="item.href" target="_blank">   
+            {{item.title}}<img class="rounded" src="./assets/images/investor04_7.jpg"/>
+          </a> 
+      </li>
+    </ul>  -->
+
+
 
   <p><span>&nbsp;&nbsp;</span></p>
   <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>公益關懷 </h5>
@@ -132,6 +143,7 @@ app.component('notice-2-5', {
         <img src="http://w3.taisol.com.tw/image/notice2-5/D.JPG" class="card-img-top" alt="...">
       </div>
     </div>
+
   </div>
 
   <p><span>&nbsp;&nbsp;</span></p>
@@ -153,7 +165,6 @@ app.component('notice-2-5', {
 
   </div>
 
-</div>
   
   
   </div>

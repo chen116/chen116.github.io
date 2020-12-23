@@ -41,7 +41,7 @@ app.component('notice-2-6', {
           content:[]
         },
         {
-          title:"六、本公司對於檢舉案件一經成立即指派專人進行調查。　　其相關紙本文件、電子檔案等，除提供予司法檢調等單位外，將由專責人員上鎖、加密，妥　　善保管之。",
+          title:"六、本公司對於檢舉案件一經成立即指派專人進行調查。　　其相關紙本文件、電子檔案等，除提供予司法檢調等單位外，將由專責人員上鎖、加密，妥善保管之。",
                     content:[]
         },
         {
@@ -71,6 +71,7 @@ app.component('notice-2-6', {
 
 
   <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>與利害關係人對話 </h5>
+  <p><span>&nbsp;&nbsp;</span></p>  
 
 <p>企業追求永續發展，必須瞭解利害關係人的想法。透明的溝通不僅會減少公司內部管理成本，亦是追求永續發展的重要參考。我們相信，開放、無障礙的溝通方式，更能充分瞭解利害關係人的需求。
   </p>
@@ -99,7 +100,6 @@ app.component('notice-2-6', {
           </ul>
         </td>
 
-    </td>
     </tr> 
     </tbody>
   </table>

@@ -29,13 +29,29 @@ app.component('notice-2-3', {
   `
   <div class="content">
   <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>規章 </h5>
-    <ul class="list-group " v-for="link in links">
+  <p><span>&nbsp;&nbsp;</span></p>  
+
+
+  <div class="col-12 container" >
+    <ul class="list-unstyled row">
+      <li class="list-item list-unstyled  col-4 border-bottom  py-2" v-for="link in links">
+        <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>
+        <a v-bind:href="link.href" target="_blank">   
+        {{link.title}} <img class="rounded" src="./assets/images/investor04_7.jpg"/>
+        </a> 
+      </li>
+
+    </ul>
+  </div>
+
+
+  <!--  <ul class="list-group " v-for="link in links">
       <li class="list-group-item" ><img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>
         <a v-bind:href="link.href" target="_blank"> {{link.title}} 
           <img class="rounded" src="./assets/images/investor04_7.jpg"/>
         </a>
       </li>
-    </ul>
+    </ul> -->
   </div>
   `,
   computed: {},

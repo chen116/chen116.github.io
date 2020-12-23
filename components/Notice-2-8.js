@@ -24,7 +24,7 @@ app.component('notice-2-8', {
   <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>客戶及供應商投訴中心 </h5>
   <p><span>&nbsp;&nbsp;</span></p>
 
-  <h6><b>違反從業道德行為舉報系統</b></h6>
+  <h6><b>違反從業道德行為舉報系統:</b></h6>
 
   <p>在泰碩電子股份有限公司，誠信正直是公司文化最重要之核心價值， 也是公司經營理念之首。泰碩公司一向承諾以誠信從事所有業務活動 ，絕不允許貪污及任何形式之舞弊行為。
   </p>

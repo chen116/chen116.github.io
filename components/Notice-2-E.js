@@ -22,9 +22,11 @@ app.component('notice-2-E', {
   /*html*/
   `
   <div class="content">
-    <h5 class="content-p">
-      <img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span> Company's Directors and supervisors are composed of 2 female and 7 male with professional experiences and qualification in marketing planning, operation management, industry knowledge and financial accounting, who respectively involve in various industries including electronic components and appliances, industrial rubber, banking, electro-optical, glass and ceramics, communication network, cement, securities, telecommunications etc.
-    </h5>
+    <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>董事會(Board of Director) </h5>
+    <p><span>&nbsp;&nbsp;</span></p>
+    <h5 class="content-p"><b>
+     Company's Directors and supervisors are composed of 2 female and 7 male with professional experiences and qualification in marketing planning, operation management, industry knowledge and financial accounting, who respectively involve in various industries including electronic components and appliances, industrial rubber, banking, electro-optical, glass and ceramics, communication network, cement, securities, telecommunications etc.
+    </b></h5>
     <div class="accordion " id="accordionFlushExample">
       <div class="accordion-item">
         <h2 class="accordion-header " id="flush-headingOne">

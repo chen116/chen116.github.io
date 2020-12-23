@@ -269,6 +269,8 @@ app.component('notice-2-1', {
     /*html*/
     `
     <div class="content">
+        <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>薪酬委員會 </h5>
+        <p><span>&nbsp;&nbsp;</span></p>
         <div class="accordion " id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header " id="flush-headingOne">

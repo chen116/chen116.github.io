@@ -25,12 +25,15 @@ app.component('notice-2-7', {
   /*html*/
   `
   <div class="content">
-  <p>泰碩公司重視企業社會責任，已要求採購「非衝突(conflict-free)」的原物料; 提倡人道精神與實踐人性尊嚴的社會道德準則，是泰碩公司理應善盡的企業社會責任。目前係以符合經濟合作暨發展組織(OECD)於 2011 年所發布之「受衝突影響與高風險地區之全球責任礦物供應鏈模範政策(Model Supply Chain Policy for a Responsible Global Supply Chain of Mineral from Conflict-Affected and High Risk Areas)」的盡職調查(due diligence)架構為依據。
-</p>
- <p> 泰碩公司鼓勵供應商向經特定產業組織(如 EICC 等)所認可為非衝突之原物料供應廠商進行採購，並要求供應商積極督促尚未取得此認可的供應廠商接受 EICC 或其他同等之獨立第三方稽核計劃檢驗，以符合「非衝突」之原則。
-  </p>
- <p> 透過供應商管理，將對環保的理念向外延伸推廣，促使供應商夥伴也能共同關心環保議題，共同提升更美好的環境與社會。 
-</p>
+
+    <h5 style="color:blue;"><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>供應商管理 </h5>
+    <p><span>&nbsp;&nbsp;</span></p>  
+    <p>泰碩公司重視企業社會責任，已要求採購「非衝突(conflict-free)」的原物料; 提倡人道精神與實踐人性尊嚴的社會道德準則，是泰碩公司理應善盡的企業社會責任。目前係以符合經濟合作暨發展組織(OECD)於 2011 年所發布之「受衝突影響與高風險地區之全球責任礦物供應鏈模範政策(Model Supply Chain Policy for a Responsible Global Supply Chain of Mineral from Conflict-Affected and High Risk Areas)」的盡職調查(due diligence)架構為依據。
+    </p>
+    <p> 泰碩公司鼓勵供應商向經特定產業組織(如 EICC 等)所認可為非衝突之原物料供應廠商進行採購，並要求供應商積極督促尚未取得此認可的供應廠商接受 EICC 或其他同等之獨立第三方稽核計劃檢驗，以符合「非衝突」之原則。
+    </p>
+    <p> 透過供應商管理，將對環保的理念向外延伸推廣，促使供應商夥伴也能共同關心環保議題，共同提升更美好的環境與社會。 
+    </p>
 
 <p><span>&nbsp;&nbsp;</span></p>
 
