@@ -155,10 +155,10 @@ app.component('notice-2-9', {
 
   <div class="row justify-content-md-center">
     <div class="col">
-      <img src="http://w3.taisol.com.tw/image/Notice2-9A.JPG" class="card-img-top" alt="...">
+      <img src="http://w3.taisol.com.tw/image/Notice2-9A.JPG" class="card-img-top rounded" alt="...">
     </div>
     <div class="col">
-      <img src="http://w3.taisol.com.tw/image/Notice2-9B.JPG" class="card-img-top" alt="...">
+      <img src="http://w3.taisol.com.tw/image/Notice2-9B.JPG" class="card-img-top rounded" alt="...">
     </div>
   </div>
 
@@ -177,7 +177,7 @@ app.component('notice-2-9', {
   </ul>
   <div class="row justify-content-md-center">
     <div class="col-md-auto">
-      <img src="http://w3.taisol.com.tw/important/notice-2-9.jpg" class="card-img-top" alt="...">
+      <img src="http://w3.taisol.com.tw/important/notice-2-9.jpg" class="card-img-top rounded" alt="...">
     </div>
   </div>
   <p><b>亞洲科技大樓108年消防及安全檢測計畫：</b></p>
