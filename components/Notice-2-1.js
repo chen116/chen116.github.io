@@ -215,15 +215,14 @@ app.component('notice-2-1', {
 
 
         table1 : [
-          {"title": "2-1title","name":"2-1a","pro_exp1":"b","pro_exp2":"c","pro_exp3":"d","fit_item1":"1","fit_item2":"2","fit_item3":"3","fit_item4":"4","fit_item5":"5","fit_item6":"6","fit_item7":"7","fit_item8":"8","fit_item9":"9","fit_item10":"10","num_company":"z","note":"qq"},
-          {"title": "2-1title","name":"a","pro_exp1":"b","pro_exp2":"c","pro_exp3":"d","fit_item1":"1","fit_item2":"2","fit_item3":"3","fit_item4":"4","fit_item5":"5","fit_item6":"6","fit_item7":"7","fit_item8":"8","fit_item9":"9","fit_item10":"10","num_company":"z","note":"qq"},
-          {"title": "2-1title","name":"a","pro_exp1":"b","pro_exp2":"c","pro_exp3":"d","fit_item1":"1","fit_item2":"2","fit_item3":"3","fit_item4":"4","fit_item5":"5","fit_item6":"6","fit_item7":"7","fit_item8":"8","fit_item9":"9","fit_item10":"10","num_company":"z","note":"qq"},
-          {"title": "2-1title","name":"a","pro_exp1":"b","pro_exp2":"c","pro_exp3":"d","fit_item1":"1","fit_item2":"2","fit_item3":"3","fit_item4":"4","fit_item5":"5","fit_item6":"6","fit_item7":"7","fit_item8":"8","fit_item9":"9","fit_item10":"10","num_company":"z","note":"qq"}
+          {"title": "召集人/獨立董事","name":"張文添","pro_exp1":"✔","pro_exp2":"-","pro_exp3":"✔","fit_item1":"✔","fit_item2":"✔","fit_item3":"✔","fit_item4":"✔","fit_item5":"✔","fit_item6":"✔","fit_item7":"✔","fit_item8":"✔","fit_item9":"✔","fit_item10":"✔","num_company":"-","note":""},
+          {"title": "委  員/獨立董事","name":"曾天運","pro_exp1":"-","pro_exp2":"✔","pro_exp3":"✔","fit_item1":"✔","fit_item2":"✔","fit_item3":"✔","fit_item4":"✔","fit_item5":"✔","fit_item6":"✔","fit_item7":"✔","fit_item8":"✔","fit_item9":"✔","fit_item10":"✔","num_company":"-","note":""},
+          {"title": "委  員/獨立董事","name":"陳志弘","pro_exp1":"-","pro_exp2":"-","pro_exp3":"✔","fit_item1":"✔","fit_item2":"✔","fit_item3":"✔","fit_item4":"✔","fit_item5":"✔","fit_item6":"✔","fit_item7":"✔","fit_item8":"✔","fit_item9":"✔","fit_item10":"✔","num_company":"-","note":""},
         ],
         table2 : [
-            {"title": "2-1title","name":"2-1a","real_show":"b","asked_show":"aa","real_show_per":"SS", "note": "ss" },
-            {"title": "2-1title","name":"2-1a","real_show":"b","asked_show":"aa","real_show_per":"SS", "note": "ss" },
-            {"title": "2-1title","name":"2-1a","real_show":"b","asked_show":"aa","real_show_per":"SS", "note": "ss" },
+            {"title": "召集委員","name":"張文添","real_show":"5","asked_show":"","real_show_per":"100.00%", "note": "107.6.19連任。" },
+            {"title": "委員","name":" 曾天運","real_show":"5","asked_show":"","real_show_per":"100.00%", "note": "107.6.19連任。" },
+            {"title": "委員","name":"陳志弘","real_show":"5","asked_show":"","real_show_per":"100.00%", "note": "107.6.19連任。" },
           ],
 
         meetings : [

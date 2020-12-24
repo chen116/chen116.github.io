@@ -5,10 +5,25 @@ app.component('notice-2-6', {
 
 
       table1:[
-          {person: "sss", topic:"sqqs", job:"qqq",results:[{txt:"eeew",href:"http://www.taisol.com.tw/news?lang=zh"}]},
-          {person: "sss", topic:"sqqs", job:"qqq",results:[{txt:"eeew",href:"http://w3.taisol.com.tw/important/notice-2-9.html"}]},
-          {person: "sss", topic:"sqqs", job:"qqq",results:[]},
-          {person: "sss", topic:"sqqs", job:"qqq",results:[{txt:"eeew",href:"http://w3.taisol.com.tw/important/notice-2-5.html"}, {txt:"eeew2",href:"http://w3.taisol.com.tw/important/EMS-ARES-ISO14001.pdf"} ]},
+          {person: "投資人", topics:["獲利情形","風險管理"], jobs:["本公司定期召開股東常會，所有管理階層也均會全程參與，詳細報告及回覆投資人所關切的議題。我們也在網頁設置與投資人關係的專區，增加公司營運的透明度。通暢的溝通管道使我們能有效管理風險，資訊的透明亦可讓投資人得以明智決策。"],results:[{txt:"最新消息",href:"http://www.taisol.com.tw/news?lang=zh"}]},
+          {person: "員工", topics:[
+            "工作環境",
+            "薪資福利",
+            "晉升遷調"
+          ]
+          , jobs:["我們希望所有同仁都能感受到自己的聲音被傾聽、被重視。為此，我們特別建立了一套無障礙的員工發聲系統和程序，提供專人處理的電話線和信箱，讓員工的意見直達最高管理階層。"],results:[{txt:"員工福利、工作環境與人身安全",href:"index.html?notice-2-9"}]},
+          {person: "客戶", topics:["產品品質"], jobs:[
+            "本公司積極要求業務單位必須與客戶保持密切聯繫，即時告知客戶應有的權益，並確保產品達到預期的可靠性與品質。我們也致力於提供客戶綠色產品，並與原物料供應商簽署限用物質承諾保證書、不使用衝突礦產，提供客戶符合歐盟ROHS規範的產品。",
+            "本公司除了已建立完整的客訴管理系統，另於網頁中提供讓客戶直接溝通的管道，凡客戶投訴的案件，皆由本公司副總經理直接處理。",
+          ]
+          ,results:[]},
+          {person: "供應商", topics:["採購條件","誠信經營"], jobs:["本公司嚴格落實誠信經營，採購單位每年檢討實際交易情形後，與供應商協調次年度之合約內容。並要求採購單位不得收受廠商以各種型式提供之不正當利益。","本公司已於網頁中提供供應商直接溝通的管道，對供應商投訴的案件，皆由本公司副總經理直接處理。"],results:[]},
+          
+          {person: "社會", topics:["環境保護","社會公益"], jobs:["本公司已通過ISO14001環境管理系統，並依ISO14064訂有多項作業辦法，積極推動對空氣、噪音、水資源等汙染防治管理及提高對溫室氣體管理之標準。","本公司於大學中設置獎助學金，給予品學兼優的年輕學子最實質的鼓勵。"],results:[{txt:"社會責任",href:"index.html?notice-2-5"}, {txt:"ISO14001證書",href:"http://w3.taisol.com.tw/important/EMS-ARES-ISO14001.pdf"} ]},
+          
+          
+       
+          
       ],
 
       list1:[
@@ -46,7 +61,7 @@ app.component('notice-2-6', {
         },
         {
           title:"七、作業流程：",
-          content:["受理窗口→董事長／總經理→管理部／稽核室→董事／監察人。" ,  "管理部／稽核室→委任律師／司法及檢調等單位 。 "]
+          content:["(1)受理窗口→董事長／總經理→管理部／稽核室→董事／監察人。" ,  "(2)管理部／稽核室→委任律師／司法及檢調等單位 。 "]
         }
 
       ],
@@ -80,22 +95,37 @@ app.component('notice-2-6', {
   <table  class="table table-bordered table-hover">
     <thead>
     <tr>
-        <th rowspan="1">利害關係人</th>
-        <th rowspan="1">關切的議題</th>
-        <th rowspan="1">我們的責任</th>
+        <th rowspan="1" >利害關係人</th>
+        <th rowspan="1" >關切的議題</th>
+        <th rowspan="1" style="width: 50%">我們的責任</th>
         <th rowspan="1">我們的努力</th>
     </tr>
 
     </thead>
     <tbody>
     <tr v-for="row in table1">
-        <td> {{row.person}}</td>
-        <td> {{row.topic}}</td>
-        <td> {{row.job}}</td>
+        <td> <b>{{row.person}}</b></td>
+        <td> 
+          <ul class="list-group list-group-flush" v-for="topic in row.topics">
+            <li class="list-group-item list-group-flush" >
+              {{topic}}
+            </li>
+          </ul>
+        
+        </td>
+        <td> 
+          <ul class="list-group list-group-flush" v-for="job in row.jobs">
+            <li class="list-group-item list-group-flush" >
+              {{job}}
+            </li>
+          </ul>
+        
+        
+        </td>
         <td> 
           <ul class="list-group list-group-flush" v-for="result in row.results">
             <li class="list-group-item list-group-flush" >
-              <a :href="result.href" >{{result.txt}} </a>
+              <a :href="result.href" >{{result.txt}} <img class="rounded" src="./assets/images/investor04_7.jpg"/></a>
             </li>
           </ul>
         </td>

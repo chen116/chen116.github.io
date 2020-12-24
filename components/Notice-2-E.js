@@ -59,16 +59,16 @@ app.component('notice-2-E', {
 
       ],
       table2 : [
-        {name:"Ching-Sung,Yu",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:" ",fit_item3:" ",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
-        {name:"Jaan-Lieh, Lin",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:" ",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"1"},
-        {name:"Chun-Hsin,Liang",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:" ",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
-      {name:"Kingo,Ashihara",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:" ",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:" ",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
-        {name:"Wen-Tien, Chang",pro_exp1:"-",pro_exp2:"v",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"1"},
-        {name:"Tien-Yun, Tseng",pro_exp1:"v",pro_exp2:"-",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
-        {name:"Chih-Hung, Chen",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
-        {name:"Chun-san, Hsieh",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:" ",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
-        {name:"Cien-Ya, Lin",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:"v",fit_item3:" ",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
-        {name:"Ming-Chun, Chang",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
+        {name:"Ching-Sung,Yu",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+        {name:"Jaan-Lieh, Lin",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"1"},
+        {name:"Chun-Hsin,Liang",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+      {name:"Kingo,Ashihara",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:" ",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+        {name:"Wen-Tien, Chang",pro_exp1:"-",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"1"},
+        {name:"Tien-Yun, Tseng",pro_exp1:"✔",pro_exp2:"-",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+        {name:"Chih-Hung, Chen",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+        {name:"Chun-san, Hsieh",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+        {name:"Cien-Ya, Lin",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:"✔",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+        {name:"Ming-Chun, Chang",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
       ],
       tableStyle:
       {
@@ -101,107 +101,110 @@ app.component('notice-2-E', {
           </button>
         </h2>
         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body"  style=" overflow: scroll;">
-          <button style="float: left;" v-on:click="expandTable('table1',2)" class="btn btn-secondary" type="button" >
-          {{ showExpandedTableButton }}
-          </button> 
-            <!-- https://css-tricks.com/complete-guide-table-element/ -->
-            <table  class="table table-bordered table-hover">
-              <thead :style="tableStyle">
-                <tr>
-                  <th rowspan="2">Title (Note1) </th>
-                  <th rowspan="2">Nationality or Place of registration</th>
-                  <th rowspan="2">Name</th>
-                  <th rowspan="2">Gender</th>
-                  <th rowspan="2">Date Elected</th>
-                  <th rowspan="2">Term</th>
-                  <th rowspan="2">Date First Elected (Note2)</th>
-                
-                  <th colspan="2">Shares Held When Elected</th>
-                  <th colspan="2">Shares Currently Held</th>
-                  <th colspan="2">Shares held by spouse and underage children Current shareholding</th>
-                  <th colspan="2">Shares held by proxy</th>
-                  <th rowspan="2">Major career (academic) achievements (Note3)</th>
-
-                  <th rowspan="2">Selected Current Position sheldcon currently in the company and/or anyother companies</th>
-                  <th colspan="3">Spouse or relatives of second degree or closer acting as Directors, Supervisors, or department heads</th>
-                  </tr>
-
-                  <tr>
-                  <th>Shares</th>
-                  <th>%</th>
-                  <th>Shares</th>
-                  <th>%</th>                
-                  <th>Shares</th>
-                  <th>%</th>                
-                  <th>Shares</th>
-                  <th>%</th>
-                  <th>Title</th>
-                  <th>Name</th>
-                  <th>Relationship</th>
-                  </tr>
-                </thead>
-              
-              
-              <tbody v-bind:style="tableStyle">
-                <tr v-for="(user,index)  in table1" :key="user.name">
-                  <!--<td v-for="key in Object.keys(user)">{{ user[key] }}</td>-->
-                  <td>{{user.title}}</td>
-                  <td>{{user.from}}</td>
-                  <td>{{user.name}}</td>
-                  <td>{{user.sex}}</td>
-                  <td>{{user.start_date}}</td>
-                  <td>{{user.duration}}</td>
-                  <td>{{user.first_start_date}}</td>
-                  <td>{{user.stock1}}</td>
-                  <td>{{user.stock_per1}}</td>
-                  <td>{{user.stock2}}</td>
-                  <td>{{user.stock_per2}}</td>
-                  <td>{{user.stock3}}</td>
-                  <td>{{user.stock_per3}}</td>
-                  <td>{{user.stock4}}</td>
-                  <td>{{user.stock_per4}}</td>
-                  <td>  
-                    <span style="font-size: 13px;" v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">{{user.exps[0]}}...</span>
-                    <button class="btn-group-lg btn-light dropdown-toggle borderless" style="padding: none;first-line :13px" :id="'sub_entry1-1_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">
+          <div class="accordion-body" >
+            <div  style=" overflow: scroll;">
+              <button style="float: left;" v-on:click="expandTable('table1',2)" class="btn btn-secondary" type="button" >
+              {{ showExpandedTableButton }}
+              </button> 
+                <!-- https://css-tricks.com/complete-guide-table-element/ -->
+                <table  class="table table-bordered table-hover">
+                  <thead :style="tableStyle">
+                    <tr>
+                      <th rowspan="2">Title (Note1) </th>
+                      <th rowspan="2">Nationality or Place of registration</th>
+                      <th rowspan="2">Name</th>
+                      <th rowspan="2">Gender</th>
+                      <th rowspan="2">Date Elected</th>
+                      <th rowspan="2">Term</th>
+                      <th rowspan="2">Date First Elected (Note2)</th>
                     
-                    </button> 
-                    <ul class="list-group list-group-flush"  v-for="exp in user.exps"  v-if=" user.exps.length<2" >
-                      <li  class="list-group-item">{{exp}}</li>
-                      </ul>
-                      <ul class="list-group list-group-flush"   v-on:click="sub_entry_list_toggle" v-for="exp in user.exps"  v-if=" expandMe('sub_entry1-1_' + index)">
-                        <li class="list-group-item" :id="'sub_entry1-1_' + index" >{{exp}}</li>
-                      </ul>
-                        <!--<ul class="list-group list-group-flush " v-for="exp in user.exps">
-                          <li class="list-group-item">{{exp}}</li>
+                      <th colspan="2">Shares Held When Elected</th>
+                      <th colspan="2">Shares Currently Held</th>
+                      <th colspan="2">Shares held by spouse and underage children Current shareholding</th>
+                      <th colspan="2">Shares held by proxy</th>
+                      <th rowspan="2">Major career (academic) achievements (Note3)</th>
+
+                      <th rowspan="2">Selected Current Position sheldcon currently in the company and/or anyother companies</th>
+                      <th colspan="3">Spouse or relatives of second degree or closer acting as Directors, Supervisors, or department heads</th>
+                      </tr>
+
+                      <tr>
+                      <th>Shares</th>
+                      <th>%</th>
+                      <th>Shares</th>
+                      <th>%</th>                
+                      <th>Shares</th>
+                      <th>%</th>                
+                      <th>Shares</th>
+                      <th>%</th>
+                      <th>Title</th>
+                      <th>Name</th>
+                      <th>Relationship</th>
+                      </tr>
+                    </thead>
+                  
+                  
+                  <tbody v-bind:style="tableStyle">
+                    <tr v-for="(user,index)  in table1" :key="user.name">
+                      <!--<td v-for="key in Object.keys(user)">{{ user[key] }}</td>-->
+                      <td>{{user.title}}</td>
+                      <td>{{user.from}}</td>
+                      <td>{{user.name}}</td>
+                      <td>{{user.sex}}</td>
+                      <td>{{user.start_date}}</td>
+                      <td>{{user.duration}}</td>
+                      <td>{{user.first_start_date}}</td>
+                      <td>{{user.stock1}}</td>
+                      <td>{{user.stock_per1}}</td>
+                      <td>{{user.stock2}}</td>
+                      <td>{{user.stock_per2}}</td>
+                      <td>{{user.stock3}}</td>
+                      <td>{{user.stock_per3}}</td>
+                      <td>{{user.stock4}}</td>
+                      <td>{{user.stock_per4}}</td>
+                      <td>  
+                        <span style="font-size: 13px;" v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">{{user.exps[0]}}...</span>
+                        <button class="btn-group-lg btn-light dropdown-toggle borderless" style="padding: none;first-line :13px" :id="'sub_entry1-1_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">
+                        
+                        </button> 
+                        <ul class="list-group list-group-flush"  v-for="exp in user.exps"  v-if=" user.exps.length<2" >
+                          <li  class="list-group-item">{{exp}}</li>
+                          </ul>
+                          <ul class="list-group list-group-flush"   v-on:click="sub_entry_list_toggle" v-for="exp in user.exps"  v-if=" expandMe('sub_entry1-1_' + index)">
+                            <li class="list-group-item" :id="'sub_entry1-1_' + index" >{{exp}}</li>
+                          </ul>
+                            <!--<ul class="list-group list-group-flush " v-for="exp in user.exps">
+                              <li class="list-group-item">{{exp}}</li>
+                            </ul>-->
+                          </td>
+                      <td>   
+
+
+
+                        <span style="font-size: 13px;" v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">{{user.other_titles[0]}}...</span>
+                        <button class="btn-group-lg btn-light dropdown-toggle borderless" style="padding: none;first-line :13px" :id="'sub_entry1-2_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">
+                        
+                        </button>
+
+
+                        <ul class="list-group list-group-flush"  v-for="other_title in user.other_titles"  v-if=" user.other_titles.length<2">
+                          <li class="list-group-item">{{other_title}}</li>
+                        </ul>
+                        <ul class="list-group list-group-flush"   v-on:click="sub_entry_list_toggle" v-for="other_title in user.other_titles"  v-if=" expandMe('sub_entry1-2_' + index)">
+                          <li class="list-group-item" :id="'sub_entry1-2_' + index" >{{other_title}}</li>
+                        </ul>
+                        <!--<ul class="list-group list-group-flush " v-for="other_title in user.other_titles">
+                          <li class="list-group-item">{{other_title}}</li>
                         </ul>-->
                       </td>
-                  <td>   
-
-
-
-                    <span style="font-size: 13px;" v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">{{user.other_titles[0]}}...</span>
-                    <button class="btn-group-lg btn-light dropdown-toggle borderless" style="padding: none;first-line :13px" :id="'sub_entry1-2_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">
-                    
-                    </button>
-
-
-                    <ul class="list-group list-group-flush"  v-for="other_title in user.other_titles"  v-if=" user.other_titles.length<2">
-                      <li class="list-group-item">{{other_title}}</li>
-                    </ul>
-                    <ul class="list-group list-group-flush"   v-on:click="sub_entry_list_toggle" v-for="other_title in user.other_titles"  v-if=" expandMe('sub_entry1-2_' + index)">
-                      <li class="list-group-item" :id="'sub_entry1-2_' + index" >{{other_title}}</li>
-                    </ul>
-                    <!--<ul class="list-group list-group-flush " v-for="other_title in user.other_titles">
-                      <li class="list-group-item">{{other_title}}</li>
-                    </ul>-->
-                  </td>
-                  <td>{{user.relative_title}}</td>
-                  <td>{{user.relative_name}}</td>
-                  <td>{{user.relative_relation}}</td>
-                </tr> 
-              </tbody>
-            </table>
+                      <td>{{user.relative_title}}</td>
+                      <td>{{user.relative_name}}</td>
+                      <td>{{user.relative_relation}}</td>
+                    </tr> 
+                  </tbody>
+                </table>
+              </div>
+              <p><span>&nbsp;&nbsp;</span></p>
 
             <h6><b> Note: </b></h6>
             <ul class="list-group list-group-flush ">

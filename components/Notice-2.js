@@ -19,16 +19,16 @@ app.component('notice-2', {
 
 
         
-        {name:"余清松",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:" ",fit_item3:" ",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"無"},
-        {name:"林展列",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:" ",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"1"},
-        {name:"梁竣興",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:" ",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"無"},
-      {name:"蘆原錦吾",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:" ",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:" ",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"無"},
-        {name:"張文添",pro_exp1:"-",pro_exp2:"v",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"1"},
-        {name:"曾天運",pro_exp1:"v",pro_exp2:"-",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"無"},
-        {name:"陳志弘",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"無"},
-        {name:"謝君山",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:" ",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"無"},
-        {name:"林千雅",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:"v",fit_item3:" ",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"無"},
-        {name:"張敏君",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"無"},
+        {name:"余清松",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+        {name:"林展列",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"1"},
+        {name:"梁竣興",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+      {name:"蘆原錦吾",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:" ",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+        {name:"張文添",pro_exp1:"-",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"1"},
+        {name:"曾天運",pro_exp1:"✔",pro_exp2:"-",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+        {name:"陳志弘",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+        {name:"謝君山",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+        {name:"林千雅",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:"✔",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+        {name:"張敏君",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
       ]
       ,
       tableStyle:
@@ -64,134 +64,140 @@ app.component('notice-2', {
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body"  style=" overflow: scroll;">
-            <button style="float: left;" v-on:click="expandTable('table1',2)" class="btn btn-secondary" type="button" >
-            {{ showExpandedTableButton }}
-            </button> 
-              <table  class="table table-bordered table-hover"  ><!-- https://css-tricks.com/complete-guide-table-element/ -->
-                <thead :style="tableStyle">
-                  <tr>
-                    <th rowspan="2" style="width: 1%">職稱（註一）</th>
-                    <th rowspan="2" style="width: 3%">國籍或註冊地</th>
-                    <th rowspan="2" style="">姓名</th>
-                    <th rowspan="2" style="">性別</th>
-                    <th rowspan="2" style="width: 1%">選(就)任日期</th>
-                    <th rowspan="2" style="width: 1%">任期</th>
-                    <th rowspan="2" style="width: 1%">初次選任日期（註二）</th>
-                    <th colspan="2" style="width: 5%">選任時持有股份</th>
-                    <th colspan="2" style="width: 5%">現在持有股份</th>
-                    <th colspan="2" style="width: 5%">配偶,未成年子女現在持有股份</th>
-                    <th colspan="2" style="width: 5%">利用他人名義持有股份</th>
-                    <th rowspan="2" style="">主要經（學）歷（註三）</th>
-                    <th rowspan="2" style="">目前兼任本公司及其他公司之職務
+            <div class="accordion-body" >
+            <div   style=" overflow: scroll;">
 
-                    </th>
-                    <th colspan="3" style="width: 10%">具配偶或二親等以內關係之其他主管,董事或監察人</th>
-                  </tr>
-                  <tr>
-                  <th>股數</th>
+              <button style="float: left;" v-on:click="expandTable('table1',2)" class="btn btn-secondary" type="button" >
+              {{ showExpandedTableButton }}
+              </button> 
+                <table  class="table table-bordered table-hover"  ><!-- https://css-tricks.com/complete-guide-table-element/ -->
+                  <thead :style="tableStyle">
+                    <tr>
+                      <th rowspan="2" style="width: 1%">職稱（註一）</th>
+                      <th rowspan="2" style="width: 3%">國籍或註冊地</th>
+                      <th rowspan="2" style="">姓名</th>
+                      <th rowspan="2" style="">性別</th>
+                      <th rowspan="2" style="width: 1%">選(就)任日期</th>
+                      <th rowspan="2" style="width: 1%">任期</th>
+                      <th rowspan="2" style="width: 1%">初次選任日期（註二）</th>
+                      <th colspan="2" style="width: 5%">選任時持有股份</th>
+                      <th colspan="2" style="width: 5%">現在持有股份</th>
+                      <th colspan="2" style="width: 5%">配偶,未成年子女現在持有股份</th>
+                      <th colspan="2" style="width: 5%">利用他人名義持有股份</th>
+                      <th rowspan="2" style="">主要經（學）歷（註三）</th>
+                      <th rowspan="2" style="">目前兼任本公司及其他公司之職務
 
-                    <th>持股比率(%)</th>
+                      </th>
+                      <th colspan="3" style="width: 10%">具配偶或二親等以內關係之其他主管,董事或監察人</th>
+                    </tr>
+                    <tr>
                     <th>股數</th>
-                    <th>持股比率(%)</th>
-                    <th>股數</th>
-                    <th>持股比率(%)</th>
-                    <th>股數</th>
-                    <th>持股比率(%)</th>
-                    <th>職稱</th>
-                    <th>姓名</th>
-                    <th>關係</th>
-                  </tr>
-                </thead>
-                <tbody v-bind:style="tableStyle">
-                  <tr v-for="(user,index) in table1" :key="user.name">
-                    <!--<td v-for="key in Object.keys(user)">{{ user[key] }}</td>-->
-                    <td>{{user.title}}</td>
-                    <td>{{user.from}}</td>
-                    <td>{{user.name}}</td>
-                    <td>{{user.sex}}</td>
-                    <td>{{user.start_date}}</td>
-                    <td>{{user.duration}}</td>
-                    <td>{{user.first_start_date}}</td>
-                    <td>{{user.stock1}}</td>
-                    <td>{{user.stock_per1}}</td>
-                    <td>{{user.stock2}}</td>
-                    <td>{{user.stock_per2}}</td>
-                    <td>{{user.stock3}}</td>
-                    <td>{{user.stock_per3}}</td>
-                    <td>{{user.stock4}}</td>
-                    <td>{{user.stock_per4}}</td>
-                    <td>   
+
+                      <th>持股比率(%)</th>
+                      <th>股數</th>
+                      <th>持股比率(%)</th>
+                      <th>股數</th>
+                      <th>持股比率(%)</th>
+                      <th>股數</th>
+                      <th>持股比率(%)</th>
+                      <th>職稱</th>
+                      <th>姓名</th>
+                      <th>關係</th>
+                    </tr>
+                  </thead>
+                  <tbody v-bind:style="tableStyle">
+                    <tr v-for="(user,index) in table1" :key="user.name">
+                      <!--<td v-for="key in Object.keys(user)">{{ user[key] }}</td>-->
+                      <td>{{user.title}}</td>
+                      <td>{{user.from}}</td>
+                      <td>{{user.name}}</td>
+                      <td>{{user.sex}}</td>
+                      <td>{{user.start_date}}</td>
+                      <td>{{user.duration}}</td>
+                      <td>{{user.first_start_date}}</td>
+                      <td>{{user.stock1}}</td>
+                      <td>{{user.stock_per1}}</td>
+                      <td>{{user.stock2}}</td>
+                      <td>{{user.stock_per2}}</td>
+                      <td>{{user.stock3}}</td>
+                      <td>{{user.stock_per3}}</td>
+                      <td>{{user.stock4}}</td>
+                      <td>{{user.stock_per4}}</td>
+                      <td>   
+          
+                      <!--<button class="accordion-button collapsed " style="padding: none;" :id="'sub_entry1-1_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">
+                      <p :style="tableStyle">{{user.exps[0]}}...</p>
+                        </button>
+                      -->
+                      <span style="font-size: 13px;" v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">{{user.exps[0]}}...</span>
+                      <button class="btn-group-lg btn-light dropdown-toggle borderless" style="padding: none;first-line :13px" :id="'sub_entry1-1_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">
+                      
+                        </button>
+
+                        <!--<div v-bind:style="tableStyle" :id="'sub_entry1-1_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">
+                        {{user.exps[0]}}...<img style="z-index: -999;" class="rounded" src="./assets/images/menu01.jpg"/></div> -->
+                        <ul class="list-group list-group-flush"  v-for="exp in user.exps"  v-if=" user.exps.length<2" >
+                          <li  class="list-group-item">{{exp}}</li>
+                        </ul>
+                        <ul class="list-group list-group-flush"   v-on:click="sub_entry_list_toggle" v-for="exp in user.exps"  v-if=" expandMe('sub_entry1-1_' + index)">
+                          <li class="list-group-item" :id="'sub_entry1-1_' + index" >{{exp}}</li>
+                        </ul>
+                        <!--<ul class="list-group list-group-flush " v-for="exp in user.exps">
+                          <li class="list-group-item">{{exp}}</li>
+                        </ul>-->
+
+
+                      </td>
+                      <td>
+                        <!--<button class="accordion-button collapsed " :id="'sub_entry1-2_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">
+                        <p :style="tableStyle">{{user.other_titles[0]}}...</p>
+                        </button>-->
+
+                        <span style="font-size: 13px;" v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">{{user.other_titles[0]}}...</span>
+                        <button class="btn-group-lg btn-light dropdown-toggle borderless" style="padding: none;first-line :13px" :id="'sub_entry1-2_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">
+                        
+                        </button>
+
+
+                        <!--<p v-bind:style="tableStyle" :id="'sub_entry1-2_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">
+                        {{user.other_titles[0]}}...<img class="rounded" src="./assets/images/menu01.jpg"/></p> -->
+                        <ul class="list-group list-group-flush"  v-for="other_title in user.other_titles"  v-if=" user.other_titles.length<2">
+                          <li class="list-group-item">{{other_title}}</li>
+                        </ul>
+                        <ul class="list-group list-group-flush"   v-on:click="sub_entry_list_toggle" v-for="other_title in user.other_titles"  v-if=" expandMe('sub_entry1-2_' + index)">
+                          <li class="list-group-item" :id="'sub_entry1-2_' + index" >{{other_title}}</li>
+                        </ul>
+
+
         
-                     <!--<button class="accordion-button collapsed " style="padding: none;" :id="'sub_entry1-1_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">
-                     <p :style="tableStyle">{{user.exps[0]}}...</p>
-                      </button>
-                     -->
-                     <span style="font-size: 13px;" v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">{{user.exps[0]}}...</span>
-                     <button class="btn-group-lg btn-light dropdown-toggle borderless" style="padding: none;first-line :13px" :id="'sub_entry1-1_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">
-                     
-                      </button>
+                      </td>
+                      <!--<td>   
+                        <div class="accordion accordion-flush" id="accordionFlushExample2">
+                          <div class="accordion-item">
+                            <p class="accordion-header" id="flush-heading2-1">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2-1" aria-expanded="false" aria-controls="flush-collapse2-1">
+    ...
+                              </button>
+                            </p>
+                            <div id="flush-collapse2-1" class="accordion-collapse collapse" aria-labelledby="flush-heading2-1" data-bs-parent="#accordionFlushExample2">
+                              <div class="accordion-body">
+                                <ul class="list-group list-group-flush " v-for="other_title in user.other_titles">
+                                  <li class="list-group-item">{{other_title}}</li>
+                                </ul>
+                              </div>
+                          </div>
+                        
+                      </td> -->
+                      <td>{{user.relative_title}}</td>
+                      <td>{{user.relative_name}}</td>
+                      <td>{{user.relative_relation}}</td>
+                    </tr> 
+                  </tbody>
+                </table>
+              
+              </div>
+              <p><span>&nbsp;&nbsp;</span></p>
 
-                      <!--<div v-bind:style="tableStyle" :id="'sub_entry1-1_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">
-                      {{user.exps[0]}}...<img style="z-index: -999;" class="rounded" src="./assets/images/menu01.jpg"/></div> -->
-                      <ul class="list-group list-group-flush"  v-for="exp in user.exps"  v-if=" user.exps.length<2" >
-                        <li  class="list-group-item">{{exp}}</li>
-                      </ul>
-                      <ul class="list-group list-group-flush"   v-on:click="sub_entry_list_toggle" v-for="exp in user.exps"  v-if=" expandMe('sub_entry1-1_' + index)">
-                        <li class="list-group-item" :id="'sub_entry1-1_' + index" >{{exp}}</li>
-                      </ul>
-                      <!--<ul class="list-group list-group-flush " v-for="exp in user.exps">
-                        <li class="list-group-item">{{exp}}</li>
-                      </ul>-->
-
-
-                    </td>
-                    <td>
-                      <!--<button class="accordion-button collapsed " :id="'sub_entry1-2_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">
-                      <p :style="tableStyle">{{user.other_titles[0]}}...</p>
-                      </button>-->
-
-                      <span style="font-size: 13px;" v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">{{user.other_titles[0]}}...</span>
-                      <button class="btn-group-lg btn-light dropdown-toggle borderless" style="padding: none;first-line :13px" :id="'sub_entry1-2_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">
-                      
-                       </button>
-
-
-                      <!--<p v-bind:style="tableStyle" :id="'sub_entry1-2_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">
-                      {{user.other_titles[0]}}...<img class="rounded" src="./assets/images/menu01.jpg"/></p> -->
-                      <ul class="list-group list-group-flush"  v-for="other_title in user.other_titles"  v-if=" user.other_titles.length<2">
-                        <li class="list-group-item">{{other_title}}</li>
-                      </ul>
-                      <ul class="list-group list-group-flush"   v-on:click="sub_entry_list_toggle" v-for="other_title in user.other_titles"  v-if=" expandMe('sub_entry1-2_' + index)">
-                        <li class="list-group-item" :id="'sub_entry1-2_' + index" >{{other_title}}</li>
-                      </ul>
-
-
-      
-                    </td>
-                    <!--<td>   
-                      <div class="accordion accordion-flush" id="accordionFlushExample2">
-                        <div class="accordion-item">
-                          <p class="accordion-header" id="flush-heading2-1">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2-1" aria-expanded="false" aria-controls="flush-collapse2-1">
-   ...
-                            </button>
-                          </p>
-                          <div id="flush-collapse2-1" class="accordion-collapse collapse" aria-labelledby="flush-heading2-1" data-bs-parent="#accordionFlushExample2">
-                            <div class="accordion-body">
-                              <ul class="list-group list-group-flush " v-for="other_title in user.other_titles">
-                                <li class="list-group-item">{{other_title}}</li>
-                              </ul>
-                            </div>
-                        </div>
-                      
-                    </td> -->
-                    <td>{{user.relative_title}}</td>
-                    <td>{{user.relative_name}}</td>
-                    <td>{{user.relative_relation}}</td>
-                  </tr> 
-                </tbody>
-              </table>
             </div>
           </div>
         </div>
