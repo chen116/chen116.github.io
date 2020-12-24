@@ -64,7 +64,7 @@ app.component('notice-2', {
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+            <div class="accordion-body"  style=" overflow: scroll;">
             <button style="float: left;" v-on:click="expandTable('table1',2)" class="btn btn-secondary" type="button" >
             {{ showExpandedTableButton }}
             </button> 

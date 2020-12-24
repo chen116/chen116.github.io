@@ -3,18 +3,84 @@ app.component('notice-2-E', {
     return {
       tables_data :{},
       table1 : [
-        { "title": "eng", "from": "from", "name": "json", "sex": "file" ,"start_date":"sd", "duration": "du", "first_start_date": "fsd", "stock1": "s1", "stock_per1":"p1","stock2": "s2", "stock_per2":"p2" ,"stock3": "s3", "stock_per3":"p3" ,"stock4": "s4", "stock_per4":"p4" ,"exps":["exp1","exp2"],"other_titles": ["ot","eee"],"relative_title":"rt","relative_name":"rn","relative_relation":"rr"},
-        { "title": "write", "from": "from", "name": "json", "sex": "file" ,"start_date":"sd", "duration": "du", "first_start_date": "fsd", "stock1": "s1", "stock_per1":"p1","stock2": "s2", "stock_per2":"p2" ,"stock3": "s3", "stock_per3":"p3" ,"stock4": "s4", "stock_per4":"p4" ,"exps":["exp1","exp2"],"other_titles": ["ot","eee"],"relative_title":"rt","relative_name":"rn","relative_relation":"rr"},
-        { "title": "write", "from": "from", "name": "json", "sex": "file" ,"start_date":"sd", "duration": "du", "first_start_date": "fsd", "stock1": "s1", "stock_per1":"p1","stock2": "s2", "stock_per2":"p2" ,"stock3": "s3", "stock_per3":"p3" ,"stock4": "s4", "stock_per4":"p4" ,"exps":["exp1","exp2"],"other_titles": ["ot","eee"],"relative_title":"rt","relative_name":"rn","relative_relation":"rr"},
-        { "title": "write", "from": "from", "name": "json", "sex": "file" ,"start_date":"sd", "duration": "du", "first_start_date": "fsd", "stock1": "s1", "stock_per1":"p1","stock2": "s2", "stock_per2":"p2" ,"stock3": "s3", "stock_per3":"p3" ,"stock4": "s4", "stock_per4":"p4" ,"exps":["exp1","exp2"],"other_titles": ["ot","eee"],"relative_title":"rt","relative_name":"rn","relative_relation":"rr"},
+
+        {title:"Chairman",from:"R.O.C",name:"Ching-Sung, Yu",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"11/06/1999",
+        stock1:"11,799,516",stock_per1:"16.9",stock2:"14,155,046",stock_per2:"16.22",stock3:"773.431",stock_per3:"0.89",stock4:"3151000",stock_per4:"3.09",
+        exps:["Bachelor Degree in Business Administration, Tatung University"],
+        other_titles:["Director, TaiSol Electronics Co., Ltd., HongKong","Director, Techmaster Electronics CO., Ltd., HongKong","Director, TAISOL ELEC, JAPAN","Director, VSELL ENTERPRISE CO., LTD."],
+        relative_title:"",relative_name:"",relative_relation:""},
+
+        {title:"Director",from:"R.O.C",name:"Jaan-Lieh, Lin",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"04/22/2013",
+        stock1:"-",stock_per1:"-",stock2:"104.000",stock_per2:"0.12",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+        exps:["Associate Degree in Mechanical Engineering, National Tainan Industrial High School","CEO, Wanshih Electronic Co., Ltd.","Director, Wanshih Electronic Co., Ltd."],
+        other_titles:["Consultant, Wanshih Electronic Co., Ltd.","Director, Wanshih Electronic Co., Ltd.","Independent Director, Hu Lane Associate Inc.","Supervisor, APAQ TECHNOLOGY CO., LTD.",
+        "Director, TAISOL ELEC, JAPAN","Director, Suzhou TaiSol Electronics Co., Ltd.","Director/COO, TaiSol Electronics Co., Ltd.","Legal representative and director, Siyang TaiSol Electronics Co., Ltd."],relative_title:"",relative_name:"",relative_relation:""},
+
+        {title:"Director",from:"R.O.C",name:"Chun-Hsin, Liang ",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"06/19/2018",
+        stock1:"38000",stock_per1:"0.05",stock2:"98.813",stock_per2:"0.11",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+        exps:["Bachelor Degree in Economics, Tunghai University","CEO/COO/Consultant, SINBON Electronics Co., Ltd."],
+        other_titles:["Director, DongGuan TaiSol Electronics Co., Ltd.","CEO, TaiSol Electronics Co., Ltd.","Director, Siyang TaiSol Electronics Co., Ltd.","Director, Suzhou TaiSol Electronics Co., Ltd."],relative_title:"",relative_name:"",relative_relation:""},
+
+        {title:"Director",from:"Japan",name:"Kingo,Ashihara",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"06/19/2018",
+        stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+        exps:["Bachelor Degree in Land Economics, National Chung Hsing University","Director, SINBON Electronics Co., Ltd."],
+        other_titles:["Oriental Computer Inc.  President"],relative_title:"",relative_name:"",relative_relation:""},
+
+        {title:"Independent Director",from:"R.O.C",name:"Wen-Tien, Chang",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"04/22/2013 (Note5)",
+        stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+        exps:["Master Degree in International Business Administration , Chinese Culture University","Assistant Manager, Bank of Communications Co., Ltd.",
+        "Vice President and Spokesman, FEDERAL CORPORATION","Assistant Vice President/R&D Director/Adm Manager/Secretary Director, Good Bank","Adjunct Instructor,  Chinese Culture University and Feng Chia University","Adjunct Instructor,  Shih Chien University","Independent Director, Oasis Technology Co., Ltd."],
+        other_titles:["None"],relative_title:"",relative_name:"",relative_relation:""},
+
+        {title:"Independent Director",from:"R.O.C",name:"Tien-Yun, Tsen",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"06/19/2018",
+        stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+        exps:["Master Degree in Law , National Chung Hsing University","Financial Vice President, Champion Building Materials Co. Ltd.","Financial Vice President, Wonderful Hi Tech Co., Ltd.","Remuneration Committee Member, Wanshih Electronic Co., Ltd. "],
+        other_titles:["Co-Owner Accountant, 大哲Certified Public Accounting Firm","Arbitrator, Chinese Arbitration Association","Independent Director, Wonderful Hi Tech Co., Ltd."],relative_title:"",relative_name:"",relative_relation:""},
+
+        {title:"Independent Director",from:"R.O.C",name:"Chih-Hung, Chen",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"06/19/2018",
+        stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+        exps:["Bachelor Degree in Business Management, Tatung University","Executive Assistant to Vice President/Chief of Director Office and QA Managerin Factory/Deputy Factory","Director of Adm in Kaohsiung/Factory Director of Adm in Kaohsiung/Executive Assistant to President in Factory , Southeast Cement Corporation"],
+        other_titles:["CEO, PENGHU CABLE TV. CO., LTD."],relative_title:"",relative_name:"",relative_relation:""},
+
+        {title:"Supervisor",from:"R.O.C",name:"Chun-san, Hsieh",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"04/22/2013 (Note6)",
+        stock1:"1205197",stock_per1:"1.73",stock2:"1,571,276",stock_per2:"1.82",stock3:"288466",stock_per3:"0.33",stock4:"-",stock_per4:"-",
+        exps:["Associate Degree, Provincial Tainan Industrial High School","Consultant, COOLPC COMPUTER CO., LTD","Director, TaiSol Electronics Co., Ltd."],
+        other_titles:["None"],relative_title:"",relative_name:"",relative_relation:""},
+
+        {title:"Supervisor",from:"R.O.C",name:"Cien-Ya, Lin",sex:"F",start_date:"06/19/2018",duration:"3years",first_start_date:"05/15/2015 (Note7)",
+        stock1:"1818316",stock_per1:"2.6",stock2:"2,074,321",stock_per2:"2.4",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+        exps:["Bachelor Degree in Land Resources, Chinese Culture University","Financial Junior Manager, Fubon Securities Co.,Ltd."],
+        other_titles:["Financial Junior Manager, LONG-THIN ENTERPRISE CO., LTD."],relative_title:"",relative_name:"",relative_relation:""},
+
+        {title:"Supervisor",from:"R.O.C",name:"Ming-Chun, Chang",sex:"F",start_date:"06/19/2018",duration:"3years",first_start_date:"07/05/2013",
+        stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+        exps:["Master Degree in International Business of College of Management, National Taiwan University","President of HTC Japan Branch Office, HTC Corporation"],
+        other_titles:["COO, Noodoe Corporation"],relative_title:"",relative_name:"",relative_relation:""}
 
       ],
       table2 : [
-        {"name":"2-Ea","pro_exp1":"b","pro_exp2":"c","pro_exp3":"d","fit_item1":"1","fit_item2":"2","fit_item3":"3","fit_item4":"4","fit_item5":"5","fit_item6":"6","fit_item7":"7","fit_item8":"8","fit_item9":"9","fit_item10":"10","num_company":"z"},
-        {"name":"a","pro_exp1":"b","pro_exp2":"c","pro_exp3":"d","fit_item1":"1","fit_item2":"2","fit_item3":"3","fit_item4":"4","fit_item5":"5","fit_item6":"6","fit_item7":"7","fit_item8":"8","fit_item9":"9","fit_item10":"10","num_company":"z"},
-        {"name":"a","pro_exp1":"b","pro_exp2":"c","pro_exp3":"d","fit_item1":"1","fit_item2":"2","fit_item3":"3","fit_item4":"4","fit_item5":"5","fit_item6":"6","fit_item7":"7","fit_item8":"8","fit_item9":"9","fit_item10":"10","num_company":"z"},
-        {"name":"a","pro_exp1":"b","pro_exp2":"c","pro_exp3":"d","fit_item1":"1","fit_item2":"2","fit_item3":"3","fit_item4":"4","fit_item5":"5","fit_item6":"6","fit_item7":"7","fit_item8":"8","fit_item9":"9","fit_item10":"10","num_company":"z"}
-      ]
+        {name:"Ching-Sung,Yu",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:" ",fit_item3:" ",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
+        {name:"Jaan-Lieh, Lin",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:" ",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"1"},
+        {name:"Chun-Hsin,Liang",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:" ",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
+      {name:"Kingo,Ashihara",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:" ",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:" ",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
+        {name:"Wen-Tien, Chang",pro_exp1:"-",pro_exp2:"v",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"1"},
+        {name:"Tien-Yun, Tseng",pro_exp1:"v",pro_exp2:"-",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
+        {name:"Chih-Hung, Chen",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
+        {name:"Chun-san, Hsieh",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:" ",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
+        {name:"Cien-Ya, Lin",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:" ",fit_item2:"v",fit_item3:" ",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
+        {name:"Ming-Chun, Chang",pro_exp1:"v",pro_exp2:"v",pro_exp3:"v",fit_item1:"v",fit_item2:"v",fit_item3:"v",fit_item4:"v",fit_item5:"v",fit_item6:"v",fit_item7:"v",fit_item8:"v",fit_item9:"v",fit_item10:"v",num_company:"None"},
+      ],
+      tableStyle:
+      {
+        fontSize:'13px',
+        zIndex:-1,
+
+      },
+
+      showExpandedTable: -1
+      ,
+      showExpandedTableButton: 'Expand All',
+      expandList:{}
     }
   },
   props: {},
@@ -35,10 +101,13 @@ app.component('notice-2-E', {
           </button>
         </h2>
         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
+          <div class="accordion-body"  style=" overflow: scroll;">
+          <button style="float: left;" v-on:click="expandTable('table1',2)" class="btn btn-secondary" type="button" >
+          {{ showExpandedTableButton }}
+          </button> 
             <!-- https://css-tricks.com/complete-guide-table-element/ -->
             <table  class="table table-bordered table-hover">
-              <thead>
+              <thead :style="tableStyle">
                 <tr>
                   <th rowspan="2">Title (Note1) </th>
                   <th rowspan="2">Nationality or Place of registration</th>
@@ -74,8 +143,8 @@ app.component('notice-2-E', {
                 </thead>
               
               
-              <tbody>
-                <tr v-for="user in table1" :key="user.name">
+              <tbody v-bind:style="tableStyle">
+                <tr v-for="(user,index)  in table1" :key="user.name">
                   <!--<td v-for="key in Object.keys(user)">{{ user[key] }}</td>-->
                   <td>{{user.title}}</td>
                   <td>{{user.from}}</td>
@@ -92,15 +161,40 @@ app.component('notice-2-E', {
                   <td>{{user.stock_per3}}</td>
                   <td>{{user.stock4}}</td>
                   <td>{{user.stock_per4}}</td>
+                  <td>  
+                    <span style="font-size: 13px;" v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">{{user.exps[0]}}...</span>
+                    <button class="btn-group-lg btn-light dropdown-toggle borderless" style="padding: none;first-line :13px" :id="'sub_entry1-1_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.exps.length>1 && (!expandMe('sub_entry1-1_' + index) )">
+                    
+                    </button> 
+                    <ul class="list-group list-group-flush"  v-for="exp in user.exps"  v-if=" user.exps.length<2" >
+                      <li  class="list-group-item">{{exp}}</li>
+                      </ul>
+                      <ul class="list-group list-group-flush"   v-on:click="sub_entry_list_toggle" v-for="exp in user.exps"  v-if=" expandMe('sub_entry1-1_' + index)">
+                        <li class="list-group-item" :id="'sub_entry1-1_' + index" >{{exp}}</li>
+                      </ul>
+                        <!--<ul class="list-group list-group-flush " v-for="exp in user.exps">
+                          <li class="list-group-item">{{exp}}</li>
+                        </ul>-->
+                      </td>
                   <td>   
-                    <ul class="list-group list-group-flush " v-for="exp in user.exps">
-                      <li class="list-group-item">{{exp}}</li>
-                    </ul>
-                  </td>
-                  <td>   
-                    <ul class="list-group list-group-flush " v-for="other_title in user.other_titles">
+
+
+
+                    <span style="font-size: 13px;" v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">{{user.other_titles[0]}}...</span>
+                    <button class="btn-group-lg btn-light dropdown-toggle borderless" style="padding: none;first-line :13px" :id="'sub_entry1-2_' + index" v-on:click="sub_entry_list_toggle" type="button"  v-if=" user.other_titles.length>1 && (!expandMe('sub_entry1-2_' + index) )">
+                    
+                    </button>
+
+
+                    <ul class="list-group list-group-flush"  v-for="other_title in user.other_titles"  v-if=" user.other_titles.length<2">
                       <li class="list-group-item">{{other_title}}</li>
                     </ul>
+                    <ul class="list-group list-group-flush"   v-on:click="sub_entry_list_toggle" v-for="other_title in user.other_titles"  v-if=" expandMe('sub_entry1-2_' + index)">
+                      <li class="list-group-item" :id="'sub_entry1-2_' + index" >{{other_title}}</li>
+                    </ul>
+                    <!--<ul class="list-group list-group-flush " v-for="other_title in user.other_titles">
+                      <li class="list-group-item">{{other_title}}</li>
+                    </ul>-->
                   </td>
                   <td>{{user.relative_title}}</td>
                   <td>{{user.relative_name}}</td>
@@ -214,7 +308,69 @@ app.component('notice-2-E', {
     </div>
   `,
   computed: {},
-  methods: {},
+  methods: {
+    expandMe(id){
+      if (this.expandList[id]==null)
+      {
+        this.expandList[id]==true
+      }
+      console.log("expandMe",id, this.expandList[id])
+      return this.expandList[id]
+  
+    },
+    expandTable(table,numCols){
+      tableNum=table.split("table")[1]
+
+
+
+      showing=true
+      if (this.showExpandedTable==-1){ this.showExpandedTable=1;showing=true}
+      else if (this.showExpandedTable==0){ this.showExpandedTable=1;showing=true}
+      else if (this.showExpandedTable==1){ this.showExpandedTable=0;showing=false}
+
+      if (this.showExpandedTable<=0)
+      {
+        // this.tableStyle.fontSize = '13px'
+        this.showExpandedTableButton ='Expand All'//+this.showExpandedTable
+      }
+      else
+      {
+        // this.tableStyle.fontSize = '13px'
+        this.showExpandedTableButton='Close All'//+this.showExpandedTable
+
+      }
+
+      allSubEntries=document.querySelectorAll('[id^="sub_entry"]')
+
+      while (numCols>0)
+      {
+        prefix = tableNum+"-"+numCols
+        regex = new RegExp(`^sub_entry${prefix}`);
+        realindex=0
+        for (let index = 0; index < allSubEntries.length; index++) {
+          if (regex.test(allSubEntries[index].id)) { // or whatever attribute you want to search
+            this.expandList["sub_entry"+prefix+"_"+realindex]=showing
+            console.log('toggle:'+"sub_entry"+prefix+"_"+realindex,this.expandList["sub_entry"+prefix+"_"+realindex]);
+            realindex++
+          }
+        }
+        numCols-=1
+      }
+
+
+    }
+    ,
+    sub_entry_list_toggle(e){
+
+      id = e.target.id//.split("-")[0]
+      console.log(e, this.expandList[id],  this.expandList[id]==null)
+      this.expandList[id]=! this.expandList[id]
+      console.log(id,this.expandList[id])
+
+    }
+
+
+  },
   beforeMount() {}
 
 })
