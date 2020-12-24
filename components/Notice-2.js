@@ -213,7 +213,7 @@ app.component('notice-2', {
              <thead>
                 <tr>
                   <th rowspan="2">條件姓名(註1)</th>
-                  <th colspan="3">是否具有五年以上工作經驗及下列專業資格</th>
+                  <th colspan="3" style="width: 50%">是否具有五年以上工作經驗及下列專業資格</th>
                   <th colspan="10">符合獨立性情形（註2）</th>
                   <th rowspan="2">兼任其他公開發行公司獨立董事家數</th>
                 </tr>
