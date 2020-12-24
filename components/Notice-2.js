@@ -209,6 +209,8 @@ app.component('notice-2', {
         </h2>
         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" >
           <div class="accordion-body">
+          <div   style=" overflow: scroll;">
+
             <table  class="table table-bordered table-hover">
              <thead>
                 <tr>
@@ -240,6 +242,7 @@ app.component('notice-2', {
                 </tr> 
               </tbody>
             </table>
+            </div>
           </div>
         </div>
       </div>
