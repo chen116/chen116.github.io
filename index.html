@@ -1,154 +1,1725 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Taisol</title>
-    <!-- Import Styles -->
-    <link rel="stylesheet" href="./assets/styles/styles.css" />
-    <link rel="icon" href="./assets/images/logo.ico"  type="image/x-icon" />
 
-    <!--Import boostrap css thru network
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>   
-    -->
-    
-    <link href="./assets/styles/bootstrap.min.css" rel="stylesheet">
-    <script src="./assets/js/bootstrap.bundle.js"></script>   
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>React Local</title>
+  <script type="application/javascript" src="./assets/js/react.production.min.js"></script>
+  <script type="application/javascript" src="./assets/js/react-dom.production.min.js"></script>
+  <script type="application/javascript" src="./assets/js/babel.min.js"></script>
+  <!-- <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script> -->
+
+  <link rel="stylesheet" href="./assets/styles/styles.css" />
+  <link rel="icon" href="./assets/images/logo.ico"  type="image/x-icon" />
+
+  <link rel="stylesheet" href="./assets/styles/bootstrap.min.css" >
+  <script src="./assets/styles/jquery-3.5.1.slim.min.js" ></script>
+  <script src="./assets/styles/bootstrap.bundle.min.js" ></script>
+
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> -->
+
+</head>
+
+<body>
+    <!-- python-header.html -->
+<nav class="navbar navbar-expand-lg navbar-dark ">
+     
+    <a class="navbar-brand" href="https://www.taisol.com"><img src='./assets/images/logo.png' /></a>
    
-    <!-- Import Vue.js thru network
-       <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script> 
-    -->
-    <script src="./assets/js/vue.global.js"></script>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <h3 style="color: white;"> <span>&nbsp;&nbsp;</span>公司治理 </h3>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 header-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="https://www.taisol.com/?lang=zh">首頁</a>
+        </li>
+        <li class="nav-item dropdown">
+
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            關於泰碩
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="https://www.taisol.com/about/about-taisol?lang=zh">公司簡介</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/about/global-location?lang=zh">據點分佈圖</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/about/company-yearbook?lang=zh">大事年鑑</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/about/patents/2018?lang=zh">鄧白氏專區</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/about/china-factory?lang=zh">品質政策</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/about/company-location?lang=zh">公司位置圖</a></li>
+          </ul>
+        </li>
  
-    
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-expanded="false">
+            最新消息
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+            <li><a class="dropdown-item" href="https://www.taisol.com/news?lang=zh">新聞中心</a></li>
+          </ul>
+        </li>
 
-
-    <link rel="stylesheet" href="./assets/styles/bootstrap-icons.css">
-
-  </head>
-  <body>
-    <div id="app">
-
-      <!-- header -->
-      <div class="nav-bar "></div>
-      <nav class="navbar navbar-expand-lg navbar-dark ">
-        <div class="container-fluid  ">
-          <a class="navbar-brand" href="https://www.taisol.com"><img src='./assets/images/logo.png' /></a>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <h3 style="color: white;"> <span>&nbsp;&nbsp;</span>公司治理 </h3>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 header-nav">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="https://www.taisol.com/?lang=zh">首頁</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  關於泰碩
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="https://www.taisol.com/about/about-taisol?lang=zh">公司簡介</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/about/global-location?lang=zh">據點分佈圖</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/about/company-yearbook?lang=zh">大事年鑑</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/about/patents/2018?lang=zh">鄧白氏專區</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/about/china-factory?lang=zh">品質政策</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/about/company-location?lang=zh">公司位置圖</a></li>
-                </ul>
-              </li>
-       
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  最新消息
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                  <li><a class="dropdown-item" href="https://www.taisol.com/news?lang=zh">新聞中心</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  產品訊息
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                  <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1?lang=zh">散熱管理解決方案</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/37?lang=zh">消費性電子產品</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/38?lang=zh">企業運算系統</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/39?lang=zh">LED照明</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/40?lang=zh">無線通訊系統</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/41?lang=zh">工業應用</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/42?lang=zh">散熱技術</a></li>
-                </ul>
-              </li>
-         
-              <li class="nav-item dropdown">
-                <a   @mouseleave="mouseLeave('navbarDropdown4')" @mouseover="mouseOver('navbarDropdown4')" ref="navbarDropdown4"  class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                  利害關係人專區
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown4" ref="navbarDropdown4-1">
-                  <li><a class="dropdown-item" href="https://www.taisol.com/investor/investor-news?lang=zh">最新消息</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/investor/corporate-info?lang=zh">公司基本資料</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/investor/monthly-income?lang=zh">財務資訊</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/investor/shareholder?lang=zh">股東關係人專區</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/investor/foundation?lang=zh">公司治理</a></li>
-                  <li><a class="dropdown-item" href="https://www.taisol.com/investor/major-info?lang=zh">公司重大訊息</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.taisol.com/contact/contact-us?lang=zh">聯絡我們 </a>
-              </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-expanded="false">
+            產品訊息
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+            <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1?lang=zh">散熱管理解決方案</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/37?lang=zh">消費性電子產品</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/38?lang=zh">企業運算系統</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/39?lang=zh">LED照明</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/40?lang=zh">無線通訊系統</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/41?lang=zh">工業應用</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/42?lang=zh">散熱技術</a></li>
+          </ul>
+        </li>
    
-            </ul>
-          </div>
-        </div>
-      </nav>
+        <li class="nav-item dropdown">
+          <a   @mouseleave="mouseLeave('navbarDropdown4')" @mouseover="mouseOver('navbarDropdown4')" ref="navbarDropdown4"  class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-expanded="false" >
+            利害關係人專區
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown4" ref="navbarDropdown4-1">
+            <li><a class="dropdown-item" href="https://www.taisol.com/investor/investor-news?lang=zh">最新消息</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/investor/corporate-info?lang=zh">公司基本資料</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/investor/monthly-income?lang=zh">財務資訊</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/investor/shareholder?lang=zh">股東關係人專區</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/investor/foundation?lang=zh">公司治理</a></li>
+            <li><a class="dropdown-item" href="https://www.taisol.com/investor/major-info?lang=zh">公司重大訊息</a></li>
+          </ul>
+        </li>
 
-      <!-- Import App -->
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.taisol.com/contact/contact-us?lang=zh">聯絡我們 </a>
+        </li>
 
-      <content-display :focused_page="focused_page"></content-display>
-      <!-- footer -->
-      <nav class="footer  navbar  navbar-expand-lg fixed-bottom  navbar-dark ">
-        <h6>Copyright ©2015 TaiSol Electronics Co., Ltd. All rights reserved</h6>  
-        <div>
-          <div class="footer-nav collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 footer-nav">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="http://www.104.com.tw/jobbank/custjob/index.php?r=cust&j=404a436c5a463f245a323c1d1d1d1d5f2443a363189j48&jobsource=n104bank1">加入泰碩</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.taisol.com/?lang=zh#">泰碩人園地</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.taisol.com/site-navigation?lang=zh">網站導覽</a>
-              </li>
-            </ul>
-                  
-          </div>
-        </div>
-      </nav>
-    
+      </ul>
     </div>
-    <script src="./main.js"></script>
-    <script src="./components/Notice-2.js"></script>
-    <script src="./components/Notice-2-E.js"></script>
-    <script src="./components/Notice-2-1.js"></script>
-    <script src="./components/Notice-2-2.js"></script>
-    <script src="./components/Notice-2-3.js"></script>
-    <script src="./components/Notice-2-4.js"></script>
-    <script src="./components/Notice-2-5.js"></script>
-    <script src="./components/Notice-2-7.js"></script>
-    <script src="./components/Notice-2-8.js"></script>
-    <script src="./components/Notice-2-10.js"></script>
-    <script src="./components/Notice-2-9.js"></script>
-    <script src="./components/Notice-2-6.js"></script>
-    <script src="./components/ContentDisplay.js"></script>
+ 
+</nav>
+    <!-- Import App -->
+    <div id="app"></div>
+
+<script type="text/babel">
+    const rootElement = document.getElementById('app')
+  //python-singlePageApp.js
+
+  class SinglePageApp extends React.Component {
+    constructor(props){
+      super(props);
+      this.state ={
+        init:false,
+        foucusedPage : 0,
+        navItems : ['董事會','董事會(Board of Director)','薪酬委員會','組織及職掌','規章','內部稽核','企業社會責任','供應商管理','客戶服務','投資人關係','人力資源','與利害關係人對話'],
+      };
+    }
+    focusThisPage(index){
+      this.setState({foucusedPage: index},function(){
+        console.log("FoucusThisPage:",this.state.foucusedPage);
+      });
+    };
+    render(){
+      const navItems = this.state.navItems.map( (item,index) =>
+      <li class="nav-item">
+          <a class="nav-link"  href="javascript:void(0);" onClick={()=>{ this.focusThisPage(index);}}>{item}</a>
+      </li>
+      );
+      if (!this.state.init)
+      {
+        var initFoucusedPage=window.location.href.split('?')[1];
+        if (initFoucusedPage==null){initFoucusedPage=0}
+        else {initFoucusedPage=parseInt(initFoucusedPage) }
+        this.state.foucusedPage=initFoucusedPage;
+        console.log("initFoucusedPage:",this.state.foucusedPage)
+        this.state.init=true
+      }
+      return (
+        <div>
+          <nav class="navbar navbar-expand-lg navbar-dark sub-navbar ">
+            <div class="container-fluid">
+              <ul class="list-group list-group-horizontal">
+                {navItems}
+              </ul>
+            </div>
+          </nav>
+          <Page0 currentPage={this.state.foucusedPage}/>
+          <Page1 currentPage={this.state.foucusedPage}/>
+          <Page2 currentPage={this.state.foucusedPage}/>
+          <Page3 currentPage={this.state.foucusedPage}/>
+          <Page7 currentPage={this.state.foucusedPage}/>
+
+        </div>  
+      )
+    }
+  }
+
+
+
+  //python-page0.js
+function Page0(props) {
+    const myPage = 0;
+    var data = {
+        table1 : [
+            {title:"董事長",from:"臺灣",name:"余清松",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"88.11.06",stock1:"11,799,516",stock_per1:"16.9",stock2:"14,155,046",stock_per2:"16.37",stock3:"773.431",stock_per3:"0.89",stock4:"3151000",stock_per4:"3.64",exps:["大同工學院工商管理系畢"],other_titles:["泰碩電子(香港)有限公司 董事","世窗電子(香港)有限公司 董事","TAISOL ELEC. JAPAN 董事","衡國企業(股)公司 董事長"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+            {title:"董  事",from:"臺灣",name:"林展列",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"102.04.22",stock1:"-",stock_per1:"-",stock2:"104.000",stock_per2:"0.12",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["台南高工機械工程科","萬旭電業股份有限公司 總經理","萬旭電業股份有限公司 董事"],other_titles:["萬旭電業股份有限公司 顧問","萬旭電業股份有限公司 董事","胡連精密股份有限公司 獨立董事","泗陽泰碩電子有限公司 董事兼法人代表","泰碩電子(股)公司 董事/營運長","蘇州泰碩電子有限公司 董事","TAISOL ELEC. JAPAN 董事","鈺邦科技股份有限公司 監察人"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+            {title:"董  事",from:"臺灣",name:"梁竣興",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"107.06.19",stock1:"38000",stock_per1:"0.05",stock2:"98.813",stock_per2:"0.11",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["東海大學經濟系","信邦電子(股)公司 總經理/營運長/顧問"],other_titles:["東莞泰碩電子有限公司 董事","泰碩電子(股)公司 總經理","泗陽泰碩電子有限公司 董事"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+            {title:"董  事",from:"日本",name:"蘆原錦吾",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"107.06.19",stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["中興大學地政系","信邦電子(股)公司 董事"],other_titles:["Oriental Computer Inc.  President"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+            {title:"獨立董事",from:"臺灣",name:"張文添",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"102.04.22 (註4)",stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["文化大學企業管理研究所碩士","交通銀行副理","泰豐輪胎(股)公司 副總經理兼發言人","寶華銀行協理、研發處長、管理部經理、祕書處長","文化大學、逢甲大學 兼任講師","實踐大學企管系 兼任講師"],other_titles:["李洲科技(股)公司 獨立董事"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+            {title:"獨立董事",from:"臺灣",name:"曾天運",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"107.06.19",stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["中興大學科技法律研究所碩士","冠軍建材股份有限公司 財務副總","萬泰科技股份有限公司 財務副總"],other_titles:["大哲聯合會計師事務所 合夥會計師","中華民國仲裁協會 仲裁人","萬旭電業股份有限公司 薪酬委員"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+            {title:"獨立董事",from:"臺灣",name:"陳志弘",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"107.06.19",stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["大同工學院事業經營系","東南水泥股份有限公司","副董事長室特別助理/駐廠董事室主任兼品保部經理/高雄廠行政副廠長/高雄廠廠長/駐廠董事長室特別助理"],other_titles:["澎湖有線電視股份有限公司 總經理"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+            {title:"監察人",from:"臺灣",name:"謝君山",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"102.04.22 (註5)",stock1:"1205197",stock_per1:"1.73",stock2:"1,571,276",stock_per2:"1.82",stock3:"288466",stock_per3:"0.33",stock4:"-",stock_per4:"-",exps:["省立台南高級工業職業學校","原價屋電腦有限公司 顧問","泰碩電子股份有限公司 董事"],other_titles:["無"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+            {title:"監察人",from:"臺灣",name:"林千雅",sex:"女",start_date:"107.06.19",duration:"3年",first_start_date:"104.05.15 (註6)",stock1:"1818316",stock_per1:"2.6",stock2:"2,074,321",stock_per2:"2.4",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["文化大學土地資源學系畢","富邦證券 財務部襄理"],other_titles:["隆昕實業股份有限公司 財務部襄理"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+            {title:"監察人",from:"臺灣",name:"張敏君",sex:"女",start_date:"107.06.19",duration:"3年",first_start_date:"102.07.05",stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["台大商學院國際企業組碩士","宏達電子HTC日本分公司社長/全球行銷處處長"],other_titles:["拓連科技股份有限公司 營運長"],relative_title:"-",relative_name:"-",relative_relation:"-"}
+        ],
+        table2 : [
+            {name:"余清松",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+            {name:"林展列",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"1"},
+            {name:"梁竣興",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+            {name:"蘆原錦吾",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:" ",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+            {name:"張文添",pro_exp1:"-",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"1"},
+            {name:"曾天運",pro_exp1:"✔",pro_exp2:"-",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+            {name:"陳志弘",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+            {name:"謝君山",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+            {name:"林千雅",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:"✔",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+            {name:"張敏君",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+        ]
+    };
+    class ActiveTable1 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={
+            tableExpanded: 0,
+            showExpandedTableButton: ['全部展開','全部收起'],
+            expandList:{}
+            };
+        }
+        toggleExpandTable(){
+            var currentTableState = this.state.tableExpanded
+            this.setState({tableExpanded: (currentTableState+1)%2} ,function(){
+                if (this.state.tableExpanded) {
+                    $('.collapseTable').collapse('show')
+                    $('.collapseTableButton').collapse('hide')
+                }else{
+                    $('.collapseTable').collapse('hide')
+                    $('.collapseTableButton').collapse('show')
+                }
+            });
+        };
+
+        render() {
+            const table = this.props.data.map( (item,index) => [
+                <tr><td>{item.title}</td><td>{item.from}</td><td>{item.name}</td><td>{item.sex}</td><td>{item.start_date}</td><td>{item.duration}</td><td>{item.first_start_date}</td><td>{item.stock1}</td> <td>{item.stock_per1}</td> <td>{item.stock2}</td> <td>{item.stock_per2}</td> <td>{item.stock3}</td><td>{item.stock_per3}</td><td>{item.stock4}</td><td>{item.stock_per4}</td>
+                    <td>
+                        <button class="btn btn-secondary dropdown-toggle btn-sm collapseTableButton" type="button" data-toggle="collapse" data-target={"#collapseExample0"+index} aria-expanded="false" aria-controls={"collapseExample0"+index}>
+                        </button>
+                        <div class="collapse collapseTable" id={"collapseExample0"+index}>
+                            <div class="card card-body">
+                                {this.props.data[index].exps.map(     (detail) =>
+                                    <li type="disc" >
+                                        {detail}
+                                    </li >
+                                )}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <button id={"collapseTableButton1"+index} class="btn btn-secondary dropdown-toggle btn-sm collapseTableButton" type="button" data-toggle="collapse" data-target={"#collapseExample1"+index} aria-expanded="false" aria-controls={"collapseExample1"+index}>
+                        </button>
+                        <div class="collapse collapseTable" id={"collapseExample1"+index}>
+                            <div class="card card-body">
+                                {this.props.data[index].other_titles.map((detail) =>
+                                    <li type="disc">
+                                        {detail}
+                                    </li >
+                                )}
+                            </div>
+                        </div>
+                    </td>
+                    <td>{item.relative_title}</td>
+                    <td>{item.relative_name}</td>
+                    <td>{item.relative_relation}</td>
+                </tr>
+            ]);
+
+            return (
+                <div>
+                    <button class="btn btn-secondary btn-sm" type="button"   onClick={()=>
+                    {
+                        this.toggleExpandTable();
+                    }}>
+                    {this.state.showExpandedTableButton[this.state.tableExpanded]}
+                    </button>
+                    <table  class="table table-bordered table-hover"  >
+                        <thead>
+                            <tr>
+                                <th rowspan="2" style={{width: `1%`}}>職稱（註一）</th>
+                                <th rowspan="2" style={{width: `3%`}}>國籍或註冊地</th>
+                                <th rowspan="2" >姓名</th>
+                                <th rowspan="2" >性別</th>
+                                <th rowspan="2" style={{width: `1%`}}>選(就)任日期</th>
+                                <th rowspan="2" style={{width: `1%`}}>任期</th>
+                                <th rowspan="2" style={{width: `1%`}}>初次選任日期（註二）</th>
+                                <th colspan="2" style={{width: `5%`}}>選任時持有股份</th>
+                                <th colspan="2" style={{width: `5%`}}>現在持有股份</th>
+                                <th colspan="2" style={{width: `5%`}}>配偶,未成年子女現在持有股份</th>
+                                <th colspan="2" style={{width: `5%`}}>利用他人名義持有股份</th>
+                                <th rowspan="2" >主要經（學）歷（註三）</th>
+                                <th rowspan="2" >目前兼任本公司及其他公司之職務</th>
+                                <th colspan="3" style={{width: `10%`}}>具配偶或二親等以內關係之其他主管,董事或監察人</th>
+                            </tr>
+                            <tr>
+                                <th>股數</th>
+                                <th>持股比率(%)</th>
+                                <th>股數</th>
+                                <th>持股比率(%)</th>
+                                <th>股數</th>
+                                <th>持股比率(%)</th>
+                                <th>股數</th>
+                                <th>持股比率(%)</th>
+                                <th>職稱</th>
+                                <th>姓名</th>
+                                <th>關係</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {table}
+                        </tbody>
+                    </table>
+                </div>
+            )
+        }
+    }
+    class ActiveTable2 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={
+            };
+        }
+        render() {
+            const table =  this.props.data.map( (item,index) => [
+                    <tr>
+                        {Object.keys(item).map(function(keyName, keyIndex) {
+                            return <td>{item[keyName]}</td>
+                        })}
+                    </tr>
+                ]);
+
+        
+
+            return (
+                <table  class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">條件姓名(註1)</th>
+                            <th colspan="3" >是否具有五年以上工作經驗及下列專業資格</th>
+                            <th colspan="10">符合獨立性情形（註2）</th>
+                            <th rowspan="2">兼任其他公開發行公司獨立董事家數</th>
+                        </tr>
+                        <tr>
+                            <th>商務、法務、財務、會計或公司業務所須相關科系之公私立大專院校講師以上</th>
+                            <th>法官、檢察官、律師、會計師或其他與公司業務所需之國家考試及格領有證書之專門職業及技術人員</th>
+                            <th>商務、法務、財務、會計或公司業務所須之工作經驗</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {table}
+                    </tbody>
+                </table>
+            )
+        }
+    }
+    if (myPage != props.currentPage){return null;}
+    return [
+        <div class="content">
+            <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>董事會 </h5>
+            <p><span>&nbsp;&nbsp;</span></p>
+            <p class="content-p">
+                本公司之董事、監察人含2名女性、7名男性；分別在電子零組件或周邊產品業、橡膠業、銀行業、光電業、玻璃陶瓷業、通信網路業、水泥工業、證券業、電信業等，具有行銷企劃、經營管理、領導決策、產業知識、財務會計之專業經驗與素養。
+            </p>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span>
+                                董事(含獨立董事)及監察人資料(1) 
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" >
+                        <div class="card-body"  style={{overflow: `auto`}}>
+                            <ActiveTable1  data={data.table1} />
+                        </div>
+                        <p><span>&nbsp;&nbsp;</span></p>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span>
+                                董事(含獨立董事)及監察人資料(2) 
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" >
+                        <div class="card-body"  style={{overflow: `auto`}}>
+                            <ActiveTable2  data={data.table2} />
+                        </div>
+                        <p><span>&nbsp;&nbsp;</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <ul class="list-group list-group-flush ">
+        <li class="list-group-item">一、本公司依107年董事會通過之「董事及經理人績效評估辦法」，於每年定期辦理董事會及其成員之績效評估。</li>
+        <li class="list-group-item">二、上述績效評估辦法之合宜性需每年定期檢討。</li>
+        <li class="list-group-item"> 三、董事會績效評估之衡量項目為下列五大面向：
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item"> 1. 對公司營運之參與程度。</li>
+            <li class="list-group-item">2. 提升董事會決策品質。</li>
+            <li class="list-group-item">3. 董事會組成與結構。</li>
+            <li class="list-group-item">4. 董事的選任及持續進修。</li>
+            <li class="list-group-item">5. 內部控制。</li>
+            <li class="list-group-item">董事成員績效評估之衡量項目為下列六大面向：
+              <ul class="list-group list-group-flush ">
+                <li class="list-group-item">1. 公司目標與任務之掌握。</li>
+                <li class="list-group-item">2. 董事職責認知。</li>
+                <li class="list-group-item">3. 對公司營運之參與程度。</li>
+                <li class="list-group-item">4. 內部關係經營與溝通。</li>
+                <li class="list-group-item">5. 董事之專業及持續進修。</li>
+                <li class="list-group-item">6. 內部控制。</li>
+              </ul>
+
+            </li>
+
+
+
+          </ul>
+        </li>
+    
+
+        <li class="list-group-item">四、績效評估結果： 
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item">108年度 :
+              <a href="./assets/docs/board.pdf" target="_blank">  董事會 
+                <img class="rounded" src="./assets/images/investor04_7.jpg"/>
+              </a> 
+              <span>&nbsp;</span>  
+              <a href="./assets/docs/payout_member.pdf" target="_blank"> 薪酬委員會 
+                <img class="rounded" src="./assets/images/investor04_7.jpg"/>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
 
 
 
 
-    <!-- Mount App -->
-    <script>
-      const mountedApp = app.mount('#app')
-    </script>
 
 
-  </body>
+
+        </div>
+
+
+    ];
+
+}
+
+  //python-page1.js
+function Page1(props) {
+    const myPage = 1;
+    var data = {
+        table1 : [
+            {title:"Chairman",from:"R.O.C",name:"Ching-Sung, Yu",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"11/06/1999",
+            stock1:"11,799,516",stock_per1:"16.9",stock2:"14,155,046",stock_per2:"16.22",stock3:"773.431",stock_per3:"0.89",stock4:"3151000",stock_per4:"3.09",
+            exps:["Bachelor Degree in Business Administration, Tatung University"],
+            other_titles:["Director, TaiSol Electronics Co., Ltd., HongKong","Director, Techmaster Electronics CO., Ltd., HongKong","Director, TAISOL ELEC, JAPAN","Director, VSELL ENTERPRISE CO., LTD."],
+            relative_title:"-",relative_name:"-",relative_relation:"-"},
+    
+            {title:"Director",from:"R.O.C",name:"Jaan-Lieh, Lin",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"04/22/2013",
+            stock1:"-",stock_per1:"-",stock2:"104.000",stock_per2:"0.12",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+            exps:["Associate Degree in Mechanical Engineering, National Tainan Industrial High School","CEO, Wanshih Electronic Co., Ltd.","Director, Wanshih Electronic Co., Ltd."],
+            other_titles:["Consultant, Wanshih Electronic Co., Ltd.","Director, Wanshih Electronic Co., Ltd.","Independent Director, Hu Lane Associate Inc.","Supervisor, APAQ TECHNOLOGY CO., LTD.",
+            "Director, TAISOL ELEC, JAPAN","Director, Suzhou TaiSol Electronics Co., Ltd.","Director/COO, TaiSol Electronics Co., Ltd.","Legal representative and director, Siyang TaiSol Electronics Co., Ltd."],relative_title:"-",relative_name:"-",relative_relation:"-"},
+    
+            {title:"Director",from:"R.O.C",name:"Chun-Hsin, Liang ",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"06/19/2018",
+            stock1:"38000",stock_per1:"0.05",stock2:"98.813",stock_per2:"0.11",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+            exps:["Bachelor Degree in Economics, Tunghai University","CEO/COO/Consultant, SINBON Electronics Co., Ltd."],
+            other_titles:["Director, DongGuan TaiSol Electronics Co., Ltd.","CEO, TaiSol Electronics Co., Ltd.","Director, Siyang TaiSol Electronics Co., Ltd.","Director, Suzhou TaiSol Electronics Co., Ltd."],relative_title:"-",relative_name:"-",relative_relation:"-"},
+    
+            {title:"Director",from:"Japan",name:"Kingo, Ashihara",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"06/19/2018",
+            stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+            exps:["Bachelor Degree in Land Economics, National Chung Hsing University","Director, SINBON Electronics Co., Ltd."],
+            other_titles:["Oriental Computer Inc.  President"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+    
+            {title:"Independent Director",from:"R.O.C",name:"Wen-Tien, Chang",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"04/22/2013 (Note5)",
+            stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+            exps:["Master Degree in International Business Administration , Chinese Culture University","Assistant Manager, Bank of Communications Co., Ltd.",
+            "Vice President and Spokesman, FEDERAL CORPORATION","Assistant Vice President/R&D Director/Adm Manager/Secretary Director, Good Bank","Adjunct Instructor,  Chinese Culture University and Feng Chia University","Adjunct Instructor,  Shih Chien University","Independent Director, Oasis Technology Co., Ltd."],
+            other_titles:["None"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+    
+            {title:"Independent Director",from:"R.O.C",name:"Tien-Yun, Tsen",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"06/19/2018",
+            stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+            exps:["Master Degree in Law , National Chung Hsing University","Financial Vice President, Champion Building Materials Co. Ltd.","Financial Vice President, Wonderful Hi Tech Co., Ltd.","Remuneration Committee Member, Wanshih Electronic Co., Ltd. "],
+            other_titles:["Co-Owner Accountant, 大哲Certified Public Accounting Firm","Arbitrator, Chinese Arbitration Association","Independent Director, Wonderful Hi Tech Co., Ltd."],relative_title:"-",relative_name:"-",relative_relation:"-"},
+    
+            {title:"Independent Director",from:"R.O.C",name:"Chih-Hung, Chen",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"06/19/2018",
+            stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+            exps:["Bachelor Degree in Business Management, Tatung University","Executive Assistant to Vice President/Chief of Director Office and QA Managerin Factory/Deputy Factory","Director of Adm in Kaohsiung/Factory Director of Adm in Kaohsiung/Executive Assistant to President in Factory , Southeast Cement Corporation"],
+            other_titles:["CEO, PENGHU CABLE TV. CO., LTD."],relative_title:"-",relative_name:"-",relative_relation:"-"},
+    
+            {title:"Supervisor",from:"R.O.C",name:"Chun-san, Hsieh",sex:"M",start_date:"06/19/2018",duration:"3years",first_start_date:"04/22/2013 (Note6)",
+            stock1:"1205197",stock_per1:"1.73",stock2:"1,571,276",stock_per2:"1.82",stock3:"288466",stock_per3:"0.33",stock4:"-",stock_per4:"-",
+            exps:["Associate Degree, Provincial Tainan Industrial High School","Consultant, COOLPC COMPUTER CO., LTD","Director, TaiSol Electronics Co., Ltd."],
+            other_titles:["None"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+    
+            {title:"Supervisor",from:"R.O.C",name:"Cien-Ya, Lin",sex:"F",start_date:"06/19/2018",duration:"3years",first_start_date:"05/15/2015 (Note7)",
+            stock1:"1818316",stock_per1:"2.6",stock2:"2,074,321",stock_per2:"2.4",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+            exps:["Bachelor Degree in Land Resources, Chinese Culture University","Financial Junior Manager, Fubon Securities Co.,Ltd."],
+            other_titles:["Financial Junior Manager, LONG-THIN ENTERPRISE CO., LTD."],relative_title:"-",relative_name:"-",relative_relation:"-"},
+    
+            {title:"Supervisor",from:"R.O.C",name:"Ming-Chun, Chang",sex:"F",start_date:"06/19/2018",duration:"3years",first_start_date:"07/05/2013",
+            stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",
+            exps:["Master Degree in International Business of College of Management, National Taiwan University","President of HTC Japan Branch Office, HTC Corporation"],
+            other_titles:["COO, Noodoe Corporation"],relative_title:"-",relative_name:"-",relative_relation:"-"}
+            ],
+            table2 : [
+                {name:"Ching-Sung,Yu",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+                {name:"Jaan-Lieh, Lin",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"1"},
+                {name:"Chun-Hsin, Liang",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+              {name:"Kingo, Ashihara",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:" ",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+                {name:"Wen-Tien, Chang",pro_exp1:"-",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"1"},
+                {name:"Tien-Yun, Tseng",pro_exp1:"✔",pro_exp2:"-",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+                {name:"Chih-Hung, Chen",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+                {name:"Chun-san, Hsieh",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+                {name:"Cien-Ya, Lin",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:"✔",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+                {name:"Ming-Chun, Chang",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"None"},
+              ],
+    };
+    class ActiveTable1 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={
+            tableExpanded: 0,
+            showExpandedTableButton: ['Expand All','Close All'],
+            expandList:{}
+            };
+        }
+        toggleExpandTable(){
+            var currentTableState = this.state.tableExpanded
+            this.setState({tableExpanded: (currentTableState+1)%2} ,function(){
+                if (this.state.tableExpanded) {
+                    $('.collapseTable').collapse('show')
+                    $('.collapseTableButton').collapse('hide')
+                }else{
+                    $('.collapseTable').collapse('hide')
+                    $('.collapseTableButton').collapse('show')
+                }
+            });
+        };
+
+        render() {
+            const table = this.props.data.map( (item,index) => [
+                <tr><td>{item.title}</td><td>{item.from}</td><td>{item.name}</td><td>{item.sex}</td><td>{item.start_date}</td><td>{item.duration}</td><td>{item.first_start_date}</td><td>{item.stock1}</td> <td>{item.stock_per1}</td> <td>{item.stock2}</td> <td>{item.stock_per2}</td> <td>{item.stock3}</td><td>{item.stock_per3}</td><td>{item.stock4}</td><td>{item.stock_per4}</td>
+                    <td>
+                        <button class="btn btn-secondary dropdown-toggle btn-sm collapseTableButton" type="button" data-toggle="collapse" data-target={"#collapseExample0"+index} aria-expanded="false" aria-controls={"collapseExample0"+index}>
+                        </button>
+                        <div class="collapse collapseTable" id={"collapseExample0"+index}>
+                            <div class="card card-body">
+                                {this.props.data[index].exps.map(     (detail) =>
+                                    <li type="disc" >
+                                        {detail}
+                                    </li >
+                                )}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <button id={"collapseTableButton1"+index} class="btn btn-secondary dropdown-toggle btn-sm collapseTableButton" type="button" data-toggle="collapse" data-target={"#collapseExample1"+index} aria-expanded="false" aria-controls={"collapseExample1"+index}>
+                        </button>
+                        <div class="collapse collapseTable" id={"collapseExample1"+index}>
+                            <div class="card card-body">
+                                {this.props.data[index].other_titles.map((detail) =>
+                                    <li type="disc">
+                                        {detail}
+                                    </li >
+                                )}
+                            </div>
+                        </div>
+                    </td>
+                    <td>{item.relative_title}</td>
+                    <td>{item.relative_name}</td>
+                    <td>{item.relative_relation}</td>
+                </tr>
+            ]);
+
+            return (
+                <div>
+                    <button class="btn btn-secondary btn-sm" type="button"   onClick={()=>
+                    {
+                        this.toggleExpandTable();
+                    }}>
+                    {this.state.showExpandedTableButton[this.state.tableExpanded]}
+                    </button>
+                    <table  class="table table-bordered table-hover"  >
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Title (Note1) </th>
+                                <th rowspan="2">Nationality or Place of registration</th>
+                                <th rowspan="2">Name</th>
+                                <th rowspan="2">Gender</th>
+                                <th rowspan="2">Date Elected</th>
+                                <th rowspan="2">Term</th>
+                                <th rowspan="2">Date First Elected (Note2)</th>
+                                
+                                <th colspan="2">Shares Held When Elected</th>
+                                <th colspan="2">Shares Currently Held</th>
+                                <th colspan="2">Shares held by spouse and underage children Current shareholding</th>
+                                <th colspan="2">Shares held by proxy</th>
+                                <th rowspan="2">Major career (academic) achievements (Note3)</th>
+
+                                <th rowspan="2">Selected Current Position sheldcon currently in the company and/or anyother companies</th>
+                                <th colspan="3">Spouse or relatives of second degree or closer acting as Directors, Supervisors, or department heads</th>
+                            </tr>
+
+                            <tr>
+                                <th>Shares</th>
+                                <th>%</th>
+                                <th>Shares</th>
+                                <th>%</th>                
+                                <th>Shares</th>
+                                <th>%</th>                
+                                <th>Shares</th>
+                                <th>%</th>
+                                <th>Title</th>
+                                <th>Name</th>
+                                <th>Relationship</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {table}
+                        </tbody>
+                    </table>
+                </div>
+            )
+        }
+    }
+    class ActiveTable2 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={
+            };
+        }
+        render() {
+            const table =  this.props.data.map( (item,index) => [
+                    <tr>
+                        {Object.keys(item).map(function(keyName, keyIndex) {
+                            return <td>{item[keyName]}</td>
+                        })}
+                    </tr>
+                ]);
+
+        
+
+            return (
+                <table  class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Criteria Name (Note 1)</th>
+                            <th colspan="3">Having Met One of the Following Professional Qualifications combined with at Least Five Years Work Experience</th>
+                            <th colspan="10">Independence Criteria (Note2)</th>
+                            <th rowspan="2">Number of Other Public Companies in Which the Individual is Concurrently Serving as an Independent Director</th>
+                        </tr>
+                        <tr>
+                            <th>An Instructor or Higher Position in a Department of Commerce, Law, Finance, Accounting, or Other Academic Department Related to the Business Needs of the Company in a Public or Private Junior College, College or University</th>
+                            <th>A Judge, Public Prosecutor, Attorney, Certified Public Accountant, or Other Professional or Technical Specialist Who has Passed a National Examination and been Awarded a Certificate in a Profession Necessary for the Business of the Company</th>
+                            <th>Having Work Experience in the Areas of Commerce, Law, Finance, or Accounting, or Otherwise Necessary for the Business of the Company</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {table}
+                    </tbody>
+                </table>
+            )
+        }
+    }
+    
+    if (myPage != props.currentPage){return null;}
+    return [
+        <div class="content">
+            <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>
+            董事會(Board of Director) </h5>
+            <p><span>&nbsp;&nbsp;</span></p>
+            <p class="content-p">
+                Company's Directors and supervisors are composed of 2 female and 7 male with professional experiences and qualification in marketing planning, operation management, industry knowledge and financial accounting, who respectively involve in various industries including electronic components and appliances, industrial rubber, banking, electro-optical, glass and ceramics, communication network, cement, securities, telecommunications etc.
+            </p>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span>
+                                Board Members, Supervisors, and Management Team(1)
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" >
+                        <div class="card-body"  style={{overflow: `auto`}}>
+                            <ActiveTable1  data={data.table1} />
+                        </div>
+                        <p><span>&nbsp;&nbsp;</span></p>
+                        <h6><span>&nbsp;&nbsp;</span><b> Note: </b></h6>
+                        <ul class="list-group list-group-flush ">
+                            <li class="list-group-item"> 1. Corporate shareholders shall list the names of corporate shareholders and representatives separately (The name of corporate shareholder shall be indicated if representative belongs to corporate shareholder).
+                            </li>
+                            <li class="list-group-item"> 2. While filling in  the date to first acted corporate director or supervisor, it shoule be noted if there is any interruption.
+                            </li>
+                            <li class="list-group-item"> 3. Above list name with experience related to the current position shall specify job title and duty to whom had worked in a certification audit firm or affiliated company during the previous disclosure period.			
+                            </li>	
+                            <li class="list-group-item"> 4.	Chairman and CEO or person with equivalent position (the top manager) are the same one, each others' spouse or relatives, who shall specify the information of reason, rationality, necessity corresponding alternative. (e.g. increasing the number of independent directors, and more than half of the directors do not serve as employees or managers, etc.)  
+                            </li>
+                            <li class="list-group-item"> 4-1.	Due to the slaes business operation, company requires Chairman Ching-Sung Yu concurrently to served as CEO, and the board of directors discussed and all approved on January 27, 2013.  According to Article 24 of the corporate governance principles of listed companies, a listed company shall have two or more	independent directors in accordance with the provisions of the articles of association, and no less than one-fifth of the number of directors. In addition to the 3 independent directors specified in the company's articles of association, the company has actually set up 3 independent directors, which complies with the law.			
+                            </li>
+                            <li class="list-group-item"> 5.	 Wen-Tien, Chang resigned as the supervisor on June 6, 1995, then he was rehired by company to serve as an independent director on April 22, 2013.								
+                            </li>
+                            <li class="list-group-item"> 6.	Chun-san, Hsieh resigned as a director and became a supervisor on April 22, 2013.		 
+                            </li>
+                            <li class="list-group-item"> 7.	Cien-Ya, Lin resigned on April 22, 2013, then she was rehired by company to serve as the same title of a supervisor on May 15, 2015.		  
+                            </li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span>
+                                Board Members, Supervisors, and Management Team(2)
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" >
+                        <div class="card-body"  style={{overflow: `auto`}}>
+                            <ActiveTable2  data={data.table2} />
+                        </div>
+                        <p><span>&nbsp;&nbsp;</span></p>
+                        <h6><span>&nbsp;&nbsp;</span><b>Note:</b></h6>
+                        <ul class="list-group list-group-flush ">
+                            <li class="list-group-item">1.  The number ofcolumns shall be adjusted according to the actual numbers			 
+                            </li>
+                            <li class="list-group-item"> 2.	If the director or supervisor meets the following conditions in the two years before the election and during the term of office, please mark “✔” in the space below each condition code.					
+                            <ul class="list-group list-group-flush ">
+                                <li class="list-group-item">(1)	Not an employee of the Company or its affiliated enterprises.	
+                                </li>
+                                <li class="list-group-item">(2)	Not a director or a supervisor of the Company or its affiliated enterprises (except for concurrent independent directors of the Company and its parent company, subsidiaries, or subsidiaries of the same parent company in accordance with this Act or local laws and regulations).	
+                                </li>
+                                <li class="list-group-item">(3)	A natural person shareholder who or whose spouse or minor children or in another person’s name does not hold more than 1% of the total issued shares of the Company or is not a top-ten shareholder.				
+                                </li>
+                                <li class="list-group-item">(4)	Not a manager in (1) or the spouse, second-tier relatives, or third-tier relatives of the persons listed in (2) or (3).
+                                </li>
+                                <li class="list-group-item">(5)	A director, supervisor, or employee of a corporate shareholder who does not directly hold more than 5% of the total issued shares of the Company, is a top-five shareholder, or is designated as a representative to serve as a director or supervisor of the Company in accordance with paragraph 1 or 2 of Article 27 of the Company Act (except for concurrent independent directors of the Company and its parent company, subsidiaries, or subsidiaries of the same parent company in accordance with this Act or local laws and regulations).
+                                </li>
+                                <li class="list-group-item">(6)	A director, supervisor, or employee of another company who does not have a seat on the board of directors or more than half of the shares with voting rights are controlled by the same person of this company (except for concurrent independent directors of the Company and its parent company, subsidiaries, or subsidiaries of the same parent company in accordance with this Act or local laws and regulations).
+                                </li>
+                                <li class="list-group-item">(7)	A director, supervisor, or employee of another company or institution who is not the same person or spouse as the Chairman, President, or an equivalent position of the Company (except for concurrent independent directors of the Company and its parent company, subsidiaries, or subsidiaries of the same parent company in accordance with this Act or local laws and regulations).
+                                </li>
+                                <li class="list-group-item">(8)	A director, supervisor, or manager of another company or institution which does not have financial or business dealings with the Company, or a shareholder holding more than 5% of the shares of the Company (not applicable if the Company or institution holds more than 20% but no more than 50% of the total issued shares of the Company, with concurrent independent directors of the Company and its parent company, subsidiaries, or subsidiaries of the same parent company in accordance with this Act or local laws and regulations).
+                                </li>
+                                <li class="list-group-item">(9)	A professional, sole proprietor, partner, business owner or partner, director, supervisor, manager, or the spouse of the above of a company or institution which does not provide audit services to the Company or its affiliated enterprises or the cumulative remuneration amount of which in the past two years does not exceed NT$500,000 for business, legal affairs, finance or accounting related services. However, this does not apply to the members of the remuneration committee, public takeover review committee, or special merger and acquisition committee who perform their functions in accordance with the Securities and Exchange Act or the Business Mergers and Acquisitions Act.
+                                </li>
+                                <li class="list-group-item">(10)	Not a spouse or have a second-tier relative relationship with other directors.
+                                </li>
+                                <li class="list-group-item">(11)	There are no such circumstances as in Article 30 of the Company Act.			
+                                </li>
+                                <li class="list-group-item">(12)	Not the government, legal person, or their representatives are elected as stipulated in Article 27 of the Company Act.
+                                </li>
+                            </ul>
+                            </li>
+                        </ul>				
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+    ];
+
+}
+
+  //python-page2.js
+function Page2(props) {
+    const myPage = 2;
+    var data = {
+      salary_regulations: [
+        {   
+            "title":"第 一 條　訂定目的及依據", 
+            "contents":[ 
+                {   
+                    "item": "為健全本公司董事、監察人及經理人薪資報酬制度，爰依「股票上市或於證券商營業處所買賣公司薪資報酬委員會設置及行使職權辦法」（以下簡稱「薪酬委員會職權辦法」）第三條之規定，訂定本薪資報酬委員會組織規程（以下簡稱「組織規程」），以資遵循。"  ,
+                    "sub_items": []  
+                }]
+        }, 
+        {   
+            "title":"第 二 條　適用範圍", 
+            "contents":[ 
+                {
+                    "item": "本公司薪資報酬委員會( 以下簡稱本委員會) 之職權相關事項，除法令或章程另有規定者外，應依本組織規程之規定。"  ,
+                    "sub_items": []  
+                }]
+        }, 
+        {   
+            "title":"第 三 條　公告備查", 
+            "contents":[ 
+                {
+                    "item": "本公司應將本組織規程之內容置於本公司網站及公開資訊觀測站，以備查詢。"  ,
+                    "sub_items": []  
+                }]
+        }, 
+        {   
+            "title":"第 四 條　委員會之功能", 
+            "contents":[ 
+                {
+                    "item": "本委員會之職能，係以專業客觀之地位，就本公司董事、監察人及經理人之薪資報酬政策及制度予以評估，並向董事會提出建議，以供其決策之參考。"  ,
+                    "sub_items": []  
+                }]
+        }, 
+        {   
+            "title":"第 五 條　委員會之組成", 
+            "contents":[ 
+                {
+                    "item": "本委員會成員人數為三人，由董事會決議委任之，其中一人為召集人。"  ,
+                    "sub_items": []  
+                },
+                {
+                    "item": "本委員會成員之專業資格與獨立性，應符合薪酬委員會職權辦法第五條及第六條之規定。"  ,
+                    "sub_items": []  
+                }]
+        }, 
+        {   
+            "title":"第 六 條　委員會之任期及補選", 
+            "contents":[ 
+                {
+                    "item": "本委員會成員之任期與委任之董事會屆期相同。"  ,
+                    "sub_items": []  
+                },
+                {
+                    "item": "本委員會之成員因故解任，致人數不足三人者，應自事實發生之即日起算三個月內召開董事會補行委任。"  ,
+                    "sub_items": []  
+                },
+            ]
+        }, 
+        {   
+            "title":"第 七 條　職責範圍", 
+            "contents":[ 
+                {
+                    "item": "本委員會應以善良管理人之注意，忠實履行下列職權，並將所提建議提交董事會討論。但有關監察人薪資報酬建議提交董事會討論，以監察人薪資報酬經公司章程訂明或股東會決議授權董事會辦理者為限："  ,
+                    "sub_items": [
+                        "一、 定期檢討本規程並提出修正建議。",
+                        "二、 訂定並定期檢討本公司董事、監察人及經理人年度及長期之績效目標與薪資報酬之政策、制度、標準與結構。",
+                        "三、 定期評估本公司董事、監察人及經理人之績效目標達成情形，並訂定其個別薪資報酬之內容及數額。"
+                    ]  
+                },
+                {
+                    "item": "本委員會履行前項職權時，應依下列原則為之："  ,
+                    "sub_items": [
+                        "一、 確保公司之薪資報酬安排符合相關法令並足以吸引優秀人才。",
+                        "二、 董事、監察人及經理人之績效評估及薪資報酬，應參考同業通常水準支給情形，並考量個人所投入之時間、所擔負之職責、達成個人目標情形、擔任其他職位表現、公司近年給予同等職位者之薪資報酬，暨由公司短期及長期業務目標之達成、公司財務狀況等評估個人表現與公司經營績效及未來風險之關連合理性。",
+                        "三、 不應引導董事及經理人為追求薪資報酬而從事逾越公司風險胃納之行為。",
+                        "四、 針對董事及高階經理人短期績效發放紅利之比例及部分變動薪資報酬支付時間，應考量行業特性及公司業務性質予以決定。",
+                        "五、 本委員會成員對於其個人薪資報酬之決定，不得加入討論及表決。"
+                    ]  
+                },   
+                {
+                    "item": "前二項所稱之薪資報酬，包括現金報酬、認股權、分紅入股、退休福利或離職給付、各項津貼及其他具有實質獎勵之措施；其範疇應與公開發行公司年報應行記載事項準則中有關董事、監察人及經理人酬金一致。"  ,
+                    "sub_items": []  
+                },
+                {
+                    "item": "本公司子公司之董事及經理人薪資報酬事項如依子公司分層負責決行事項須經本公司董事會核定者，應先經本委員會提出建議後，再提交董事會討論。"  ,
+                    "sub_items": []  
+                },             
+            ]
+        }, 
+        {   
+            "title":"第 八 條　會議召開及召集", 
+            "contents":[ 
+                {
+                    "item": "本委員會每年召開兩次，召集時應載明召集事由，於七日前通知委員會成員。但有緊急情事者，不在此限。"  ,
+                    "sub_items": []  
+                },
+                {
+                    "item": "本委員會由全體成員互推一人擔任召集人及會議主席；召集人請假或因故不能召集會議，由其指定委員會之其他成員代理之；該召集人未指定代理人者，由委員會之其他成員推舉一人代理之。"  ,
+                    "sub_items": []  
+                }]
+        }, 
+        {   
+            "title":"第 九 條　議程之訂定", 
+            "contents":[ 
+                {
+                    "item": "本委員會會議議程由召集人訂定，其他成員亦得提供議案供委員會討論。會議議程應事先提供予委員會之成員。"  ,
+                    "sub_items": []  
+                },
+                {
+                    "item": "本委員會召開時，公司應設簽名簿供出席成員簽到，並供查考。"  ,
+                    "sub_items": []  
+                },
+                {
+                    "item": "本委員會之成員應親自出席委員會，如不能親自出席，得委託其他成員代理出席；以視訊參與會議者，視為親自出席。"  ,
+                    "sub_items": []  
+                },
+                {
+                    "item": "本委員會成員委託其他成員代理出席委員會時，應於每次出具委託書，且列舉召集事由之授權範圍。"  ,
+                    "sub_items": []  
+                },
+                {
+                    "item": "第三項代理人，以受一人之委託為限。"  ,
+                    "sub_items": []  
+                }]
+        }, 
+        {   
+            "title":"第 十 條　決議方法", 
+            "contents":[ 
+                {
+                    "item": "本委員會為決議時，應有全體成員二分之一以上同意。表決時如經委員會主席徵詢無異議者，視為通過，其效力與投票表決同。"  ,
+                    "sub_items": []  
+                },
+                {
+                    "item": "前項表決之結果，應當場報告，並作成紀錄。"  ,
+                    "sub_items": []  
+                }]
+        }, 
+        {   
+            "title":"第十一條　議事錄", 
+            "contents":[ 
+                {
+                    "item": "本委員會之議事，應作成議事錄，議事錄應詳實記載下列事項："  ,
+                    "sub_items": [
+                        "一、 會議屆次及時間地點。 	",
+                        "二、 主席之姓名。 	",
+                        "三、 成員出席狀況， 包括出席、請假及缺席者之姓名與人數。",
+                        "四、 列席者之姓名及職稱。 	",
+                        "五、 紀錄之姓名。 	",
+                        "六、 報告事項。 	",
+                        "七、 討論事項：各議案之決議方法與結果、委員會成員之反對或保留意見。",
+                        "八、 臨時動議：提案人姓名、議案之決議方法與結果、委員會之成員、專家及其他人員發言摘要、反對或保留意見。",
+                        "九、 其他應記載事項。"
+                    ]  
+                },
+                {
+                    "item": "本委員會簽到簿為議事錄之一部分；以視訊會議召開者，其視訊影音資料亦為議事錄之一部分。"  ,
+                    "sub_items": []  
+                },   
+                {
+                    "item": "議事錄須由會議主席及記錄人員簽名或蓋章，於會後二十日內分送委員會成員，並應呈報董事會及列入公司重要檔案，且應保存五年；議事錄之製作及分發，得以電子方式為之。"  ,
+                    "sub_items": []  
+                },
+                {
+                    "item": "前項保存期限未屆滿前，發生關於本委員會相關事項之訴訟時，應保存至訴訟終止為止。"  ,
+                    "sub_items": []  
+                },             
+            ]
+        }, 
+        {   
+            "title":"第十二條　會議決議之辦理", 
+            "contents":[ 
+                {
+                    "item": "本委員會基於第七條所定職權之決議事項，或依第十三條第二項決議委任專業人員等之後續執行工作，得授權召集人或委員會其他成員續行辦理，並於執行期間向本委員會為書面報告；必要時應於下一次會議提報本委員會追認或報告。"  ,
+                    "sub_items": []  
+                }
+            ]
+        },
+        {   
+            "title":"第十三條　行使職權之資源", 
+            "contents":[ 
+                {
+                    "item": "本委員會召開時，得請本公司董事、相關部門經理人員、內部稽核人員、會計師、法律顧問或其他人員列席會議，並提供相關必要之資訊。"  ,
+                    "sub_items": []  
+                },
+                {
+                    "item": "本委員會得經決議，委任律師、會計師或其他專業人員，就行使職權有關之事項為必要之查核或提供諮詢，其相關費用由公司負擔。"  ,
+                    "sub_items": []  
+                }]
+        },
+        {   
+            "title":"第十四條　施行", 
+            "contents":[ 
+                {
+                    "item": "本組織規程經董事會通過後施行，修正時亦同。"  ,
+                    "sub_items": []  
+                }
+            ]
+        },
+        {   
+            "title":"第十五條 本規程訂立於民國一○○年十二月二十九日。", 
+            "contents":[ 
+                {
+                    "item": ""  ,
+                    "sub_items": []  
+                }
+            ]
+        }
+        
+      ],
+      table1 : [
+        {"title": "召集人/獨立董事","name":"張文添","pro_exp1":"✔","pro_exp2":"-","pro_exp3":"✔","fit_item1":"✔","fit_item2":"✔","fit_item3":"✔","fit_item4":"✔","fit_item5":"✔","fit_item6":"✔","fit_item7":"✔","fit_item8":"✔","fit_item9":"✔","fit_item10":"✔","num_company":"-","note":"-"},
+        {"title": "委  員/獨立董事","name":"曾天運","pro_exp1":"-","pro_exp2":"✔","pro_exp3":"✔","fit_item1":"✔","fit_item2":"✔","fit_item3":"✔","fit_item4":"✔","fit_item5":"✔","fit_item6":"✔","fit_item7":"✔","fit_item8":"✔","fit_item9":"✔","fit_item10":"✔","num_company":"-","note":"-"},
+        {"title": "委  員/獨立董事","name":"陳志弘","pro_exp1":"-","pro_exp2":"-","pro_exp3":"✔","fit_item1":"✔","fit_item2":"✔","fit_item3":"✔","fit_item4":"✔","fit_item5":"✔","fit_item6":"✔","fit_item7":"✔","fit_item8":"✔","fit_item9":"✔","fit_item10":"✔","num_company":"-","note":"-"},
+      ],
+      table2 : [
+          {"title": "召集委員","name":"張文添","real_show":"5","asked_show":"","real_show_per":"100.00%", "note": "107.6.19連任。" },
+          {"title": "委員","name":" 曾天運","real_show":"5","asked_show":"","real_show_per":"100.00%", "note": "107.6.19連任。" },
+          {"title": "委員","name":"陳志弘","real_show":"5","asked_show":"","real_show_per":"100.00%", "note": "107.6.19連任。" },
+        ],
+
+      meetings : [
+          {
+              "date" : "108年1月25日", 
+              "contents": [ 
+                  {"summary": "(1)本公司民國一○七年年終獎金暨一○六年員工酬勞發放標準及擬發放金額案。", "result":"無異議照案通過。"},
+                  {"summary": "(2)擬訂本公司一O七年度員工及董監事酬勞提撥案，提請討論。", "result":"無異議照案通過。"} 
+              ]
+          },
+          {
+              "date" : "108年8月12日", 
+              "contents": [ 
+                  {"summary": "(1)一○八年度董事兼任經理人薪資調整討論案。", "result":"無異議照案通過。"},
+                  {"summary": "(2)為公司營運管理之需，調升經理人員討論案。", "result":"無異議照案通過。"} 
+              ]
+          },    
+          {
+              "date" : "108年10月4日", 
+              "contents": [ 
+                  {"summary": "(1)子公司泗陽泰碩電子有限公司(以下簡稱泗陽泰碩)因管理之需，增聘經理人員薪酬案，提請 審議。", "result":"無異議照案通過。"},
+                  {"summary": "(2)為公司營運管理之需，調升經理人員討論案。", "result":"無異議照案通過。"} 
+              ]
+          },   
+          {
+              "date" : "109年1月16日", 
+              "contents": [ 
+                  {"summary": "(1)本公司民國一○八年年終獎金暨一○七年員工酬勞發放標準及擬發放金額案。", "result":"無異議照案通過。"}
+              ]
+          },    
+          {
+              "date" : "109年3月13日", 
+              "contents": [ 
+                  {"summary": "(1)擬訂本公司一O八年度員工及董監事酬勞提撥案，提請討論。", "result":"無異議照案通過。"},
+                  {"summary": "(2)修訂本公司「董事及經理人績效評估辦法」案，提請討論。", "result":"無異議照案通過。"}
+              ]
+          },        
+      ]
+    }
+
+    class ActiveList1 extends React.Component {
+      constructor(props){
+          super(props);
+          this.state={
+          };
+      }
+      render() {
+          const list =  this.props.data.map( (reg,index) => [
+              <li class="list-group-item"><b>{reg.title}</b>
+                <ul class="list-group list-group-flush " >
+                  {reg.contents.map(function(content, index2) {
+                            return [
+                              <li class="list-group-item">{content.item}
+                                <ul class="list-group list-group-flush">
+                                  { content.sub_items.map(function(sub_item,index3){
+                                    return [
+                                      <li class="list-group-item"> { sub_item }
+                                      </li>         
+                                    ]
+                                  })}
+                                </ul>
+                              </li> 
+                          ]
+                        })}
+                  </ul>
+              </li> 
+            ]);
+          return (
+            <ul class="list-group list-group-flush ">
+              {list}
+            </ul>
+
+          )
+      }
+    }  
+
+    class ActiveTable1 extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+        };
+    }
+    render() {
+        const table =  this.props.data.map( (item,index) => [
+                <tr>
+                    {Object.keys(item).map(function(keyName, keyIndex) {
+                        return <td>{item[keyName]}</td>
+                    })}
+                </tr>
+            ]);
+
+    
+
+        return (
+            <table  class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                      <th rowspan="2">身份別（註1）</th>
+                      <th rowspan="2">姓名</th>
+                      <th colspan="3" style={{width: `50%`}}>是否具有五年以上工作經驗及下列專業資格</th>
+                      <th colspan="10">符合獨立性情形（註2）</th>
+                      <th rowspan="2">兼任其他公開發行公司獨立董事家數</th>
+                      <th rowspan="2">備註</th>
+                    </tr>
+                    <tr>
+                        <th>商務、法務、財務、會計或公司業務所須相關科系之公私立大專院校講師以上</th>
+                        <th>法官、檢察官、律師、會計師或其他與公司業務所需之國家考試及格領有證書之專門職業及技術人員</th>
+                        <th>商務、法務、財務、會計或公司業務所須之工作經驗</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>10</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {table}
+                </tbody>
+            </table>
+        )
+    }
+    }
+    class ActiveTable2 extends React.Component {
+      constructor(props){
+          super(props);
+          this.state={
+          };
+      }
+      render() {
+          const table =  this.props.data.map( (item,index) => [
+                  <tr>
+                      {Object.keys(item).map(function(keyName, keyIndex) {
+                          return <td>{item[keyName]}</td>
+                      })}
+                  </tr>
+              ]);
+  
+      
+  
+          return (
+              <table  class="table table-bordered table-hover">
+                  <thead>
+                      <tr>
+                        <th rowspan="1">職稱</th>
+                        <th rowspan="1">姓名</th>
+                        <th rowspan="1">實際出(列)席次數B</th>
+                        <th rowspan="1">委託出席次數</th>
+                        <th rowspan="1">實際出(列)席率(%)【B/A】</th>
+                        <th rowspan="1">備註</th>
+      
+                      </tr>
+                  </thead>
+                  <tbody>
+                      {table}
+                  </tbody>
+              </table>
+          )
+      }
+      }
+      class ActiveList2 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={
+            };
+        }
+        render() {
+            const list =  this.props.data.map( (meeting,index) => [
+                <li class="list-group-item">{index+1}. 薪酬委員會日期：{meeting.date}
+                  <ul class="list-group list-group-flush">
+                    {meeting.contents.map(function(content, index2) {
+                              return [
+                                <li class="list-group-item">{content.summary}
+                                  <ul class="list-group list-group-flush">
+                                   
+                                        <li class="list-group-item"> { content.result }
+                                        </li>         
+                              
+                                  </ul>
+                                </li> 
+                            ]
+                          })}
+                    </ul>
+                </li> 
+              ]);
+            return (
+              <ul class="list-group list-group-flush ">
+                {list}
+              </ul>
+  
+            )
+        }
+      }  
+    if (myPage != props.currentPage){return null;}
+    return [
+        <div class="content">
+            <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>
+            薪酬委員會  </h5>
+            <p><span>&nbsp;&nbsp;</span></p>
+
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span>
+                                薪酬委員會章程
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" >
+                        <div class="card-body"  style={{overflow: `auto`}}>
+                        <ActiveList1  data={data.salary_regulations} />
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span>
+                                薪酬委員會之組成
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" >
+                        <div class="card-body"  style={{overflow: `auto`}}>
+                          <ActiveTable1 data={data.table1} />
+                        </div>
+                        <p><span>&nbsp;&nbsp;</span></p>
+                        	
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span>
+                                薪酬委員會之職責
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingOne" >
+                        <div class="card-body"  style={{overflow: `auto`}}>
+                        <ul class="list-group list-group-flush ">
+                            <li class="list-group-item"><b>(一)以善良管理人之注意， 忠實履行下列職權， 並將所提建議提交董事會討論：</b>
+                            </li>
+                            <li class="list-group-item">
+                                <ul class="list-group list-group-flush ">
+                                    <li class="list-group-item">1. 訂定並定期檢討董事、監察人及經理人績效評估與薪資報酬之政策、制度、標準與結構。
+                                    </li>
+                                    <li class="list-group-item">2. 訂定並定期評估董事、監察人及經理人之薪資報酬。
+                                    </li>
+                                    <li class="list-group-item">3. 對監察人報酬之建議， 以公司章程明定(或股東會決議)授權董事會辦理者為限。
+                                    </li>
+                                    <li class="list-group-item">4. 子公司董事及經理人之薪資報酬， 依公司規定需經母公司董事會核定者， 應先請母公司薪資報酬委員會提出建議。
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="list-group-item"><b>(二)薪資報酬之定義</b>：
+                                <ul class="list-group list-group-flush ">
+                                    <li class="list-group-item">1. 現金
+                                    </li>
+                                    <li class="list-group-item">2. 認股權
+                                    </li>
+                                    <li class="list-group-item">3. 分紅入股
+                                    </li>
+                                    <li class="list-group-item">4. 退休福利
+                                    </li>
+                                    <li class="list-group-item">5. 離職給付
+                                    </li>
+                                    <li class="list-group-item">6. 各項津貼
+                                    </li>
+                                    <li class="list-group-item">7. 其他具有實質獎勵之措施
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </div>
+                        <p><span>&nbsp;&nbsp;</span></p>
+                        	
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span>
+                                薪酬委員會運作情形
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingOne" >
+                        <div class="card-body"  style={{overflow: `auto`}}>
+                          <ul class="list-group list-group-flush ">
+                              <li class="list-group-item">(1)   本公司之薪資報酬委員會委員計3人。
+                              </li>
+                              <li class="list-group-item">(2)   本屆委員任期：107年6月19日至110年6月18日，最近年度(108年度至年報刊印日止)薪資報酬委員會開會 5 次(Ａ)，委員資格及出席情形如下：
+                                  <ActiveTable2 data={data.table2} />
+                                  <ul class="list-group list-group-flush ">
+                                    <li class="list-group-item">其他應記載事項：
+                                      </li>
+                                      <li class="list-group-item">一、108年度至年報刊印日止薪資報酬委員會開會討論議案如下：
+                                      </li>
+                                      <li class="list-group-item">
+                                          <ActiveList2 data={data.meetings} />
+                                      </li>
+                                      <li class="list-group-item">二、董事會如不採納或修正薪資報酬委員會之建議，應敘明董事會日期、期別、議案內容、董事會決議結果以及公司對薪資報酬委員會意見之處理 (如董事會通過之薪資報酬優於薪資報酬委員會之建議，應敘明其差異情形及原因)：無。
+                                      </li>
+                                      <li class="list-group-item">三、薪資報酬委員會之議決事項，如成員有反對或保留意見且有紀錄或書面聲明者，應敘明薪資報酬委員會日期、期別、議案內容、所有成員意見及對成員意見之處理：無。
+                                      </li>
+                                  </ul>
+                              </li>
+                          </ul>
+                        </div>
+                        <p><span>&nbsp;&nbsp;</span></p>
+                        	
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+    ];
+
+}
+
+  //python-page3.js
+function Page3(props) {
+    const myPage = 3;
+    if (myPage != props.currentPage){return null;}
+
+      var data = {
+        table1 : [
+            {   "name": "HQO",
+                "summary" : "秉承總經理之命令，執行專案業務之推動及落實並負責對投資人公共關係之維繫。",
+                "details" : [] 
+                
+            },
+            {   "name": "稽核室", 
+                "summary" : "執行內部控制制度的稽核工作，檢查並評估公司的營運記錄有無缺失並提出改善建議。",
+                "details" : [] 
+                
+            },
+            {   "name": "財管處",
+                "summary" : "秉承總經理之命令，掌管公司之財務、人事、總務、公關等事宜。下設財務部、管理部。主要內容為：",
+                "details" : ["(1)規劃公司的營運方針並執行董事會的決議，建立公司營運體制及監督日常運作。","(2)處理公司對內及對外公共關係及跨部門之溝通與協調情事。"] 
+                
+            },
+            {   
+                "name": "資訊室", 
+                "summary" : "",
+                "details" : ["(1)ERP系統的維護及軟體整合。","(2)內部網路的架設及電子郵件系統的更新及修護。","(3)軟、硬體設備的更新及維護。","(4)資訊安全維護及推動。"] 
+            
+            },
+            {   
+                "name": "財務部", 
+                "summary" : "",
+                "details" : ["(1)負責公司人事、行政、總務、股務及固定資產之管理與推動工作。","(2)公司智慧財產權利之維護與訴訟。","(3)負責勞工安全衛生規劃與管理並釐訂公司職業災害防治措施。"] 
+            
+            },
+            {   
+                "name": "業務行銷處", 
+                "summary" : "秉承總經理之命令，以創造公司之最大利潤為目標，依產品別區分為散熱器、通訊﹑連接器及讀卡器四大行銷部。",
+                "details" : ["(1)蒐集市場資訊，提供給主管及研發處。","(2)售價政策之擬訂及市場規劃、預估。","(3)規劃並辦理廣告及參展事宜。","(4)執行新產品開發建議之審查。","(5)擬定產品初期規格及成本分析。"] 
+            
+            },
+            
+            {   
+                "name": "業務處", 
+                "summary" : "秉承總經理之命令，以達成業績，創造公司之最大利潤為目標，其下區分日本、通訊、熱傳、連接器、讀卡器等五大產品線業務：",
+                "details" : ["(1)客戶之開發、調查、選定、聯繫及服務客戶。"
+                ,"(2)合約、訂單之審查、產銷、出貨控制之聯繫協調。","(3)客戶抱怨及維修之聯繫處理。","(4)反應品質異常資訊給品保單位，蒐集並提供技術資料給客戶。","(5)安排出貨交運事宜。"] 
+            
+            },
+            
+            
+            {   
+                "name": "研發處", 
+                "summary" : "秉承總經理之命令，負責本公司產品開發、製造技術支援、銷售技術支援、及對客戶支援事宜。下設通訊研發部、熱傳研發部、連接器研發部、讀卡器研發部、研發管理部。",
+                "details" : 
+                ["通訊研發部：","(1)通訊散熱產品設計及相關零件之承認。","(2)模具開發、試產。","(3)協助解決客戶技術問題。","熱傳研發部：","(1)散熱器設計及相關零件之承認。","(2)模具開發、試產。","(3)協助解決客戶技術問題。","連接器研發部：","(1)連接器設計及相關零件之承認。","(2)模具開發、試產。","(3)協助解決客戶技術問題。","讀卡器研發部：","(1)讀卡器設計及相關零件之承認。","(2)產品開發、試產。","(3)協助解決客戶技術問題。"]
+
+            
+            },
+
+            
+            {   
+                "name": "資材部", 
+                "summary" : "秉承總經理之命令，以達成業績，創造公司之最大利潤為目標，其下區分日本、通訊、熱傳、連接器、讀卡器等五大產品線業務：",
+                "details" : ["(1)負責原物料、各項設備等採購事宜，做到適質、適量、適時與適價的採購策略。"
+                ,"(2)對物料倉儲及存貨之管制與記錄，並維護廠區存貨之完整，達到適時供給所需。"] 
+            
+            },
+
+            {   
+                "name": "生管部", 
+                "summary" : "秉承總經理之命令，以達成業績，創造公司之最大利潤為目標，其下區分日本、通訊、熱傳、連接器、讀卡器等五大產品線業務：",
+                "details" : [
+                    "(1)製造部門生產排程規劃。","(2)負責原物料請購、物料安排事宜。"]
+                
+            
+            },       
+            
+            
+            
+            {   
+                "name": "品保部", 
+                "summary" : "秉承總經理之命令，以達成業績，創造公司之最大利潤為目標，其下區分日本、通訊、熱傳、連接器、讀卡器等五大產品線業務：",
+                "details" : [
+                    "(1)執行公司品質政策、確保品質系統之實施及品質作業稽核、改善。","(2)提供經營者有關品質之建議，協助及協調各部門執行品保的工作並推行品質提升之活動與教育訓練以提供客戶滿意的服務。"
+                ] 
+            
+            }, 
+                    
+            {   
+                "name": "製造部", 
+                "summary" : "秉承總經理之命令，以達成業績，創造公司之最大利潤為目標，其下區分日本、通訊、熱傳、連接器、讀卡器等五大產品線業務：",
+                "details" : ["(1)負責公司產品之製造及生產。",
+                    "(2)生產製程之改善及良率之提升。"] 
+            
+            },     
+          
+          
+        ],
+        table2 : [
+            {"title": "董事長","name":"余清松","exps":["大同工學院工商管理系畢"]},
+            {"title": "總經理","name":"梁俊興","exps":["東海大學經濟系","信邦電子股份有限公司總經理","信邦電子股份有限公司監察人","數碼醫療器材股份有限公司執行長"]}
+        ],
+
+
+        table3:[
+            {name: '余清松',self_stock:'14,155,046',self_stock_per:"16.22", fam_stock:"773,431",fam_stock_per:"0.89",other_stock:"2,698,000",other_stock_pre:'3.09', name2:'隆昕實業',relation:'關係人',note:''},
+            {name: '隆昕實業股份有限公司法人代表：葉麗娟',self_stock:'2,698,000',self_stock_per:"3.09", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'余清松',relation:'關係人',note:''},
+            {name: '林千雅',self_stock:'1,844,321',self_stock_per:"2.11", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+            {name: '台灣企銀受託保管群益創新科技基金專戶',self_stock:'1,200,000',self_stock_per:"1.38", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+            {name: '群益馬拉基金專戶',self_stock:'1,030,000',self_stock_per:"1.18", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+            {name: '謝君山',self_stock:'1,022,276',self_stock_per:"1.17", fam_stock:"280,466",fam_stock_per:"0.32",other_stock:"",other_stock_pre:'-', name2:'',relation:'',note:''},
+            {name: '元大人壽保險股份有限公司',self_stock:'956,000',self_stock_per:"1.10", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+            {name: '復華傳家二號基金專戶',self_stock:'863,000',self_stock_per:"0.99", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+            {name: '野村中小基金專戶',self_stock:'855,000',self_stock_per:"0.98", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+            {name: '復華數位經濟基金專戶',self_stock:'812,000',self_stock_per:"0.93", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+        ]
+
+
+      };
+      const table1 = data.table1.map( (item,index) => [
+                                                <tr>
+                              <td> {item.name}</td>
+                                <td> 
+                                    <ul class="list-group list-group-flush ">{item.summary}
+
+                                      {data.table1[index].details.map(     (detail) =>
+                                          <li class="list-group-item" >
+                                          {detail}
+                                          </li>
+                                        )}
+                                    </ul>
+                                </td>
+                                </tr>
+                                ]
+        );
+
+
+        const table2 = data.table2.map( (item,index) => [
+                            <td> {item.title}</td>,
+                                <td> {item.name}</td>,
+                                <td> 
+                                    <ul class="list-group list-group-flush ">
+                                      {data.table2[index].exps.map( (item2) =>
+                                          <li class="list-group-item" >
+                                            {item2}
+                                          </li>
+                                        )}
+                                    </ul>
+                                </td>
+                                ]
+        );
+
+        const table3 = data.table2.map( (item,index) => [
+                                
+                                  Object.keys(item).map(function(keyName,keyIndex){
+                                      <td> {item.keyName}</td>
+                                  } )
+                               
+
+                              ]
+        );
+
+
+
+      
+
+      return [
+      <div class="content">
+        <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>組織及職掌 </h5>
+        <p><span>&nbsp;&nbsp;</span></p>
+    
+  <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          主要部門職稱及權責 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" >
+      <div class="card-body">
+        <table  class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th rowspan="1">部門</th>
+                                <th rowspan="1">主要職掌</th>
+                            </tr>
+
+                            </thead>
+                            <tbody>
+                               {table1}
+                            </tbody>
+                        </table>
+       
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+      ];
+
+    }
+      //python-page7.js
+function Page7(props) {
+    const myPage = 7;
+    if (myPage != props.currentPage){return null;}
+
+      var data =  {          list1:[
+                      "1. 設立環境管理系統與環境目標:供應商必須擁有 ISO 14001 或 RC14001。",
+                      "2. 原物料有害物質禁用:供應商必須提供聲明，保證其產品不含對環境有害的國際禁用物質，確保產品符合客戶與國際相關法令的要求，如歐盟 RoHS。",
+                      "3. 環境保護法規符合性:供應商必須符合在地政府相關空氣污染防制、水污染防制、廢棄物與毒性物質管理等環境保護法規;經查證有違反法規之情事，必須及時提出改善計劃。",
+                      "4. 節能減碳:鼓勵供應商建置工廠的碳盤查資料、建立產品碳足跡、提供具體的減碳績效。",
+                      "5. 水資源與節水:鼓勵供應商建置工廠的水盤查資料、提供具體的水資源管理計劃。 ",
+                      "註:「非衝突(conflict-free)」之原物料係指該原物料係來自於經電子產業公民聯盟或其他同等組織所認可之供應商，或經合理查證和盡職調查後依相關法規足資認定為「非來自剛果衝突地區」(DRC conflict free)之供應商。 "
+                    ],
+
+                    list2:[
+                      "1. 您所提供的個人資料，包含姓名、電話、電子郵件地址，泰碩 公司於調查期間，得為調查舉報事項與聯繫用途而處理利用； 調查若有必要，泰碩公司得傳遞您必要的個人資訊予公司內部 及司法檢調等相關單位。",
+                      "2. 不得明知不實而故意捏造事實，倘舉報事後被證明是出於惡意 或有故意捏造虛偽陳述之情事，您必須自負相關法律責任。",
+                      "3. 為能盡早調查與解決問題，請您務必提供所有可能的相關具體 資訊與文件，若相關資訊與文件不齊備，泰碩公司將無法進行 調查。",
+                      "4. 泰碩公司提供予您的相關聯絡內容，其全部或一部分皆不可向 任何人揭露。除依法律之規定要求外，您不得以泰碩公司與您 之間的聯絡內容提出訴訟或以該聯絡內容作為訴訟相關資料。",
+                      
+                    ]}
+
+
+
+        const list1 = data.list1.map( (item,index) =>
+        <li class="list-group-item" >
+          {item}
+        </li>
+        );
+
+        const list2 = data.list2.map(item=>
+        <li class="list-group-item" >
+  {item}
+</li>);
+
+
+      return  [
+      <div class="content">
+
+<h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>供應商管理 </h5>
+<p><span>&nbsp;&nbsp;</span></p>  
+<p>泰碩公司重視企業社會責任，已要求採購「非衝突(conflict-free)」的原物料; 提倡人道精神與實踐人性尊嚴的社會道德準則，是泰碩公司理應善盡的企業社會責任。目前係以符合經濟合作暨發展組織(OECD)於 2011 年所發布之「受衝突影響與高風險地區之全球責任礦物供應鏈模範政策(Model Supply Chain Policy for a Responsible Global Supply Chain of Mineral from Conflict-Affected and High Risk Areas)」的盡職調查(due diligence)架構為依據。
+</p>
+<p> 泰碩公司鼓勵供應商向經特定產業組織(如 EICC 等)所認可為非衝突之原物料供應廠商進行採購，並要求供應商積極督促尚未取得此認可的供應廠商接受 EICC 或其他同等之獨立第三方稽核計劃檢驗，以符合「非衝突」之原則。
+</p>
+<p> 透過供應商管理，將對環保的理念向外延伸推廣，促使供應商夥伴也能共同關心環保議題，共同提升更美好的環境與社會。 
+</p>
+
+<p><span>&nbsp;&nbsp;</span></p>
+
+<h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>對供應商有關環境保護之要求 (2018年-已完成共37家供應商評鑑) </h5>
+
+
+<ul class="list-group list-group-flush" >
+ {list1}
+</ul>
+
+
+<p><span>&nbsp;&nbsp;</span></p>
+<h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>客戶及供應商投訴中心 </h5>
+<p><span>&nbsp;&nbsp;</span></p>
+
+<h6><b>違反從業道德行為舉報系統</b></h6>
+
+<p>在泰碩電子股份有限公司，誠信正直是公司文化最重要之核心價值， 也是公司經營理念之首。泰碩公司一向承諾以誠信從事所有業務活動 ，絕不允許貪污及任何形式之舞弊行為。
+</p>
+<p>若您發現泰碩公司員工或任何代表泰碩公司的相關人士進行可疑行為 或可能違反泰碩公司的道德行為準則時，請告訴我們。
+您的舉報事項，我們將交由公司副總經理直接處理。
+</p>
+<p>除法律另有規定外，對於您提供關於您的個人資料，我們將予以保密 ，並依法採取適當之保護措施，保護您的個人資料及隱私。 
+</p>
+<p><span>&nbsp;&nbsp;</span></p>
+
+<h6><b>提醒您：</b></h6>
+
+<ul class="list-group list-group-flush" >
+{list2}
+<li  class="list-group-item">   郭尚仁 先生
+(副總經理暨發言人)
+E-Mail：<a href="mailto:sales@taisol.com">sales@taisol.com</a>
+</li>
+</ul>
+
+
+
+</div>
+      ];
+    
+   
+    
+  }
+
+  // Create a function to wrap up your component
+  function App(){
+    return(
+    <div>
+      <SinglePageApp />
+    </div>
+    )
+    }
+    ReactDOM.render(
+      <App />,
+      rootElement
+    )
+</script>
+
+<!-- python-footer.html -->
+<nav class="footer  navbar  navbar-expand-lg fixed-bottom  navbar-dark ">
+    <div class="container-fluid">
+      <div class="row" style="width: 100%">
+        <div class="col-8">
+          <div class="footer-nav collapse navbar-collapse " id="navbarSupportedContent2">
+            <ul class="navbar-nav mb-2 mb-lg-0 ">
+              <li class="nav-item">
+                <p  aria-current="page" >Copyright ©2015 TaiSol Electronics Co., Ltd. All rights reserved</p>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+        <div class="col-4">
+            <div class="footer-nav collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="http://www.104.com.tw/jobbank/custjob/index.php?r=cust&j=404a436c5a463f245a323c1d1d1d1d5f2443a363189j48&jobsource=n104bank1">加入泰碩</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.taisol.com/?lang=zh#">泰碩人園地</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.taisol.com/site-navigation?lang=zh">網站導覽</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</body>
+
 </html>

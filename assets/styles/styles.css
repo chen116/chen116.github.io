@@ -30,8 +30,9 @@ h5 {
 }
 
 .footer-nav {
-  position: absolute;
-  right:10%;
+  /* position: absolute; */
+  /* right:10%; */
+  float: right;
    
 }
 

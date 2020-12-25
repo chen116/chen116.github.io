@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>React Local</title>
+  <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+  <script type="application/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+  <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+
+
+
+
+  <link rel="stylesheet" href="./assets/styles/styles.css" />
+  <link rel="icon" href="./assets/images/logo.ico"  type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+
+    <!-- python-header -->
+    
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+     
+        <a class="navbar-brand" href="https://www.taisol.com"><img src='./assets/images/logo.png' /></a>
+       
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <h3 style="color: white;"> <span>&nbsp;&nbsp;</span>公司治理 </h3>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 header-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="https://www.taisol.com/?lang=zh">首頁</a>
+            </li>
+            <li class="nav-item dropdown">
+
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                關於泰碩
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="https://www.taisol.com/about/about-taisol?lang=zh">公司簡介</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/about/global-location?lang=zh">據點分佈圖</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/about/company-yearbook?lang=zh">大事年鑑</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/about/patents/2018?lang=zh">鄧白氏專區</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/about/china-factory?lang=zh">品質政策</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/about/company-location?lang=zh">公司位置圖</a></li>
+              </ul>
+            </li>
+     
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-expanded="false">
+                最新消息
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <li><a class="dropdown-item" href="https://www.taisol.com/news?lang=zh">新聞中心</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-expanded="false">
+                產品訊息
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1?lang=zh">散熱管理解決方案</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/37?lang=zh">消費性電子產品</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/38?lang=zh">企業運算系統</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/39?lang=zh">LED照明</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/40?lang=zh">無線通訊系統</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/41?lang=zh">工業應用</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/product/product-list/1/42?lang=zh">散熱技術</a></li>
+              </ul>
+            </li>
+       
+            <li class="nav-item dropdown">
+              <a   @mouseleave="mouseLeave('navbarDropdown4')" @mouseover="mouseOver('navbarDropdown4')" ref="navbarDropdown4"  class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-expanded="false" >
+                利害關係人專區
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown4" ref="navbarDropdown4-1">
+                <li><a class="dropdown-item" href="https://www.taisol.com/investor/investor-news?lang=zh">最新消息</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/investor/corporate-info?lang=zh">公司基本資料</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/investor/monthly-income?lang=zh">財務資訊</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/investor/shareholder?lang=zh">股東關係人專區</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/investor/foundation?lang=zh">公司治理</a></li>
+                <li><a class="dropdown-item" href="https://www.taisol.com/investor/major-info?lang=zh">公司重大訊息</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.taisol.com/contact/contact-us?lang=zh">聯絡我們 </a>
+            </li>
+ 
+          </ul>
+        </div>
+     
+    </nav>
+
+    <!-- Import App -->
+
+
+    <div id="app"></div>
+   
+    <!-- footer -->
+   
+
+  
+  <div id="dss"></div>
+
+<script type="text/babel">
+    const rootElement = document.getElementById('app')
+
+
+    function showSingleOrList(user){
+
+      return (
+      <td onClick={()=>
+            {
+              hi(user.other_titles[0]);
+              
+            }}>
+
+                                    <ul class="list-group list-group-flush ">
+
+                                      {user.other_titles.map(     (title) =>
+                                          <li class="list-group-item" >
+                                          {title}
+                                          </li>
+                                        )}
+                                    </ul>
+            
+            
+            
+            </td>)
+    }
+
+
+
+
+
+  class ActiveTable extends React.Component {
+    constructor(props){
+      super(props);
+      this.state={
+        tableExpanded: 0,
+        showExpandedTableButton: ['全部展開','全部收起'],
+        expandList:{}
+      };
+    }
+
+    
+      
+
+
+
+
+
+
+    render()
+    {
+      const table_td_ids = this.props.data.map( (item,index) => {
+        
+      }) 
+
+
+      const table = this.props.data.map( (item,index) => [
+
+                 <tr><td>{item.title}</td><td>{item.from}</td><td>{item.name}</td><td>{item.sex}</td><td>{item.start_date}</td><td>{item.duration}</td><td>{item.first_start_date}</td><td>{item.stock1}</td> <td>{item.stock_per1}</td> <td>{item.stock2}</td> <td>{item.stock_per2}</td> <td>{item.stock3}</td><td>{item.stock_per3}</td><td>{item.stock4}</td><td>{item.stock_per4}</td>
+                    
+                  <td>
+
+  <button class="btn btn-secondary dropdown-toggle btn-sm collapseTableButton" type="button" data-toggle="collapse" data-target={"#collapseExample0"+index} aria-expanded="false" aria-controls={"collapseExample0"+index}>
+    
+  </button>
+  <div class="collapse collapseTable" id={"collapseExample0"+index}>
+  <div class="card card-body">
+    {this.props.data[index].exps.map(     (detail) =>
+      <li >
+      {detail}
+      </li>
+      )}
+  </div>
+</div>
+
+  </td>
+
+
+  <td>
+
+<button id={"collapseTableButton1"+index} class="btn btn-secondary dropdown-toggle btn-sm collapseTableButton" type="button" data-toggle="collapse" data-target={"#collapseExample1"+index} aria-expanded="false" aria-controls={"collapseExample1"+index}>
+ 
+</button>
+<div class="collapse collapseTable" id={"collapseExample1"+index}>
+<div class="card card-body">
+  
+  {this.props.data[index].other_titles.map(     (detail) =>
+      <li >
+      {detail}
+      </li>
+    )}
+</div>
+</div>
+
+</td>
+                  
+                  </tr>
+
+                ]
+        );
+
+
+        function hi(ww){
+          console.log("yo:rr:",ww);
+
+        };
+
+
+
+        return (
+          <div>
+          <button class="btn btn-secondary btn-sm" type="button"   onClick={()=>
+            {
+              
+              var currentTableState = this.state.tableExpanded
+              this.setState({tableExpanded: (currentTableState+1)%2} ,function(){
+                if (this.state.tableExpanded) {
+                $('.collapseTable').collapse('show')
+                $('.collapseTableButton').collapse('hide')
+                }else{
+                  $('.collapseTable').collapse('hide')
+                $('.collapseTableButton').collapse('show')
+
+                  
+                }
+              });
+
+
+            }}>
+            {this.state.showExpandedTableButton[this.state.tableExpanded]}
+          </button>
+          <table  class="table table-bordered table-hover"  >
+    <thead>
+      <tr>
+        <th rowspan="2" style={{width: `1%`}}>職稱（註一）</th>
+        <th rowspan="2" style={{width: `3%`}}>國籍或註冊地</th>
+        <th rowspan="2" >姓名</th>
+        <th rowspan="2" >性別</th>
+        <th rowspan="2" style={{width: `1%`}}>選(就)任日期</th>
+        <th rowspan="2" style={{width: `1%`}}>任期</th>
+        <th rowspan="2" style={{width: `1%`}}>初次選任日期（註二）</th>
+        <th colspan="2" style={{width: `5%`}}>選任時持有股份</th>
+        <th colspan="2" style={{width: `5%`}}>現在持有股份</th>
+        <th colspan="2" style={{width: `5%`}}>配偶,未成年子女現在持有股份</th>
+        <th colspan="2" style={{width: `5%`}}>利用他人名義持有股份</th>
+        <th rowspan="2" >主要經（學）歷（註三）</th>
+        <th rowspan="2" >目前兼任本公司及其他公司之職務
+
+        </th>
+        <th colspan="3" style={{width: `10%`}}>具配偶或二親等以內關係之其他主管,董事或監察人</th>
+      </tr>
+      <tr>
+      <th>股數</th>
+
+        <th>持股比率(%)</th>
+        <th>股數</th>
+        <th>持股比率(%)</th>
+        <th>股數</th>
+        <th>持股比率(%)</th>
+        <th>股數</th>
+        <th>持股比率(%)</th>
+        <th>職稱</th>
+        <th>姓名</th>
+        <th>關係</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      {table}
+    
+        
+    </tbody>
+    </table>
+    </div>
+        )
+
+    }
+  }
+
+
+    class SinglePageApp extends React.Component {
+      constructor(props){
+        super(props);
+        this.state ={
+          init:false,
+          foucusedPage : 0,
+          navItems : ['董事會','董事會(Board of Director)','薪酬委員會','組織及職掌','規章','內部稽核','企業社會責任','供應商管理','客戶服務','投資人關係','人力資源','與利害關係人對話'],
+
+
+        
+        };
+
+
+      }
+
+
+
+      render(){
+        const navItems = this.state.navItems.map( (item,index) =>
+        <li class="nav-item">
+            <a class="nav-link"  href="javascript:void(0);" onClick={()=>
+            {
+              this.setState({foucusedPage: index});
+              console.log("FoucusedPage:",this.state.foucusedPage);
+            }}
+            >{item}</a>
+        </li>
+        );
+        if (!this.state.init)
+        {
+          var initFoucusedPage=window.location.href.split('?')[1];
+          if (initFoucusedPage==null){initFoucusedPage=0}
+          else {initFoucusedPage=parseInt(initFoucusedPage) }
+          this.state.foucusedPage=initFoucusedPage;
+          console.log("initFoucusedPage:",this.state.foucusedPage)
+          this.state.init=true
+        }
+        return (
+          <div>
+            <nav class="navbar navbar-expand-lg navbar-dark sub-navbar ">
+                  <div class="container-fluid">
+                      <ul class="list-group list-group-horizontal">
+                        {navItems}
+                      </ul>
+                  </div>
+                  
+                  
+              </nav>
+              <Page7 currentPage={this.state.foucusedPage}/>
+              <Page3 currentPage={this.state.foucusedPage}/>
+              <Page0 currentPage={this.state.foucusedPage}/>
+
+
+
+          </div>  
+        )
+      }
+    }
+
+    function Part(props) {
+      return <h1>{props.meow}</h1>
+    }
+    function Page0(props) {
+    const myPage = 0;
+    if (myPage != props.currentPage){return null;}
+      var data = {
+        table1 : [
+          {title:"董事長",from:"臺灣",name:"余清松",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"88.11.06",stock1:"11,799,516",stock_per1:"16.9",stock2:"14,155,046",stock_per2:"16.37",stock3:"773.431",stock_per3:"0.89",stock4:"3151000",stock_per4:"3.64",exps:["大同工學院工商管理系畢"],other_titles:["泰碩電子(香港)有限公司 董事","世窗電子(香港)有限公司 董事","TAISOL ELEC. JAPAN 董事","衡國企業(股)公司 董事長"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+          {title:"董  事",from:"臺灣",name:"林展列",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"102.04.22",stock1:"-",stock_per1:"-",stock2:"104.000",stock_per2:"0.12",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["台南高工機械工程科","萬旭電業股份有限公司 總經理","萬旭電業股份有限公司 董事"],other_titles:["萬旭電業股份有限公司 顧問","萬旭電業股份有限公司 董事","胡連精密股份有限公司 獨立董事","泗陽泰碩電子有限公司 董事兼法人代表","泰碩電子(股)公司 董事/營運長","蘇州泰碩電子有限公司 董事","TAISOL ELEC. JAPAN 董事","鈺邦科技股份有限公司 監察人"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+          {title:"董  事",from:"臺灣",name:"梁竣興",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"107.06.19",stock1:"38000",stock_per1:"0.05",stock2:"98.813",stock_per2:"0.11",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["東海大學經濟系","信邦電子(股)公司 總經理/營運長/顧問"],other_titles:["東莞泰碩電子有限公司 董事","泰碩電子(股)公司 總經理","泗陽泰碩電子有限公司 董事"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+          {title:"董  事",from:"日本",name:"蘆原錦吾",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"107.06.19",stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["中興大學地政系","信邦電子(股)公司 董事"],other_titles:["Oriental Computer Inc.  President"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+          {title:"獨立董事",from:"臺灣",name:"張文添",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"102.04.22 (註4)",stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["文化大學企業管理研究所碩士","交通銀行副理","泰豐輪胎(股)公司 副總經理兼發言人","寶華銀行協理、研發處長、管理部經理、祕書處長","文化大學、逢甲大學 兼任講師","實踐大學企管系 兼任講師"],other_titles:["李洲科技(股)公司 獨立董事"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+          {title:"獨立董事",from:"臺灣",name:"曾天運",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"107.06.19",stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["中興大學科技法律研究所碩士","冠軍建材股份有限公司 財務副總","萬泰科技股份有限公司 財務副總"],other_titles:["大哲聯合會計師事務所 合夥會計師","中華民國仲裁協會 仲裁人","萬旭電業股份有限公司 薪酬委員"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+          {title:"獨立董事",from:"臺灣",name:"陳志弘",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"107.06.19",stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["大同工學院事業經營系","東南水泥股份有限公司","副董事長室特別助理/駐廠董事室主任兼品保部經理/高雄廠行政副廠長/高雄廠廠長/駐廠董事長室特別助理"],other_titles:["澎湖有線電視股份有限公司 總經理"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+          {title:"監察人",from:"臺灣",name:"謝君山",sex:"男",start_date:"107.06.19",duration:"3年",first_start_date:"102.04.22 (註5)",stock1:"1205197",stock_per1:"1.73",stock2:"1,571,276",stock_per2:"1.82",stock3:"288466",stock_per3:"0.33",stock4:"-",stock_per4:"-",exps:["省立台南高級工業職業學校","原價屋電腦有限公司 顧問","泰碩電子股份有限公司 董事"],other_titles:["無"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+          {title:"監察人",from:"臺灣",name:"林千雅",sex:"女",start_date:"107.06.19",duration:"3年",first_start_date:"104.05.15 (註6)",stock1:"1818316",stock_per1:"2.6",stock2:"2,074,321",stock_per2:"2.4",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["文化大學土地資源學系畢","富邦證券 財務部襄理"],other_titles:["隆昕實業股份有限公司 財務部襄理"],relative_title:"-",relative_name:"-",relative_relation:"-"},
+          {title:"監察人",from:"臺灣",name:"張敏君",sex:"女",start_date:"107.06.19",duration:"3年",first_start_date:"102.07.05",stock1:"-",stock_per1:"-",stock2:"-",stock_per2:"-",stock3:"-",stock_per3:"-",stock4:"-",stock_per4:"-",exps:["台大商學院國際企業組碩士","宏達電子HTC日本分公司社長/全球行銷處處長"],other_titles:["拓連科技股份有限公司 營運長"],relative_title:"-",relative_name:"-",relative_relation:"-"}
+      ],
+      table2 : [
+
+        {name:"余清松",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+        {name:"林展列",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"1"},
+        {name:"梁竣興",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+      {name:"蘆原錦吾",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:" ",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:" ",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+        {name:"張文添",pro_exp1:"-",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"1"},
+        {name:"曾天運",pro_exp1:"✔",pro_exp2:"-",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+        {name:"陳志弘",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+        {name:"謝君山",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+        {name:"林千雅",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:" ",fit_item2:"✔",fit_item3:" ",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+        {name:"張敏君",pro_exp1:"✔",pro_exp2:"✔",pro_exp3:"✔",fit_item1:"✔",fit_item2:"✔",fit_item3:"✔",fit_item4:"✔",fit_item5:"✔",fit_item6:"✔",fit_item7:"✔",fit_item8:"✔",fit_item9:"✔",fit_item10:"✔",num_company:"無"},
+      ]
+      };
+
+
+      const table1 = data.table1.map( (user,index) => [
+                                                <tr>
+                       <td>{user.title}</td>
+                      <td>{user.from}</td>
+                      <td>{user.name}</td>
+                      <td>{user.sex}</td>
+                      <td>{user.start_date}</td>
+                      <td>{user.duration}</td>
+                      <td>{user.first_start_date}</td>
+                      <td>{user.stock1}</td>
+                      <td>{user.stock_per1}</td>
+                      <td>{user.stock2}</td>
+                      <td>{user.stock_per2}</td>
+                      <td>{user.stock3}</td>
+                      <td>{user.stock_per3}</td>
+                      <td>{user.stock4}</td>
+                      <td>{user.stock_per4}</td>
+                      <td>{user.exps}</td>
+                      <td>{user.other_titles}</td>
+                      <td>{user.relative_title}</td>
+                      <td>{user.relative_name}</td>
+                      <td>{user.relative_relation}</td>
+                                </tr>
+                                ]
+        );
+
+
+      return [
+
+      <div class="content">
+        <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>組織及職掌 </h5>
+        <p><span>&nbsp;&nbsp;</span></p>
+
+
+      <div class="accordion" id="accordionExample">
+  <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              董事(含獨立董事)及監察人資料(1) 
+            </button>
+          </h2>
+        </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" >
+      <div class="card-body">
+       <ActiveTable  data={data.table1} />
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+    ];
+
+    }
+    function Page3(props) {
+    const myPage = 3;
+    if (myPage != props.currentPage){return null;}
+
+      var data = {
+        table1 : [
+            {   "name": "HQO",
+                "summary" : "秉承總經理之命令，執行專案業務之推動及落實並負責對投資人公共關係之維繫。",
+                "details" : [] 
+                
+            },
+            {   "name": "稽核室", 
+                "summary" : "執行內部控制制度的稽核工作，檢查並評估公司的營運記錄有無缺失並提出改善建議。",
+                "details" : [] 
+                
+            },
+            {   "name": "財管處",
+                "summary" : "秉承總經理之命令，掌管公司之財務、人事、總務、公關等事宜。下設財務部、管理部。主要內容為：",
+                "details" : ["(1)規劃公司的營運方針並執行董事會的決議，建立公司營運體制及監督日常運作。","(2)處理公司對內及對外公共關係及跨部門之溝通與協調情事。"] 
+                
+            },
+            {   
+                "name": "資訊室", 
+                "summary" : "",
+                "details" : ["(1)ERP系統的維護及軟體整合。","(2)內部網路的架設及電子郵件系統的更新及修護。","(3)軟、硬體設備的更新及維護。","(4)資訊安全維護及推動。"] 
+            
+            },
+            {   
+                "name": "財務部", 
+                "summary" : "",
+                "details" : ["(1)負責公司人事、行政、總務、股務及固定資產之管理與推動工作。","(2)公司智慧財產權利之維護與訴訟。","(3)負責勞工安全衛生規劃與管理並釐訂公司職業災害防治措施。"] 
+            
+            },
+            {   
+                "name": "業務行銷處", 
+                "summary" : "秉承總經理之命令，以創造公司之最大利潤為目標，依產品別區分為散熱器、通訊﹑連接器及讀卡器四大行銷部。",
+                "details" : ["(1)蒐集市場資訊，提供給主管及研發處。","(2)售價政策之擬訂及市場規劃、預估。","(3)規劃並辦理廣告及參展事宜。","(4)執行新產品開發建議之審查。","(5)擬定產品初期規格及成本分析。"] 
+            
+            },
+            
+            {   
+                "name": "業務處", 
+                "summary" : "秉承總經理之命令，以達成業績，創造公司之最大利潤為目標，其下區分日本、通訊、熱傳、連接器、讀卡器等五大產品線業務：",
+                "details" : ["(1)客戶之開發、調查、選定、聯繫及服務客戶。"
+                ,"(2)合約、訂單之審查、產銷、出貨控制之聯繫協調。","(3)客戶抱怨及維修之聯繫處理。","(4)反應品質異常資訊給品保單位，蒐集並提供技術資料給客戶。","(5)安排出貨交運事宜。"] 
+            
+            },
+            
+            
+            {   
+                "name": "研發處", 
+                "summary" : "秉承總經理之命令，負責本公司產品開發、製造技術支援、銷售技術支援、及對客戶支援事宜。下設通訊研發部、熱傳研發部、連接器研發部、讀卡器研發部、研發管理部。",
+                "details" : 
+                ["通訊研發部：","(1)通訊散熱產品設計及相關零件之承認。","(2)模具開發、試產。","(3)協助解決客戶技術問題。","熱傳研發部：","(1)散熱器設計及相關零件之承認。","(2)模具開發、試產。","(3)協助解決客戶技術問題。","連接器研發部：","(1)連接器設計及相關零件之承認。","(2)模具開發、試產。","(3)協助解決客戶技術問題。","讀卡器研發部：","(1)讀卡器設計及相關零件之承認。","(2)產品開發、試產。","(3)協助解決客戶技術問題。"]
+
+            
+            },
+
+            
+            {   
+                "name": "資材部", 
+                "summary" : "秉承總經理之命令，以達成業績，創造公司之最大利潤為目標，其下區分日本、通訊、熱傳、連接器、讀卡器等五大產品線業務：",
+                "details" : ["(1)負責原物料、各項設備等採購事宜，做到適質、適量、適時與適價的採購策略。"
+                ,"(2)對物料倉儲及存貨之管制與記錄，並維護廠區存貨之完整，達到適時供給所需。"] 
+            
+            },
+
+            {   
+                "name": "生管部", 
+                "summary" : "秉承總經理之命令，以達成業績，創造公司之最大利潤為目標，其下區分日本、通訊、熱傳、連接器、讀卡器等五大產品線業務：",
+                "details" : [
+                    "(1)製造部門生產排程規劃。","(2)負責原物料請購、物料安排事宜。"]
+                
+            
+            },       
+            
+            
+            
+            {   
+                "name": "品保部", 
+                "summary" : "秉承總經理之命令，以達成業績，創造公司之最大利潤為目標，其下區分日本、通訊、熱傳、連接器、讀卡器等五大產品線業務：",
+                "details" : [
+                    "(1)執行公司品質政策、確保品質系統之實施及品質作業稽核、改善。","(2)提供經營者有關品質之建議，協助及協調各部門執行品保的工作並推行品質提升之活動與教育訓練以提供客戶滿意的服務。"
+                ] 
+            
+            }, 
+                    
+            {   
+                "name": "製造部", 
+                "summary" : "秉承總經理之命令，以達成業績，創造公司之最大利潤為目標，其下區分日本、通訊、熱傳、連接器、讀卡器等五大產品線業務：",
+                "details" : ["(1)負責公司產品之製造及生產。",
+                    "(2)生產製程之改善及良率之提升。"] 
+            
+            },     
+          
+          
+        ],
+        table2 : [
+            {"title": "董事長","name":"余清松","exps":["大同工學院工商管理系畢"]},
+            {"title": "總經理","name":"梁俊興","exps":["東海大學經濟系","信邦電子股份有限公司總經理","信邦電子股份有限公司監察人","數碼醫療器材股份有限公司執行長"]}
+        ],
+
+
+        table3:[
+            {name: '余清松',self_stock:'14,155,046',self_stock_per:"16.22", fam_stock:"773,431",fam_stock_per:"0.89",other_stock:"2,698,000",other_stock_pre:'3.09', name2:'隆昕實業',relation:'關係人',note:''},
+            {name: '隆昕實業股份有限公司法人代表：葉麗娟',self_stock:'2,698,000',self_stock_per:"3.09", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'余清松',relation:'關係人',note:''},
+            {name: '林千雅',self_stock:'1,844,321',self_stock_per:"2.11", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+            {name: '台灣企銀受託保管群益創新科技基金專戶',self_stock:'1,200,000',self_stock_per:"1.38", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+            {name: '群益馬拉基金專戶',self_stock:'1,030,000',self_stock_per:"1.18", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+            {name: '謝君山',self_stock:'1,022,276',self_stock_per:"1.17", fam_stock:"280,466",fam_stock_per:"0.32",other_stock:"",other_stock_pre:'-', name2:'',relation:'',note:''},
+            {name: '元大人壽保險股份有限公司',self_stock:'956,000',self_stock_per:"1.10", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+            {name: '復華傳家二號基金專戶',self_stock:'863,000',self_stock_per:"0.99", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+            {name: '野村中小基金專戶',self_stock:'855,000',self_stock_per:"0.98", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+            {name: '復華數位經濟基金專戶',self_stock:'812,000',self_stock_per:"0.93", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+        ]
+
+
+      };
+      const table1 = data.table1.map( (item,index) => [
+                                                <tr>
+                              <td> {item.name}</td>
+                                <td> 
+                                    <ul class="list-group list-group-flush ">{item.summary}
+
+                                      {data.table1[index].details.map(     (detail) =>
+                                          <li class="list-group-item" >
+                                          {detail}
+                                          </li>
+                                        )}
+                                    </ul>
+                                </td>
+                                </tr>
+                                ]
+        );
+
+
+        const table2 = data.table2.map( (item,index) => [
+                            <td> {item.title}</td>,
+                                <td> {item.name}</td>,
+                                <td> 
+                                    <ul class="list-group list-group-flush ">
+                                      {data.table2[index].exps.map( (item2) =>
+                                          <li class="list-group-item" >
+                                            {item2}
+                                          </li>
+                                        )}
+                                    </ul>
+                                </td>
+                                ]
+        );
+
+        const table3 = data.table2.map( (item,index) => [
+                                
+                                  Object.keys(item).map(function(keyName,keyIndex){
+                                      <td> {item.keyName}</td>
+                                  } )
+                               
+
+                              ]
+        );
+
+
+
+      
+
+      return [
+      <div class="content">
+        <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>組織及職掌 </h5>
+        <p><span>&nbsp;&nbsp;</span></p>
+    
+  <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          主要部門職稱及權責 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" >
+      <div class="card-body">
+        <table  class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th rowspan="1">部門</th>
+                                <th rowspan="1">主要職掌</th>
+                            </tr>
+
+                            </thead>
+                            <tbody>
+                               {table1}
+                            </tbody>
+                        </table>
+       
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+      ];
+
+    }
+    
+
+
+
+    function Page7(props) {
+    const myPage = 7;
+    if (myPage != props.currentPage){return null;}
+
+      var data =  {          list1:[
+                      "1. 設立環境管理系統與環境目標:供應商必須擁有 ISO 14001 或 RC14001。",
+                      "2. 原物料有害物質禁用:供應商必須提供聲明，保證其產品不含對環境有害的國際禁用物質，確保產品符合客戶與國際相關法令的要求，如歐盟 RoHS。",
+                      "3. 環境保護法規符合性:供應商必須符合在地政府相關空氣污染防制、水污染防制、廢棄物與毒性物質管理等環境保護法規;經查證有違反法規之情事，必須及時提出改善計劃。",
+                      "4. 節能減碳:鼓勵供應商建置工廠的碳盤查資料、建立產品碳足跡、提供具體的減碳績效。",
+                      "5. 水資源與節水:鼓勵供應商建置工廠的水盤查資料、提供具體的水資源管理計劃。 ",
+                      "註:「非衝突(conflict-free)」之原物料係指該原物料係來自於經電子產業公民聯盟或其他同等組織所認可之供應商，或經合理查證和盡職調查後依相關法規足資認定為「非來自剛果衝突地區」(DRC conflict free)之供應商。 "
+                    ],
+
+                    list2:[
+                      "1. 您所提供的個人資料，包含姓名、電話、電子郵件地址，泰碩 公司於調查期間，得為調查舉報事項與聯繫用途而處理利用； 調查若有必要，泰碩公司得傳遞您必要的個人資訊予公司內部 及司法檢調等相關單位。",
+                      "2. 不得明知不實而故意捏造事實，倘舉報事後被證明是出於惡意 或有故意捏造虛偽陳述之情事，您必須自負相關法律責任。",
+                      "3. 為能盡早調查與解決問題，請您務必提供所有可能的相關具體 資訊與文件，若相關資訊與文件不齊備，泰碩公司將無法進行 調查。",
+                      "4. 泰碩公司提供予您的相關聯絡內容，其全部或一部分皆不可向 任何人揭露。除依法律之規定要求外，您不得以泰碩公司與您 之間的聯絡內容提出訴訟或以該聯絡內容作為訴訟相關資料。",
+                      
+                    ]}
+
+
+
+        const list1 = data.list1.map( (item,index) =>
+        <li class="list-group-item" >
+          {item}
+        </li>
+        );
+
+        const list2 = data.list2.map(item=>
+        <li class="list-group-item" >
+  {item}
+</li>);
+
+
+      return  [
+      <div class="content">
+
+<h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>供應商管理 </h5>
+<p><span>&nbsp;&nbsp;</span></p>  
+<p>泰碩公司重視企業社會責任，已要求採購「非衝突(conflict-free)」的原物料; 提倡人道精神與實踐人性尊嚴的社會道德準則，是泰碩公司理應善盡的企業社會責任。目前係以符合經濟合作暨發展組織(OECD)於 2011 年所發布之「受衝突影響與高風險地區之全球責任礦物供應鏈模範政策(Model Supply Chain Policy for a Responsible Global Supply Chain of Mineral from Conflict-Affected and High Risk Areas)」的盡職調查(due diligence)架構為依據。
+</p>
+<p> 泰碩公司鼓勵供應商向經特定產業組織(如 EICC 等)所認可為非衝突之原物料供應廠商進行採購，並要求供應商積極督促尚未取得此認可的供應廠商接受 EICC 或其他同等之獨立第三方稽核計劃檢驗，以符合「非衝突」之原則。
+</p>
+<p> 透過供應商管理，將對環保的理念向外延伸推廣，促使供應商夥伴也能共同關心環保議題，共同提升更美好的環境與社會。 
+</p>
+
+<p><span>&nbsp;&nbsp;</span></p>
+
+<h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>對供應商有關環境保護之要求 (2018年-已完成共37家供應商評鑑) </h5>
+
+
+<ul class="list-group list-group-flush" >
+ {list1}
+</ul>
+
+
+<p><span>&nbsp;&nbsp;</span></p>
+<h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>客戶及供應商投訴中心 </h5>
+<p><span>&nbsp;&nbsp;</span></p>
+
+<h6><b>違反從業道德行為舉報系統</b></h6>
+
+<p>在泰碩電子股份有限公司，誠信正直是公司文化最重要之核心價值， 也是公司經營理念之首。泰碩公司一向承諾以誠信從事所有業務活動 ，絕不允許貪污及任何形式之舞弊行為。
+</p>
+<p>若您發現泰碩公司員工或任何代表泰碩公司的相關人士進行可疑行為 或可能違反泰碩公司的道德行為準則時，請告訴我們。
+您的舉報事項，我們將交由公司副總經理直接處理。
+</p>
+<p>除法律另有規定外，對於您提供關於您的個人資料，我們將予以保密 ，並依法採取適當之保護措施，保護您的個人資料及隱私。 
+</p>
+<p><span>&nbsp;&nbsp;</span></p>
+
+<h6><b>提醒您：</b></h6>
+
+<ul class="list-group list-group-flush" >
+{list2}
+<li  class="list-group-item">   郭尚仁 先生
+(副總經理暨發言人)
+E-Mail：<a href="mailto:sales@taisol.com">sales@taisol.com</a>
+</li>
+</ul>
+
+
+
+</div>
+      ];
+    
+   
+    
+  }
+
+
+
+
+  // Create a function to wrap up your component
+  function App(){
+    return(
+    <div>
+      <SinglePageApp />
+      
+    </div>
+    )
+}
+    ReactDOM.render(
+      <App />,
+      rootElement
+    )
+</script>
+
+
+
+<script type="text/babel">
+// Obtain the root 
+// const rootElement = document.getElementById('dss')
+// // Create a ES6 class component    
+// class ShopList extends React.Component { 
+// // Use the render function to return JSX component      
+//     render() { 
+//         return (
+//         <div className="shopping-list">
+//         <h1>Shopping List for {this.props.name}</h1>
+//           <ul>
+//             <li>Instagram</li>
+//             <li>WhatsAaaapp</li>
+//             <li>Oculus</li>
+//           </ul>
+//         </div>
+//       );
+//       } 
+//     }
+
+// function App(){
+//   return(
+//   <div>
+//     <ShopList name="@leeeeeee"/>
+//   </div>
+//   )
+// }
+
+
+// Use the ReactDOM.render to show your component on the browser
+    // ReactDOM.render(
+    //   <App />,
+    //   rootElement
+    // )
+
+</script>
+
+
+
+
+
+
+<nav class="footer  navbar  navbar-expand-lg fixed-bottom  navbar-dark ">
+  <div class="container-fluid">
+    <div class="row" style="width: 100%">
+      <div class="col-8">
+        <div class="footer-nav collapse navbar-collapse " id="navbarSupportedContent2">
+          <ul class="navbar-nav mb-2 mb-lg-0 ">
+            <li class="nav-item">
+              <p  aria-current="page" >Copyright ©2015 TaiSol Electronics Co., Ltd. All rights reserved</p>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="col-4">
+          <div class="footer-nav collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="http://www.104.com.tw/jobbank/custjob/index.php?r=cust&j=404a436c5a463f245a323c1d1d1d1d5f2443a363189j48&jobsource=n104bank1">加入泰碩</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.taisol.com/?lang=zh#">泰碩人園地</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.taisol.com/site-navigation?lang=zh">網站導覽</a>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+</nav>
+</body>
+
+</html>
