@@ -128,11 +128,13 @@ function Page3(props) {
                         <td> {item.name}</td>
                           <td> 
                               {item.summary}
+                              
                                 {item.details.map((detail) =>
                                   <li class="list-group-item " >
                                     {detail}
                                   </li>
                                 )}
+                                
                                 
                            
                           </td>
@@ -242,7 +244,7 @@ function Page3(props) {
             <div class="card-header" id="headingOne">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span>主要部門職稱及權責 
+                  <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span>組織架構 
                 </button>
               </h2>
             </div>
@@ -253,48 +255,37 @@ function Page3(props) {
               </div>
             </div>
           </div>
+
           <div class="card">
             <div class="card-header" id="headingTwo">
               <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 主要經營管理團隊
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 主要部門職稱及權責
                 </button>
               </h2>
             </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
               <div class="card-body" style={{overflow: `auto`}}>
                 <ActiveTable1 data={data.table1}/>
               </div>
             </div>
           </div>
+
           <div class="card">
             <div class="card-header" id="headingThree">
               <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                   <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 主要經營管理團隊
                 </button>
               </h2>
             </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" >
               <div class="card-body" style={{overflow: `auto`}}>
                 <ActiveTable2 data={data.table2}/>
               </div>
             </div>
           </div>
-          {/* <div class="card">
-            <div class="card-header" id="headingFour">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 主要股東名單
-                </button>
-              </h2>
-            </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-              <div class="card-body" style={{overflow: `auto`}}>
-                <ActiveTable3 data={data.table3}/>
-              </div>
-            </div>
-          </div> */}
+
 
 
         </div>
