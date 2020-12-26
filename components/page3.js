@@ -127,13 +127,14 @@ function Page3(props) {
                       <tr>
                         <td> {item.name}</td>
                           <td> 
-                              <ul class="list-group list-group-flush ">{item.summary}
+                              {item.summary}
                                 {item.details.map((detail) =>
-                                  <li class="list-group-item" >
+                                  <li class="list-group-item " >
                                     {detail}
                                   </li>
                                 )}
-                              </ul>
+                                
+                           
                           </td>
                       </tr>
                   ]);
@@ -261,7 +262,7 @@ function Page3(props) {
               </h2>
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-              <div class="card-body">
+              <div class="card-body" style={{overflow: `auto`}}>
                 <ActiveTable1 data={data.table1}/>
               </div>
             </div>
@@ -275,7 +276,7 @@ function Page3(props) {
               </h2>
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-              <div class="card-body">
+              <div class="card-body" style={{overflow: `auto`}}>
                 <ActiveTable2 data={data.table2}/>
               </div>
             </div>
@@ -289,7 +290,7 @@ function Page3(props) {
               </h2>
             </div>
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-              <div class="card-body">
+              <div class="card-body" style={{overflow: `auto`}}>
                 <ActiveTable3 data={data.table3}/>
               </div>
             </div>

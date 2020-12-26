@@ -12,14 +12,8 @@ mypath = './components/'
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
 print(onlyfiles)
-import fileinput,re  
 
-def  modify_file(file_name,pattern,value=""):  
-    fh=fileinput.input(file_name,inplace=True)  
-    for line in fh:  
-        replacement=value + line  
-        line=re.sub(pattern,replacement,line)  
-    fh.close()  
+
 
 
 def insert_to_file(file_name,pattern,content):
@@ -29,6 +23,7 @@ def insert_to_file(file_name,pattern,content):
         for idx,line in enumerate(lines):
             if pattern in line:
                 lineNum_to_insert=idx
+                break
         print(pattern,lineNum_to_insert)
         with open("index.html", "w+",encoding="utf8") as f1:
             widx=0

@@ -51,7 +51,7 @@ function Page0(props) {
         render() {
             const table = this.props.data.map( (item,index) => [
                 <tr><td>{item.title}</td><td>{item.from}</td><td>{item.name}</td><td>{item.sex}</td><td>{item.start_date}</td><td>{item.duration}</td><td>{item.first_start_date}</td><td>{item.stock1}</td> <td>{item.stock_per1}</td> <td>{item.stock2}</td> <td>{item.stock_per2}</td> <td>{item.stock3}</td><td>{item.stock_per3}</td><td>{item.stock4}</td><td>{item.stock_per4}</td>
-                    <td>
+                    <td >
                         <button class="btn btn-secondary dropdown-toggle btn-sm collapseTableButton" type="button" data-toggle="collapse" data-target={"#collapseExample0"+index} aria-expanded="false" aria-controls={"collapseExample0"+index}>
                         </button>
                         <div class="collapse collapseTable" id={"collapseExample0"+index}>
@@ -91,7 +91,7 @@ function Page0(props) {
                     }}>
                     {this.state.showExpandedTableButton[this.state.tableExpanded]}
                     </button>
-                    <table  class="table table-bordered table-hover"  >
+                    <table  class="table table-bordered table-hover"  style={{width:`1650px`}} >
                         <thead>
                             <tr>
                                 <th rowspan="2" style={{width: `1%`}}>職稱（註一）</th>
@@ -101,14 +101,15 @@ function Page0(props) {
                                 <th rowspan="2" style={{width: `1%`}}>選(就)任日期</th>
                                 <th rowspan="2" style={{width: `1%`}}>任期</th>
                                 <th rowspan="2" style={{width: `1%`}}>初次選任日期（註二）</th>
-                                <th colspan="2" style={{width: `5%`}}>選任時持有股份</th>
-                                <th colspan="2" style={{width: `5%`}}>現在持有股份</th>
-                                <th colspan="2" style={{width: `5%`}}>配偶,未成年子女現在持有股份</th>
-                                <th colspan="2" style={{width: `5%`}}>利用他人名義持有股份</th>
-                                <th rowspan="2" >主要經（學）歷（註三）</th>
-                                <th rowspan="2" >目前兼任本公司及其他公司之職務</th>
+                                <th colspan="2" style={{width: `8%`}}>選任時持有股份</th>
+                                <th colspan="2" style={{width: `8%`}}>現在持有股份</th>
+                                <th colspan="2" style={{width: `8%`}}>配偶,未成年子女現在持有股份</th>
+                                <th colspan="2" style={{width: `8%`}}>利用他人名義持有股份</th>
+                                <th rowspan="2" style={{width: `25%`}} >主要經（學）歷（註三）</th>
+                                <th rowspan="2" style={{width: `25%`}}>目前兼任本公司及其他公司之職務</th>
                                 <th colspan="3" style={{width: `10%`}}>具配偶或二親等以內關係之其他主管,董事或監察人</th>
-                            </tr>
+                            </tr> 
+
                             <tr>
                                 <th>股數</th>
                                 <th>持股比率(%)</th>

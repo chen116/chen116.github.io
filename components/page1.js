@@ -133,7 +133,7 @@ function Page1(props) {
                     }}>
                     {this.state.showExpandedTableButton[this.state.tableExpanded]}
                     </button>
-                    <table  class="table table-bordered table-hover"  >
+                    <table  class="table table-bordered table-hover" style={{width:`2000px`}} >
                         <thead>
                             <tr>
                                 <th rowspan="2">Title (Note1) </th>

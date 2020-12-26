@@ -97,22 +97,18 @@ function Page11(props) {
                                 </ul>
                     </td>
                     <td>
-                            <ul >
                                 {this.props.data[index].jobs.map(     (job) =>
-                                    <li  >
+                                    <li style={{listStyleType:`none`}} >
                                         {job}
                                     </li >
                                 )}
-                              </ul>
                     </td>
                     <td>
-                              <ul >
                                 {this.props.data[index].results.map(     (result) =>
-                                    <li >
+                                    <li style={{listStyleType:`none`}} >
                                         <a href={result.href} >{result.txt} <img class="rounded" src="./assets/images/investor04_7.jpg"/></a>
                                     </li >
                                 )}
-                              </ul>
 
                     </td>
                 </tr>
