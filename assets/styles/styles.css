@@ -58,7 +58,8 @@ margin-bottom: 70px;
 
 .nav-link {color: white;}
 .nav-link:hover {color: rgb(216, 216, 216);}
-
+.nav-linkOri {color: rgb(180, 177, 177);}
+.nav-linkOri:hover {color: rgb(99, 98, 98);}
 ul {
   list-style-type: none;
 }
