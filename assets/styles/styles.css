@@ -56,6 +56,15 @@ margin-bottom: 70px;
 }
 
 
+@media screen and (max-width: 1420px) {
+  .fixedheader {
+    overflow: auto; 
+    min-width: 1420px;
+  }
+}
+
+
+
 .nav-link {color: white;}
 .nav-link:hover {color: rgb(216, 216, 216);}
 .nav-linkOri {color: rgb(180, 177, 177);}

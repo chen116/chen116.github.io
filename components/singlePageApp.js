@@ -30,7 +30,7 @@
       }
       return (
         <div>
-          <nav class="navbar navbar-expand-lg navbar-dark sub-navbar ">
+          <nav class="navbar navbar-expand-lg navbar-dark sub-navbar fixedheader">
             <div class="container-fluid">
               <ul class="list-group list-group-horizontal">
                 {navItems}
