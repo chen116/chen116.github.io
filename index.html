@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>React Local</title>
+  <title>Taisol 公司治理</title>
   <script type="application/javascript" src="./assets/js/react.production.min.js"></script>
   <script type="application/javascript" src="./assets/js/react-dom.production.min.js"></script>
   <script type="application/javascript" src="./assets/js/babel.min.js"></script>
@@ -147,7 +147,14 @@
           <Page1 currentPage={this.state.foucusedPage}/>
           <Page2 currentPage={this.state.foucusedPage}/>
           <Page3 currentPage={this.state.foucusedPage}/>
+          <Page4 currentPage={this.state.foucusedPage}/>
+          <Page5 currentPage={this.state.foucusedPage}/>
+          <Page6 currentPage={this.state.foucusedPage}/>
           <Page7 currentPage={this.state.foucusedPage}/>
+          <Page8 currentPage={this.state.foucusedPage}/>
+          <Page9 currentPage={this.state.foucusedPage}/>
+          <Page10 currentPage={this.state.foucusedPage}/>
+          <Page11 currentPage={this.state.foucusedPage}/>
 
         </div>  
       )
@@ -342,7 +349,7 @@ function Page0(props) {
     if (myPage != props.currentPage){return null;}
     return [
         <div class="content">
-            <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>董事會 </h5>
+            <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>董事會 </h4>
             <p><span>&nbsp;&nbsp;</span></p>
             <p class="content-p">
                 本公司之董事、監察人含2名女性、7名男性；分別在電子零組件或周邊產品業、橡膠業、銀行業、光電業、玻璃陶瓷業、通信網路業、水泥工業、證券業、電信業等，具有行銷企劃、經營管理、領導決策、產業知識、財務會計之專業經驗與素養。
@@ -673,8 +680,8 @@ function Page1(props) {
     if (myPage != props.currentPage){return null;}
     return [
         <div class="content">
-            <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>
-            董事會(Board of Director) </h5>
+            <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>
+            董事會(Board of Director) </h4>
             <p><span>&nbsp;&nbsp;</span></p>
             <p class="content-p">
                 Company's Directors and supervisors are composed of 2 female and 7 male with professional experiences and qualification in marketing planning, operation management, industry knowledge and financial accounting, who respectively involve in various industries including electronic components and appliances, industrial rubber, banking, electro-optical, glass and ceramics, communication network, cement, securities, telecommunications etc.
@@ -1206,8 +1213,8 @@ function Page2(props) {
     if (myPage != props.currentPage){return null;}
     return [
         <div class="content">
-            <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>
-            薪酬委員會  </h5>
+            <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>
+            薪酬委員會  </h4>
             <p><span>&nbsp;&nbsp;</span></p>
 
             <div class="accordion" id="accordionExample">
@@ -1469,120 +1476,546 @@ function Page3(props) {
 
 
       };
-      const table1 = data.table1.map( (item,index) => [
-                                                <tr>
-                              <td> {item.name}</td>
-                                <td> 
-                                    <ul class="list-group list-group-flush ">{item.summary}
 
-                                      {data.table1[index].details.map(     (detail) =>
-                                          <li class="list-group-item" >
-                                          {detail}
-                                          </li>
-                                        )}
-                                    </ul>
-                                </td>
-                                </tr>
-                                ]
-        );
-
-
-        const table2 = data.table2.map( (item,index) => [
-                            <td> {item.title}</td>,
-                                <td> {item.name}</td>,
-                                <td> 
-                                    <ul class="list-group list-group-flush ">
-                                      {data.table2[index].exps.map( (item2) =>
-                                          <li class="list-group-item" >
-                                            {item2}
-                                          </li>
-                                        )}
-                                    </ul>
-                                </td>
-                                ]
-        );
-
-        const table3 = data.table2.map( (item,index) => [
-                                
-                                  Object.keys(item).map(function(keyName,keyIndex){
-                                      <td> {item.keyName}</td>
-                                  } )
-                               
-
-                              ]
-        );
-
-
-
-      
-
+      class ActiveTable1 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={};
+        }
+          render() {
+              const table =  this.props.data.map( (item,index) => [
+                      <tr>
+                        <td> {item.name}</td>
+                          <td> 
+                              <ul class="list-group list-group-flush ">{item.summary}
+                                {item.details.map((detail) =>
+                                  <li class="list-group-item" >
+                                    {detail}
+                                  </li>
+                                )}
+                              </ul>
+                          </td>
+                      </tr>
+                  ]);
+              return (
+                <table  class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                        <th rowspan="1">部門</th>
+                        <th rowspan="1">主要職掌</th>
+                    </tr>
+                  </thead>
+                <tbody>
+                   {table}
+                </tbody>
+                </table>
+              )
+          }
+        }
+      class ActiveTable2 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={};
+        }
+          render() {
+              const table =  this.props.data.map( (item,index) => [
+                <tr>
+                  <td> {item.title}</td>
+                  <td> {item.name}</td>
+                  <td> 
+                      <ul class="list-group list-group-flush ">
+                        { item.exps.map((sub_item,index2) =>
+                          <li class="list-group-item">
+                          {sub_item}
+                          </li>
+                        )}
+                      </ul>
+                  </td>
+                </tr> 
+              ]);
+              return (
+                <table  class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                        <th rowspan="1">職稱</th>
+                        <th rowspan="1">姓名</th>
+                        <th rowspan="1">主要經(學)歷</th>
+                    </tr>
+                  </thead>
+                <tbody>
+                    {table}
+                </tbody>
+                </table>
+              )
+          }
+        }
+      class ActiveTable3 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={};
+        }
+          render() {
+              const table =  this.props.data.map( (item,index) => [
+                <tr>
+                  {Object.keys(item).map(function(keyName, keyIndex) {
+                      return <td>{item[keyName]}</td>
+                  })}
+                </tr>
+              ]);
+              return (
+                <table  class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th rowspan="2">姓名（註一）</th>
+                      <th colspan="2">本人持有股份</th>
+                      <th colspan="2">配偶、未成年子女持有股份</th>
+                      <th colspan="2">利用他人名義合計持有股份</th>
+                      <th colspan="2">前十大股東互相間具有財務會計準則公報第六號關係人或為配偶、二等親以內之親屬關係者，其名稱或姓名及關係（註三）</th>
+                      <th rowspan="2">備註</th>
+                    </tr>
+                    <tr>
+                          <th>股數</th>
+                          <th>持股比率(%)</th>
+                          <th>股數</th>
+                          <th>持股比率(%)</th>
+                          <th>股數</th>
+                          <th>持股比率(%)</th>
+                          <th>名稱(或姓名)</th>
+                          <th>關係</th>
+                        </tr>
+                  </thead>
+                <tbody>
+                    {table}
+                </tbody>
+                </table>
+              )
+          }
+        }
       return [
       <div class="content">
-        <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>組織及職掌 </h5>
+        <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>組織及職掌 </h4>
         <p><span>&nbsp;&nbsp;</span></p>
     
-  <div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h2 class="mb-0">
-        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          主要部門職稱及權責 
-        </button>
-      </h2>
-    </div>
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span>主要部門職稱及權責 
+                </button>
+              </h2>
+            </div>
 
-    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" >
-      <div class="card-body">
-        <table  class="table table-bordered table-hover">
-                            <thead>
-                            <tr>
-                                <th rowspan="1">部門</th>
-                                <th rowspan="1">主要職掌</th>
-                            </tr>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" >
+              <div class="card-body" style={{overflow: `auto`}}>
+              <img class="rounded" src="./assets/images/img20.gif"/>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 主要經營管理團隊
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <ActiveTable1 data={data.table1}/>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 主要經營管理團隊
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <ActiveTable2 data={data.table2}/>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 主要股東名單
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <div class="card-body">
+                <ActiveTable3 data={data.table3}/>
+              </div>
+            </div>
+          </div>
 
-                            </thead>
-                            <tbody>
-                               {table1}
-                            </tbody>
-                        </table>
-       
+
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h2 class="mb-0">
-        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
-        </button>
-      </h2>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h2 class="mb-0">
-        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
-        </button>
-      </h2>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
       ];
 
     }
-      //python-page7.js
+      //python-page4.js
+function Page4(props) {
+    const myPage = 4;
+    var data = {
+        links: [
+
+            {title :"公司章程",
+            href:"http://w3.taisol.com.tw/important/%E5%85%AC%E5%8F%B8%E7%AB%A0%E7%A8%8B.pdf"},
+    
+            {title :"董事及監察人選舉辦法",
+            href:"http://w3.taisol.com.tw/important/%E8%91%A3%E7%9B%A3%E9%81%B8%E8%88%89%E8%BE%A6%E6%B3%95.pdf"},
+    
+            {title:"股東會議事規則",href:"http://w3.taisol.com.tw/important/%E8%82%A1%E6%9D%B1%E6%9C%83%E8%AD%B0%E4%BA%8B%E8%A6%8F%E5%89%87.pdf"},
+            {title:"取得或處分資產處理程序",href:"http://w3.taisol.com.tw/important/%E5%8F%96%E5%BE%97%E6%88%96%E8%99%95%E5%88%86%E8%B3%87%E7%94%A2%E8%99%95%E7%90%86%E7%A8%8B%E5%BA%8F.pdf"},
+            {title:"背書保證作業程序",href:"http://w3.taisol.com.tw/important/%E8%83%8C%E6%9B%B8%E4%BF%9D%E8%AD%89.pdf"},
+            {title:"資金貸與他人作業程序",href:"http://w3.taisol.com.tw/important/%E8%B3%87%E9%87%91%E8%B2%B8%E8%88%87.pdf"},
+            {title:"內部重大資訊處理作業程序",href:"http://w3.taisol.com.tw/important/%E5%85%A7%E9%83%A8%E9%87%8D%E5%A4%A7%E8%B3%87%E8%A8%8A%E8%99%95%E7%90%86%E4%BD%9C%E6%A5%AD%E7%A8%8B%E5%BA%8F.pdf"},
+            {title:"誠信經營作業程序及行為指南",href:"http://w3.taisol.com.tw/important/%E8%AA%A0%E4%BF%A1%E7%B6%93%E7%87%9F%E4%BD%9C%E6%A5%AD%E7%A8%8B%E5%BA%8F%E5%8F%8A%E8%A1%8C%E7%82%BA%E6%8C%87%E5%8D%97.pdf"},
+            {title:"道德行為準則",href:"http://w3.taisol.com.tw/important/%E9%81%93%E5%BE%B7%E8%A1%8C%E7%82%BA%E6%BA%96%E5%89%87.pdf"},
+            {title:"企業社會責任實務守則",href:"http://w3.taisol.com.tw/important/%E4%BC%81%E6%A5%AD%E7%A4%BE%E6%9C%83%E8%B2%AC%E4%BB%BB%E5%AF%A6%E5%8B%99%E5%AE%88%E5%89%87.pdf"},
+            {title:"公司治理實務守則",href:"http://w3.taisol.com.tw/important/%E5%85%AC%E5%8F%B8%E6%B2%BB%E7%90%86%E5%AF%A6%E5%8B%99%E5%AE%88%E5%89%87.pdf"},
+            {title:"提名委員會組織規程",href:"http://w3.taisol.com.tw/important/%E6%8F%90%E5%90%8D%E5%A7%94%E5%93%A1%E6%9C%83%E7%B5%84%E7%B9%94%E8%A6%8F%E7%A8%8B.pdf"},
+    
+          ]
+    };
+
+    class ActiveList1 extends React.Component {
+      constructor(props){
+          super(props);
+          this.state={
+          };
+      }
+      render() {
+          const list =  this.props.data.map( (link,index) => [
+                <li class="list-group-item" ><img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>
+                    <a href={link.href} target="_blank"> {link.title}
+                        <img class="rounded" src="./assets/images/investor04_7.jpg"/>
+                    </a>
+                </li>
+            ]);
+          return (
+            <ul class="list-group list-group-flush ">
+              {list}
+            </ul>
+
+          )
+      }
+    }  
+
+    if (myPage != props.currentPage){return null;}
+    return [
+        <div class="content">
+            <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>規章 </h4>
+            <p><span>&nbsp;&nbsp;</span></p>  
+            <ActiveList1 data={data.links} />
+
+
+
+
+
+
+        </div>
+
+
+    ];
+
+}
+
+  //python-page5.js
+function Page5(props) {
+    const myPage = 5;
+    var data = {
+        table1 : [
+            {date: "109.06.05", type: "座談會", items: ["1. 109年1~4月稽核業務執行情形報告。","2. 就現行內控運作情形報告。"], results:["獨立董事、監察人洽悉。"]},
+            {date: "109.11.06", type: "座談會", items: [
+              "1. 109年5~10月稽核業務執行情形報告。",
+              "2.就現行內控運作情形報告。",
+              "3.陳報110年稽核計畫。"
+            ], results:[
+              "1.獨立董事、監察人洽悉。",
+              "2.獨立董事、監察人洽悉。",
+              "3.經審議後，送董事會決議。"
+            ]},
+          ]
+    };
+    class ActiveTable1 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={};
+        }
+          render() {
+              const table =  this.props.data.map( (meeting,index) => [
+                <tr>
+                  <td> {meeting.date}</td>
+                  <td> {meeting.type}</td>
+                  <td> 
+                      <ul class="list-group list-group-flush ">
+                        { meeting.items.map((sub_item,index2) =>
+                          <li class="list-group-item">
+                          {sub_item}
+                          </li>
+                        )}
+                      </ul>
+                  </td>
+                  <td>
+                        <ul class="list-group list-group-flush ">
+                            { meeting.results.map((sub_item,index2) =>
+                            <li class="list-group-item">
+                            {sub_item}
+                            </li>
+                            )}
+                        </ul>                      
+                  </td>
+                </tr> 
+              ]);
+              return (
+                <table  class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                        <th rowspan="1">會議日期</th>
+                        <th rowspan="1">會議性質</th>
+                        <th rowspan="1">溝通重點</th>
+                        <th rowspan="1">溝通結果</th>
+                    </tr>
+                  </thead>
+                <tbody>
+                    {table}
+                </tbody>
+                </table>
+              )
+          }
+        }
+    if (myPage != props.currentPage){return null;}
+    return [
+        <div class="content">
+            <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>內部稽核 </h4>
+            <p><span>&nbsp;&nbsp;</span></p>  
+            <p class="content-p">
+                本公司設置隸屬於董事會之內部稽核單位，並依公司規模、業務情況、管理需要及其他有關法令之規定，配置適任及適當人數之專任內部稽核人員。
+            </p>
+            <img class="rounded" src="./assets/images/IR-internal.gif"/>
+            <p><span>&nbsp;&nbsp;</span></p>
+            <p>內部稽核單位執行內部控制制度的稽核工作，檢查並評估公司的營運記錄有無缺失。對於發現之內部控制制度可能缺失及提出改善建議，做成稽核報告，定期向董事會報告。</p>
+            <p>內部稽核單位督促內部各單位及子公司每年定期自行檢查內部控制制度之有效性，再由內部稽核單位覆核各單位及子公司之自行檢查報告，並綜合自行檢查結果，做為董事會及總經理出具內部控制制度聲明書之依據。</p>
+            <p><span>&nbsp;&nbsp;</span></p>
+            <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>獨立董事、監察人與內部稽核主管之溝通方式:</h5>
+            <p><span>&nbsp;&nbsp;</span></p>
+            <p>1. 每年定期召開2次溝通會議，就本公司內部稽核業務執行狀況及內控運作情形提出報告。</p>
+            <p>2. 若有重大或緊急事項時，召開不定期會議討論之。平時以電話及電子郵件等方式進行溝通。</p>
+            <p>3. 稽核報告及追蹤報告陳核後，於次月底前交付各監察人、獨立董事查閱。</p>
+            <p><span>&nbsp;&nbsp;</span></p>
+            <p><b>獨立董事、監察人與內部稽核主管之溝通情形摘要： </b></p>
+
+            <p>溝通結果:</p>
+            <ActiveTable1 data={data.table1} />
+
+
+
+
+        </div>
+
+
+    ];
+
+}
+
+  //python-page6.js
+function Page6(props) {
+    const myPage = 6;
+    var data = {
+      list1 : [
+        "遵守相關勞動法規並尊重國際公認基本勞動人權原則，保障員工之合法權益，雇用政策並無差別待遇，並已建立相關管理機制。",
+        "為保護地球及降低對生態系統的破壞，並使產品能符合歐盟ROHS及其他相關環境指令之要求， 本公司原物料供應商皆簽署限用物質承諾保證書，承諾其供應之產品設計及製造方面均嚴守環境保護法令及規範，並與本公司共同努力達到世界環境保護政策之目標，有效管控原料和製程，保證其所提供之產品均符合ROHS之規範。",
+        "本公司勵行節能減炭作業，對可節省能源之相關議題或措施均會列入檢討，若屬可行並全力推行。",
+        "本公司提供安全與健康之工作環境，並定期健康檢查及辦理安全講座。",
+        "對於公司政策之宣導、員工的意見了解，皆採開放雙向溝通方式進行。",
+        "本公司訂有客訴處理作業，並建立以客戶為導向的品質系統，利用客觀的方法及標準流程，來評估客戶對本公司產品或服務之滿意度。",
+        "本公司對各項公益活動均熱心參與，亦鼓勵員工主動參與。",
+        "本公司每年定期於股東會年報中揭露與企業社會責任相關資訊之執行情形。"
+      ],
+      list2 : [
+        {title:"溫室氣體資訊管理程序",href:"http://w3.taisol.com.tw/file/%E6%BA%AB%E5%AE%A4%E6%B0%A3%E9%AB%94%E8%B3%87%E8%A8%8A%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F.pdf"},
+        {title:"溫室氣體管理手冊",href:"http://w3.taisol.com.tw/file/%E6%BA%AB%E5%AE%A4%E6%B0%A3%E9%AB%94%E7%AE%A1%E7%90%86%E6%89%8B%E5%86%8A.pdf"},
+        {title:"溫室氣體報告管理程序",href:"http://w3.taisol.com.tw/file/%E6%BA%AB%E5%AE%A4%E6%B0%A3%E9%AB%94%E5%A0%B1%E5%91%8A%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F.pdf"}, 
+        {title:"溫室氣體清單說明管理程序",href:"http://w3.taisol.com.tw/file/%E6%BA%AB%E5%AE%A4%E6%B0%A3%E9%AB%94%E6%B8%85%E5%96%AE%E8%AA%AA%E6%98%8E%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F.pdf"},
+        {title:"溫室氣體內部查證程序",href:"http://w3.taisol.com.tw/file/%E6%BA%AB%E5%AE%A4%E6%B0%A3%E9%AB%94%E5%85%A7%E9%83%A8%E6%9F%A5%E8%AD%89%E7%A8%8B%E5%BA%8F.pdf"},
+        {title:"汙水處理系統緊急預案",href:"http://w3.taisol.com.tw/file/%E6%B1%99%E6%B0%B4%E8%99%95%E7%90%86%E7%B3%BB%E7%B5%B1%E7%B7%8A%E6%80%A5%E9%A0%90%E6%A1%88.pdf"},
+        {title:"水汙染物管理辦法",href:"http://w3.taisol.com.tw/file/%E6%B0%B4%E6%B1%99%E6%9F%93%E7%89%A9%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95.pdf"},
+        {title:"噪音汙染管理辦法",href:"http://w3.taisol.com.tw/file/%E5%99%AA%E9%9F%B3%E6%B1%99%E6%9F%93%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95.pdf"},
+        {title:"噪聲測量管理辦法",href:"http://w3.taisol.com.tw/file/%E5%99%AA%E8%81%B2%E6%B8%AC%E9%87%8F%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95.pdf"},
+        {title:"廢棄物管理辦法",href:"http://w3.taisol.com.tw/file/%E5%BB%A2%E6%A3%84%E7%89%A9%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95.pdf"},
+        {title:"化學危險品管理辦法",href:"http://w3.taisol.com.tw/file/%E5%8C%96%E5%AD%B8%E5%8D%B1%E9%9A%AA%E5%93%81%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95.pdf"},
+        {title:"大氣污染物管理辦法",href:"http://w3.taisol.com.tw/file/%E5%A4%A7%E6%B0%A3%E6%B1%A1%E6%9F%93%E7%89%A9%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95.pdf"},
+        {title:"跑、冒、滴、漏管理辦法",href:"http://w3.taisol.com.tw/file/%E8%B7%91%E3%80%81%E5%86%92%E3%80%81%E6%BB%B4%E3%80%81%E6%BC%8F%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95.pdf"},
+        {title:"液氨洩漏緊急預案",href:"http://w3.taisol.com.tw/file/%E6%B6%B2%E6%B0%A8%E6%B4%A9%E6%BC%8F%E7%B7%8A%E6%80%A5%E9%A0%90%E6%A1%88.pdf"},
+        {title:"環境相關物質清單及削減計劃表",href:"http://w3.taisol.com.tw/file/%E7%92%B0%E5%A2%83%E7%9B%B8%E9%97%9C%E7%89%A9%E8%B3%AA%E6%B8%85%E5%96%AE%E5%8F%8A%E5%89%8A%E6%B8%9B%E8%A8%88%E5%8A%83%E8%A1%A8.pdf"},
+        {title:"環境目標、指標、管理方案管理程序",href:"http://w3.taisol.com.tw/file/%E7%92%B0%E5%A2%83%E7%9B%AE%E6%A8%99%E3%80%81%E6%8C%87%E6%A8%99%E3%80%81%E7%AE%A1%E7%90%86%E6%96%B9%E6%A1%88%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F.pdf"},
+        {title:"環境管理職責程序",href:"http://w3.taisol.com.tw/file/%E7%92%B0%E5%A2%83%E7%AE%A1%E7%90%86%E8%81%B7%E8%B2%AC%E7%A8%8B%E5%BA%8F.pdf"},
+        {title:"環境管理物質禁(限)用標準",href:"http://w3.taisol.com.tw/file/%E7%92%B0%E5%A2%83%E7%AE%A1%E7%90%86%E7%89%A9%E8%B3%AA%E7%A6%81(%E9%99%90)%E7%94%A8%E6%A8%99%E6%BA%96.pdf"},
+        {title:"環境管理方針和目標",href:"http://w3.taisol.com.tw/file/%E7%92%B0%E5%A2%83%E7%AE%A1%E7%90%86%E6%96%B9%E9%87%9D%E5%92%8C%E7%9B%AE%E6%A8%99.pdf"},
+        {title:"環境監測程序",href:"http://w3.taisol.com.tw/file/%E7%92%B0%E5%A2%83%E7%9B%A3%E6%B8%AC%E7%A8%8B%E5%BA%8F.pdf"},
+        {title:"環保產品管制程序",href:"http://w3.taisol.com.tw/file/%E7%92%B0%E4%BF%9D%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F.pdf"},
+        {title:"環保管理程序",href:"http://w3.taisol.com.tw/file/%E7%92%B0%E4%BF%9D%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F.pdf"},
+        {title:"環境手冊",href:"http://w3.taisol.com.tw/file/%E7%92%B0%E5%A2%83%E6%89%8B%E5%86%8A.pdf"},
+        {title:"資源、能源管理辦法",href:"http://w3.taisol.com.tw/file/%E8%B3%87%E6%BA%90%E3%80%81%E8%83%BD%E6%BA%90%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95.pdf"},
+        {title:"運行控制程序",href:"http://w3.taisol.com.tw/file/%E9%81%8B%E8%A1%8C%E6%8E%A7%E5%88%B6%E7%A8%8B%E5%BA%8F.pdf"},
+        {title:"緊急準備與回應程序",href:"http://w3.taisol.com.tw/file/%E7%B7%8A%E6%80%A5%E6%BA%96%E5%82%99%E8%88%87%E5%9B%9E%E6%87%89%E7%A8%8B%E5%BA%8F.pdf"},
+        {title:"緊急應變手冊",href:"http://w3.taisol.com.tw/file/%E7%B7%8A%E6%80%A5%E6%87%89%E8%AE%8A%E6%89%8B%E5%86%8A.pdf"},
+        {title:"重要環境因素評價管理辦法",href:"http://w3.taisol.com.tw/file/%E9%87%8D%E8%A6%81%E7%92%B0%E5%A2%83%E5%9B%A0%E7%B4%A0%E8%A9%95%E5%83%B9%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95.pdf"},
+        {title:"承包商、服務商環境影響評價管理辦法",href:"http://w3.taisol.com.tw/file/%E6%89%BF%E5%8C%85%E5%95%86%E3%80%81%E6%9C%8D%E5%8B%99%E5%95%86%E7%92%B0%E5%A2%83%E5%BD%B1%E9%9F%BF%E8%A9%95%E5%83%B9%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95.pdf"},
+      ]
+    };
+    class ActiveList1 extends React.Component {
+      constructor(props){
+          super(props);
+          this.state={
+          };
+      }
+      render() {
+          const list =  this.props.data.map( (item,index) => [
+            <li class="list-group-item" >
+              <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>{item}
+            </li>
+            ]);
+          return (
+            <ul class="list-group list-group-flush" >
+              {list}
+            </ul>
+          )
+      }
+    }  
+    class ActiveList2 extends React.Component {
+      constructor(props){
+          super(props);
+          this.state={
+          };
+      }
+      render() {
+          const list =  this.props.data.map( (item,index) => [
+            <li class="list-item list-unstyled  col-4 border-bottom py-2 ">
+              <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>
+              <a href={item.href} target="_blank">   
+                {item.title}<img class="rounded" src="./assets/images/investor04_7.jpg"/>
+              </a> 
+            </li>
+            ]);
+          return (
+            <ul class="list-unstyled row">
+              {list}
+            </ul>
+          )
+      }
+    } 
+    if (myPage != props.currentPage){return null;}
+    return [
+        <div class="content">
+            <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>企業社會責任 </h4>
+            <p><span>&nbsp;&nbsp;</span></p>  
+            <p><b>環境永續:</b></p>
+            <ul class="list-group list-group-flush" >
+              <li class="list-group-item" >
+                <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span><b>ISO14001 環境管理體系</b> 
+                  <a href="http://w3.taisol.com.tw/important/EMS-ARES-ISO14001.pdf" target="_blank">   
+                  證書<img class="rounded" src="./assets/images/investor04_7.jpg"/>
+                  </a>: <br/ >
+                  為致力於提升各項資源之利用效率，積極使用再生物料，並對空氣、噪音、水資源等各項汙染防制進行管理，已制定多項相關作業辦法，以資遵循。
+              </li>
+              <li class="list-group-item" >
+                <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span><b>EICC 電子產業行為準則 </b> 
+                  <a href="http://cn.taisol.com.cn/eicc" target="_blank">   
+                  EICC專區<img class="rounded" src="./assets/images/investor04_7.jpg"/>
+                  </a> :<br />
+                  工作環境均已列入規範管理，並設有專人管理或推動EICC相關規範。
+              </li>
+              <li class="list-group-item" >
+                <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span><b>ISO14064-1 溫室氣體管理體系 </b> :
+                  <br />
+                  為提高對溫室氣體管理之標準，已制定多項相關作業辦法，以資遵循。
+              </li>
+              <li></li>
+            
+            
+            </ul>
+            <ActiveList1 data={data.list1} />
+
+            <p><span>&nbsp;&nbsp;</span></p>
+
+            <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>相關作業辦法 </h5>
+            <p><span>&nbsp;&nbsp;</span></p>
+
+            <div class="col-12 container" >
+              <ActiveList2 data={data.list2} />
+            </div>
+
+            <p><span>&nbsp;&nbsp;</span></p>
+            <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>公益關懷 </h5>
+            <p><span>&nbsp;&nbsp;</span></p>
+
+            <p> <b>｢散發熱情，傳愛千里｣ </b></p>
+            <p>2020年是泰碩的公益啟動年，泰碩電子秉持著「取之於社會、回饋於社會」的公益理念，在董事長余清松的支持下，由總經理梁竣興親自率領成立了泰碩志工團，並開啟了第一屆【耶誕圓夢鞋盒】活動。 </p>
+            <p>首年辦理耶誕圓夢鞋盒活動，泰碩與失親兒福利基金會、藍迪兒童之家合作，由社工老師一對一的了解每位失親或單親孩子的耶誕願望，再由泰碩來協助孩子們圓夢，2020年我們一共送出了118個耶誕圓夢鞋盒，在每個鞋盒內除了有孩子許願的禮物外，還附上由同仁及主管們親手撰寫的鼓勵卡片，希望透過良善的互動，溫暖孩子的童年，讓這群弱勢家庭的孩童年年都能過個有溫度的耶誕節。 </p>
+            <p>透過這次活動，我們深刻的發現在台灣仍有很多需要被關懷的弱勢孩童，雖然第一屆志工團的力量有限，但我們堅信只要一直做著對的事，愛的力量便會無限的壯大，良善的循環將會一屆傳承一屆，將泰碩的愛心傳送千里。</p>
+
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/A.JPG" class="card-img-top rounded-pill" alt="..." />
+                </div>
+                <div class="col">
+                <img src="http://w3.taisol.com.tw/image/notice2-5/B.JPG" class="card-img-top rounded-pill" alt="..." />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                <img src="http://w3.taisol.com.tw/image/notice2-5/C.JPG" class="card-img-top rounded-pill" alt="..." />
+                </div>
+                <div class="col">
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/F.JPG" class="card-img-top rounded-pill" alt="..." />
+                </div>
+                <div class="col">
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/D.JPG" class="card-img-top rounded-pill" alt="..." />
+                </div>
+              </div>
+
+            </div>
+
+            <p><span>&nbsp;&nbsp;</span></p>
+            <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>環境關懷 </h5>
+            <p><span>&nbsp;&nbsp;</span></p>
+
+            <p> <b>｢關懷土地，用行動支持在地友善農業｣</b></p>
+              <p>隨著環保意識抬頭，在台灣有越來越多的小農秉持著無毒無化肥的環保理念，致力將環保生態與農業發展進行結合，而這群在地友善農友就是泰碩要支持的對象。  </p>
+              <p>2020年中秋節，泰碩首次購入新南田董米，以行動支持友善農友!</p>
+              <p> 不同於一般稻米求豐收，田董米以「水鳥棲地保育」做為品牌使命，所以全年採用無農藥耕種，並以米糠作為肥料灌溉，用最自然的方式守護水田，進而提供珍貴水鳥們一個天然又安全的家，達到生態與農作共存的理念。</p>
+              <p>展望未來，泰碩仍會持續以行動支持環保、關懷土地，將綠色幸福的理念，年年不斷的傳遞下去。</p>
+            <div class="container">
+
+              <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/E.JPG" class="card-img-top rounded-pill" alt="..." />
+                </div>
+              </div>
+
+            </div>
+
+
+
+        </div>
+
+
+    ];
+
+}
+
+  //python-page7.js
 function Page7(props) {
     const myPage = 7;
     if (myPage != props.currentPage){return null;}
@@ -1621,7 +2054,7 @@ function Page7(props) {
       return  [
       <div class="content">
 
-<h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>供應商管理 </h5>
+<h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>供應商管理 </h4>
 <p><span>&nbsp;&nbsp;</span></p>  
 <p>泰碩公司重視企業社會責任，已要求採購「非衝突(conflict-free)」的原物料; 提倡人道精神與實踐人性尊嚴的社會道德準則，是泰碩公司理應善盡的企業社會責任。目前係以符合經濟合作暨發展組織(OECD)於 2011 年所發布之「受衝突影響與高風險地區之全球責任礦物供應鏈模範政策(Model Supply Chain Policy for a Responsible Global Supply Chain of Mineral from Conflict-Affected and High Risk Areas)」的盡職調查(due diligence)架構為依據。
 </p>
@@ -1633,6 +2066,7 @@ function Page7(props) {
 <p><span>&nbsp;&nbsp;</span></p>
 
 <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>對供應商有關環境保護之要求 (2018年-已完成共37家供應商評鑑) </h5>
+<p><span>&nbsp;&nbsp;</span></p>  
 
 
 <ul class="list-group list-group-flush" >
@@ -1668,6 +2102,708 @@ E-Mail：<a href="mailto:sales@taisol.com">sales@taisol.com</a>
 
 
 </div>
+      ];
+    
+   
+    
+  }
+  //python-page8.js
+function Page8(props) {
+    const myPage = 8;
+    if (myPage != props.currentPage){return null;}
+
+      var data =  {      
+        list1:[
+          "1. 您所提供的個人資料，包含姓名、電話、電子郵件地址，泰碩 公司於調查期間，得為調查舉報事項與聯繫用途而處理利用； 調查若有必要，泰碩公司得傳遞您必要的個人資訊予公司內部 及司法檢調等相關單位。",
+          "2. 不得明知不實而故意捏造事實，倘舉報事後被證明是出於惡意 或有故意捏造虛偽陳述之情事，您必須自負相關法律責任。",
+          "3. 為能盡早調查與解決問題，請您務必提供所有可能的相關具體 資訊與文件，若相關資訊與文件不齊備，泰碩公司將無法進行 調查。",
+          "4. 泰碩公司提供予您的相關聯絡內容，其全部或一部分皆不可向 任何人揭露。除依法律之規定要求外，您不得以泰碩公司與您 之間的聯絡內容提出訴訟或以該聯絡內容作為訴訟相關資料。",
+          
+        ]
+
+      }
+
+      class ActiveList1 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={
+            };
+        }
+        render() {
+            const list =  this.props.data.map( (item,index) => [
+                  <li class="list-group-item" >
+                    {item}
+                  </li>
+              ]);
+            return (
+              <ul class="list-group list-group-flush ">
+                {list}
+                <li  class="list-group-item">   郭尚仁 先生
+                (副總經理暨發言人)
+                E-Mail：<a href="mailto:sales@taisol.com">sales@taisol.com</a>
+                </li>
+              </ul>
+  
+            )
+        }
+      }  
+
+
+
+      return  [
+      <div class="content">
+
+        <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>客戶及供應商投訴中心 </h4>
+        <p><span>&nbsp;&nbsp;</span></p>  
+        <p><b>違反從業道德行為舉報系統:</b></p>
+        <p>在泰碩電子股份有限公司，誠信正直是公司文化最重要之核心價值， 也是公司經營理念之首。泰碩公司一向承諾以誠信從事所有業務活動 ，絕不允許貪污及任何形式之舞弊行為。
+        </p>
+        <p>若您發現泰碩公司員工或任何代表泰碩公司的相關人士進行可疑行為 或可能違反泰碩公司的道德行為準則時，請告訴我們。
+        您的舉報事項，我們將交由公司副總經理直接處理。
+        </p>
+        <p>除法律另有規定外，對於您提供關於您的個人資料，我們將予以保密 ，並依法採取適當之保護措施，保護您的個人資料及隱私。 
+        </p>
+        <p><span>&nbsp;&nbsp;</span></p>
+        <p><b>提醒您：</b></p>
+        <ActiveList1 data={data.list1} />
+
+      </div>
+      ];
+    
+   
+    
+  }
+  //python-page9.js
+function Page9(props) {
+    const myPage = 9;
+    if (myPage != props.currentPage){return null;}
+
+      var data =  {      
+        table1:[
+          {name: '余清松',self_stock:'14,155,046',self_stock_per:"16.22", fam_stock:"773,431",fam_stock_per:"0.89",other_stock:"2,698,000",other_stock_pre:'3.09', name2:'隆昕實業',relation:'關係人',note:''},
+          {name: '隆昕實業股份有限公司法人代表：葉麗娟',self_stock:'2,698,000',self_stock_per:"3.09", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'余清松',relation:'關係人',note:''},
+          {name: '林千雅',self_stock:'1,844,321',self_stock_per:"2.11", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+          {name: '台灣企銀受託保管群益創新科技基金專戶',self_stock:'1,200,000',self_stock_per:"1.38", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+          {name: '群益馬拉基金專戶',self_stock:'1,030,000',self_stock_per:"1.18", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+          {name: '謝君山',self_stock:'1,022,276',self_stock_per:"1.17", fam_stock:"280,466",fam_stock_per:"0.32",other_stock:"",other_stock_pre:'-', name2:'',relation:'',note:''},
+          {name: '元大人壽保險股份有限公司',self_stock:'956,000',self_stock_per:"1.10", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+          {name: '復華傳家二號基金專戶',self_stock:'863,000',self_stock_per:"0.99", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+          {name: '野村中小基金專戶',self_stock:'855,000',self_stock_per:"0.98", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+          {name: '復華數位經濟基金專戶',self_stock:'812,000',self_stock_per:"0.93", fam_stock:"-",fam_stock_per:"-",other_stock:"-",other_stock_pre:'-', name2:'',relation:'',note:''},
+      ]
+  
+
+      }
+
+      class ActiveTable1 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={};
+        }
+          render() {
+              const table =  this.props.data.map( (item,index) => [
+                <tr>
+                    {Object.keys(item).map(function(keyName, keyIndex) {
+                        return <td>{item[keyName]}</td>
+                    })}
+                </tr> 
+              ]);
+              return (
+                <table  class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                        <th rowspan="2">姓名（註一）</th>
+                        <th colspan="2">本人持有股份</th>
+                        <th colspan="2">配偶、未成年子女持有股份</th>
+                        <th colspan="2">利用他人名義合計持有股份</th>
+                        <th colspan="2">前十大股東互相間具有財務會計準則公報第六號關係人或為配偶、二等親以內之親屬關係者，其名稱或姓名及關係（註三）</th>
+                        <th rowspan="2">備註</th>
+                    </tr>
+                    <tr>
+
+                      <th>股數</th>
+                      <th>持股比率(%)</th>
+                      <th>股數</th>
+                      <th>持股比率(%)</th>
+                      <th>股數</th>
+                      <th>持股比率(%)</th>
+                      <th>名稱(或姓名)</th>
+                      <th>關係</th>
+                    </tr>
+
+                    </thead>
+                <tbody>
+                    {table}
+                </tbody>
+                </table>
+              )
+          }
+        }
+
+
+
+      return  [
+      <div class="content">
+
+        <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>投資人關係 </h4>
+        <p><span>&nbsp;&nbsp;</span></p>
+
+        <p><b>股權結構:</b></p>
+        <p><span>&nbsp;&nbsp;</span>本公司股權比例占前十大之股東： </p>
+        <p style={{textAlign:`right`}}>109 年 4 月 7 日  單位：股</p>
+        <ActiveTable1 data={data.table1} />
+
+      </div>
+      ];
+    
+   
+    
+  }
+  //python-page10.js
+function Page10(props) {
+    const myPage = 10;
+    if (myPage != props.currentPage){return null;}
+
+      var data =  {      
+
+        list1:[
+          "三節禮金、勞動節禮金、生日禮金、生育禮金、婚喪喜慶補助金、旅遊補助金、住院慰問金、退休慰問金等。",
+          "除法定勞健保外，尚為同仁提供免費團保(含壽險、意外險、意外醫療、住院醫療等，優於一般公司團保)、旅平險。",
+          "特定人員免費停車位、手機費、汽車津貼、油資等補助及投保團體年金。",
+          "免費咖啡飲料。",
+          "業績獎金、專利提案獎金、專利權獎金及專利應用獎金。",
+          "週休二日、可彈性上下班。",
+          "不定期舉辦運動競賽、國內外旅遊、員工電影票、冬至湯圓、部門聚餐等休閒活動。",
+          "每年舉辦尾牙、抽獎活動、資深員工表揚等犒賞員工，並依營運狀況提供年終禮物(例如:高級GORE-TEX外套等)。",
+          "優於勞基法規定(如增設訂婚假等)。",
+          "其他各項有關員工福利事項。"],
+  
+          list2:[
+  
+            "新人訓練",
+            "專業職能培訓",
+            "管理職能培訓",
+            "共通職能培訓",
+            "派外訓練補助",
+          ],
+  
+          list3: [ 
+            {title: "一、工作環境",
+            details:[
+                "綠色採購(例如:環保文具、LED燈具、辦公設備等)。",
+              "公司符合公共安全規定，例如採用防燃設備(地毯、窗簾、漆等)、防爆門、逃生設備等。",
+              "公司門禁與新光保全公司合作，電腦控制並定期保全人員巡邏，維護員工安全。",
+              "定期進行辦公室環境清潔及消毒。"]
+            },
+            {title:"二、人身安全的保護措施",
+            details:[
+              "辦理免費員工健康檢查(優於法定規定年限及項目)，維護員工健康。",
+              "定期舉辦消防演習，加強員工消防意識。",
+              "實施夜間下班員工之免費特約企業計程車服務，保護夜歸員工之安全。"]
+            }
+          ],
+  
+          table1: [
+            {date: "108年06月12日", content:"消防自我檢查"},
+            {date: "108年07月25日", content:"急救訓練及消防逃生訓練"},
+            {date: "108年09月17日", content:"大樓修繕消防缺失"},
+            {date: "108年09月27日", content:"	市府消防隊安全復檢"},
+          ],
+          table2: [
+  
+            {date:"107年04月10日",content:	"1樓台中銀行--台北市消防局檢測"},
+            {date:"107年05月11日",content:	"大樓及各公司自我檢測"},
+            {date:"107年07月23日",content:	"大樓及各公司消防演練"},
+            {date:"107年10月12日",content:	"大樓及各公司--台北市消防局檢測"},
+            {date:"107年12月07日",content:	"1樓郵局自我檢測"},
+            {date:"107年12月14日",content:	"1樓郵局--台北市消防局檢測"},
+            {date:"108年01月14日",content:	"大樓及各公司消防演練"}
+          
+          ],
+  
+  
+  
+  
+  
+          list4:[
+  
+            {
+              title:"1.      多元包容性與平等機會", 
+              content:"本公司落實職場多元性，不因種族、階級、語言、思想、宗教、黨派、籍貫、出生地、性別、性傾向、年齡、婚姻、容貌、五官、身心障礙、星座、血型或以往工會會員身分為由等，予以差別待遇或任何形式之歧視。"
+            },
+            {
+              title:"2.      合理工時",
+              content:"為確保員工健康，泰碩明訂工作時間與延長工時之規範，並定期關懷及管理員工出勤狀況。"
+            },
+            {
+              title:" 3.      健康職場",
+              content:"為關懷員工身心健康，泰碩定期提供員工免費健康檢查，並設有企業舒壓按摩服務及不定期辦理員工活動，如：員工旅遊、耶誕活動、專業及生活講座等來活絡員工人際互動，以達工作與生活平衡，全面照顧員工身心靈健康。"
+            },
+            {
+              title:"4.      勞資關係",
+              content:      "為提供員工順暢的溝通管道，本公司設有『員工建議與申訴信箱：talk@taisol.com』，並定期召開勞資會議，確保勞雇雙方權益。"
+            }
+  
+          ]
+
+      }
+      class ActiveList1 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={
+            };
+        }
+        render() {
+            const list =  this.props.data.map( (item,index) => [
+              <li class="list-group-item" >
+                <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>{item}
+              </li>
+              ]);
+            return (
+              <ul class="list-group list-group-flush" >
+                <li class="list-group-item list-group-flush"><b>一、福利措施</b>
+                  {list}
+                </li>
+                <li class="list-group-item list-group-flush"><b>二、員工認股</b>
+                  <li class="list-group-item list-group-flush" >
+                  <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>本公司為追求企業永續成長與員工共同分享企業經營成果，推行員工認股與分紅入股辦法，落
+                  　　實『員工即股東』之理念。
+                  </li>
+                </li>
+                <li class="list-group-item list-group-flush"><b>三、退休制度</b>
+                  <li class="list-group-item list-group-flush" >	
+                    <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>實施情形:
+                    <br />
+                    本公司員工退休辦法悉依勞動基準法訂定，由公司每月按員工薪資總額之3％提撥退休準備金，
+                    儲存於中央信託局退休金專戶；另，自民國九十四年七月一日起配合勞工退休金條例(以下簡稱
+                    「新制」)之實施，原適用本公司退休辦法之員工如經選擇適用新制後之服務年資或新制施行後到
+                    職之員工其服務年資改採確定提撥制，其退休金之給付由本公司按月依每月工資百分之六提繳退
+                    休金，儲存於勞工退休金個人專戶。
+                  </li>
+                
+                  <li class="list-group-item list-group-flush" >	
+                    <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>退休之資格(依最新版本之勞基法):
+                    <br />
+                    凡本公司之員工，合乎下列規定之一，即得自行申請退休或辦理強制退休：
+                    <ul class="list-group list-group-flush" >(1)自請退休：
+                      <li class="list-group-item list-group-flush" >a.於本公司服務滿十五年以上且年滿五十五歲者。
+                      </li>
+                      <li class="list-group-item list-group-flush" >b.於本公司服務滿二十五年者。
+                      </li>
+                      <li class="list-group-item list-group-flush" >c.於本公司服務滿十年以上且年滿六十歲者。
+                      </li>
+                    </ul>
+                    <ul class="list-group list-group-flush" > (2)強制退休：
+                      <li class="list-group-item list-group-flush" > a.年滿六十五歲者。
+                      </li>
+                      <li class="list-group-item list-group-flush" >b.心神喪失或身體殘廢不堪勝任職務者。
+                      </li>
+                    </ul>
+                  </li>
+
+                </li> 
+
+              </ul>
+            )
+        }
+      }  
+      class ActiveList2 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={
+            };
+        }
+        render() {
+            const list =  this.props.data.map( (item,index) => [
+              
+              <li class="list-group-item " >
+              <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>{item}
+              </li>
+              ]);
+            return (
+              <ul class="list-group list-group-flush" >
+                <li class="list-group-item list-group-flush"><b>人才培育範疇包含：</b>
+                  {list}
+                </li>
+              </ul>
+            )
+        }
+      }  
+      class ActiveList3 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={
+            };
+        }
+        render() {
+            const list =  this.props.data.map( (item,index) => [
+              <li class="list-group-item list-group-flush"><b>{item.title}</b>
+                  {item.details.map(function(detail, index2) {
+                    return [
+                      <li class="list-group-item " >
+                        <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>{detail}
+                      </li>
+                    ]
+                    
+                    })}
+ 
+              </li>
+              ]);
+            return (
+              <ul class="list-group list-group-flush" >
+                  {list}
+              </ul>
+            )
+        }
+      }  
+      class ActiveTable1 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={};
+        }
+          render() {
+              const table =  this.props.data.map( (item,index) => [
+                <tr>
+                  <td> {item.date}</td>
+                  <td> {item.content}</td>
+                </tr> 
+              ]);
+              return (
+                <table  class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                      <th rowspan="1" style={{width: `50%`}}>檢測時間</th>
+                      <th rowspan="1" style={{width: `50%`}}>計畫內容</th>
+                  </tr>
+
+                </thead>
+                <tbody>
+                    {table}
+                </tbody>
+                </table>
+              )
+          }
+        }
+
+        class ActiveList4 extends React.Component {
+          constructor(props){
+              super(props);
+              this.state={
+              };
+          }
+          render() {
+              const list =  this.props.data.map( (item,index) => [
+                
+                <li class="list-group-item list-group-flush"><b>{item.title}</b>
+                  <li class="list-group-item list-group-flush">
+                    <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>{item.content}
+                  </li>
+                </li>
+                ]);
+              return (
+                <ul class="list-group list-group-flush" >
+                  <li class="list-group-item list-group-flush"><b>人才培育範疇包含：</b>
+                    {list}
+                  </li>
+                </ul>
+              )
+          }
+        }  
+
+      return  [
+      <div class="content">
+
+        <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>人力資源 </h4>
+        <p><span>&nbsp;&nbsp;</span></p>
+
+
+        <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>福利制度 </h5>
+        <p><span>&nbsp;&nbsp;</span></p>
+        <p>本公司秉持尊重及關心員工的理念，致力於提供高品質的友善職場環境及員工福利，並於88年5月1日正式成立職工福利委員會組織，負責員工福利規劃與活動辦理，我們期許透過完善的福利制度，全方位照顧員工的身、心、靈健康與平衡。員工福利措施及制度包含：
+        </p>
+        <ActiveList1 data={data.list1} />
+  
+        <p><span>&nbsp;&nbsp;</span></p>
+
+        <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>人才培育 </h5>
+        <p><span>&nbsp;&nbsp;</span></p>
+        <p>泰碩瞭解『員工』是公司最重要的資產，而持續的人才培育正是提升員工技能及服務品質的重要策略。本公司訂有教育訓練相關辦法，並配合公司短中長期之發展需要，辦理內外訓相關課程，不斷增進員工專業知識及管理技能。  
+        </p>
+        <ActiveList2 data={data.list2} />
+        <p><span>&nbsp;&nbsp;</span></p>
+
+        <div class="row justify-content-md-center">
+          <div class="col">
+            <img src="http://w3.taisol.com.tw/image/Notice2-9A.JPG" class="card-img-top rounded-pill" alt="..." />
+          </div>
+          <div class="col">
+            <img src="http://w3.taisol.com.tw/image/Notice2-9B.JPG" class="card-img-top rounded-pill" alt="..." />
+          </div>
+        </div>
+        <p><span>&nbsp;&nbsp;</span></p>
+        <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>員工工作環境與人身安全的保護措施 </h5>
+        <p><span>&nbsp;&nbsp;</span></p>
+        <p>泰碩重視員工安全，並致力提供一個安全、衛生與舒適的工作環境予全體同仁，工作環境與員工人身安全保護措施彙整如下：  </p>
+        <ActiveList3 data={data.list3} />
+        <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+          <img src="http://w3.taisol.com.tw/important/notice-2-9.jpg" class="card-img-top rounded-pill" alt="..." />
+        </div>
+        </div>
+        <p><span>&nbsp;&nbsp;</span></p>
+
+        <p><b>亞洲科技大樓108年消防及安全檢測計畫：</b></p>
+          <ActiveTable1 data={data.table1} />
+        <p><b>亞洲科技大樓107年消防及安全檢測計畫：</b></p>
+          <ActiveTable1 data={data.table2} />
+        <p><span>&nbsp;&nbsp;</span></p>
+        <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>人權政策 </h5>
+        <p><span>&nbsp;&nbsp;</span></p>
+        <p>泰碩電子股份有限公司(以下稱「泰碩」)，為善盡企業社會責任並落實人權保障，尊重並遵循「聯合國世界人權宣言」、「聯合國全球盟約」及國際勞工組織的「工作基本原則與權利宣言」等各項國際人權公約所揭橥之人權保護精神與基本原則，特制定本政策，並遵守《中華民國勞動基準法》、《性別工作平等法》、《就業服務法》等勞動相關法規，杜絕任何侵犯及違反人權之行為，有尊嚴的對待及尊重所有同仁。  </p>
+        <p>本公司人權政策適用範圍包括本公司及相關企業，落實方針如下：</p>
+        <ActiveList4 data={data.list4}/>
+      </div>
+      ];
+    
+   
+    
+  }
+  //python-page11.js
+function Page11(props) {
+    const myPage = 11;
+    if (myPage != props.currentPage){return null;}
+
+      var data =  {      
+        table1:[
+          {person: "投資人", topics:["獲利情形","風險管理"], jobs:["本公司定期召開股東常會，所有管理階層也均會全程參與，詳細報告及回覆投資人所關切的議題。我們也在網頁設置與投資人關係的專區，增加公司營運的透明度。通暢的溝通管道使我們能有效管理風險，資訊的透明亦可讓投資人得以明智決策。"],results:[{txt:"最新消息",href:"http://www.taisol.com.tw/news?lang=zh"}]},
+          {person: "員工", topics:[
+            "工作環境",
+            "薪資福利",
+            "晉升遷調"
+          ]
+          , jobs:["我們希望所有同仁都能感受到自己的聲音被傾聽、被重視。為此，我們特別建立了一套無障礙的員工發聲系統和程序，提供專人處理的電話線和信箱，讓員工的意見直達最高管理階層。"],results:[{txt:"員工福利、工作環境與人身安全",href:"index.html?notice-2-9"}]},
+          {person: "客戶", topics:["產品品質"], jobs:[
+            "本公司積極要求業務單位必須與客戶保持密切聯繫，即時告知客戶應有的權益，並確保產品達到預期的可靠性與品質。我們也致力於提供客戶綠色產品，並與原物料供應商簽署限用物質承諾保證書、不使用衝突礦產，提供客戶符合歐盟ROHS規範的產品。",
+            "本公司除了已建立完整的客訴管理系統，另於網頁中提供讓客戶直接溝通的管道，凡客戶投訴的案件，皆由本公司副總經理直接處理。",
+          ]
+          ,results:[]},
+          {person: "供應商", topics:["採購條件","誠信經營"], jobs:["本公司嚴格落實誠信經營，採購單位每年檢討實際交易情形後，與供應商協調次年度之合約內容。並要求採購單位不得收受廠商以各種型式提供之不正當利益。","本公司已於網頁中提供供應商直接溝通的管道，對供應商投訴的案件，皆由本公司副總經理直接處理。"],results:[]},
+          
+          {person: "社會", topics:["環境保護","社會公益"], jobs:["本公司已通過ISO14001環境管理系統，並依ISO14064訂有多項作業辦法，積極推動對空氣、噪音、水資源等汙染防治管理及提高對溫室氣體管理之標準。","本公司於大學中設置獎助學金，給予品學兼優的年輕學子最實質的鼓勵。"],results:[{txt:"社會責任",href:"index.html?notice-2-5"}, {txt:"ISO14001證書",href:"http://w3.taisol.com.tw/important/EMS-ARES-ISO14001.pdf"} ]},
+          
+          
+       
+          
+      ],
+
+      list1:[
+
+        {
+          title:"一、本公司為落實誠信經營政策，積極防範不誠信的行為，已設立檢舉信箱機制，嚴格禁止任何違反從業道德之行為及情事，如有違反各營運所在相關法令或本公司各項從業道德行為準則，一律秉公處理，絕不寬貸。", 
+          content:[]
+        },
+        {
+          title:"二、本公司提供檢舉之獎勵：糾正或檢舉違反廉潔守則情事，凡經查證屬實者，將予適當之獎勵。另針對違反從業道德之行為，除所獲取之各項不正當利益均應追繳發還被索取人或公司外，並依情節之大小，予以處分或合併處分。",
+          content:[]
+        },
+        {
+          title:"三、檢舉方式如下:",
+          content:["檢舉信箱 : 如下方所示"]
+        },
+        {
+          title:"四、檢舉人應至少提供下列資訊始得成立檢舉案件：",
+          content: 
+          [
+            "內部員工 : (1)廠別(2)工號(3)姓名。",
+　　        "外部人 : (1)姓名(2)身分證字號。",
+　　        "可聯絡到檢舉人之地址、電話、電子信箱。",
+　　        "被檢舉人之姓名或其他足資識別被檢舉人身分特徵之資料。",
+　　        "可供調查之具體事證。"
+          ]
+        },
+        {
+          title:"五、本公司依檢舉人及檢舉事項、對象，接受檢舉之窗口分別為管理部吳小姐或發言人郭副總，　　如下方所示。對於檢舉人之身份與所檢舉之內容，除依法律之規定要求外，絕對會予以保密　　，並承諾保護檢舉人及酌予適當獎勵。 ",
+          content:[]
+        },
+        {
+          title:"六、本公司對於檢舉案件一經成立即指派專人進行調查。　　其相關紙本文件、電子檔案等，除提供予司法檢調等單位外，將由專責人員上鎖、加密，妥善保管之。",
+                    content:[]
+        },
+        {
+          title:"七、作業流程：",
+          content:["(1)受理窗口→董事長／總經理→管理部／稽核室→董事／監察人。" ,  "(2)管理部／稽核室→委任律師／司法及檢調等單位 。 "]
+        }
+
+      ],
+
+      list2:[
+        "1. 您所提供的個人資料，包含姓名、電話、電子郵件地址，泰碩 公司於調查期間，得為調查舉報事項與聯繫用途而處理利用； 調查若有必要，泰碩公司得傳遞您必要的個人資訊予公司內部 及司法檢調等相關單位。",
+        "2. 不得明知不實而故意捏造事實，倘舉報事後被證明是出於惡意 或有故意捏造虛偽陳述之情事，您必須自負相關法律責任。",
+        "3. 為能盡早調查與解決問題，請您務必提供所有可能的相關具體 資訊與文件，若相關資訊與文件不齊備，泰碩公司將無法進行 調查。",
+        "4. 泰碩公司提供予您的相關聯絡內容，其全部或一部分皆不可向 任何人揭露。除依法律之規定要求外，您不得以泰碩公司與您 之間的聯絡內容提出訴訟或以該聯絡內容作為訴訟相關資料。",
+        
+      ],
+
+  
+
+      }
+
+      class ActiveTable1 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={};
+        }
+          render() {
+              const table =  this.props.data.map( (row,index) => [
+                  <tr>
+                    <td> <b>{row.person}</b></td>
+
+                  <td>
+                              <ul class="list-group list-group-flush">
+                                {this.props.data[index].topics.map(     (topic) =>
+                                    <li class="list-group-item list-group-flush" >
+                                        {topic}
+                                    </li >
+                                )}
+                                </ul>
+                    </td>
+                    <td>
+                            <ul >
+                                {this.props.data[index].jobs.map(     (job) =>
+                                    <li  >
+                                        {job}
+                                    </li >
+                                )}
+                              </ul>
+                    </td>
+                    <td>
+                              <ul >
+                                {this.props.data[index].results.map(     (result) =>
+                                    <li >
+                                        <a href={result.href} >{result.txt} <img class="rounded" src="./assets/images/investor04_7.jpg"/></a>
+                                    </li >
+                                )}
+                              </ul>
+
+                    </td>
+                </tr>
+              ]);
+              return (
+                <table  class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th rowspan="1" >利害關係人</th>
+                      <th rowspan="1" >關切的議題</th>
+                      <th rowspan="1" style={{width: `50%`}}>我們的責任</th>
+                      <th rowspan="1">我們的努力</th>
+                    </tr>
+
+                    </thead>
+                <tbody>
+                    {table}
+                </tbody>
+                </table>
+              )
+          }
+        }
+      class ActiveList1 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={
+            };
+        }
+        render() {
+            const list =  this.props.data.map( (item,index) => [
+              <li class="list-group-item list-group-flush">{item.title}
+                  {item.content.map(function(detail, index2) {
+                    return [
+                      <li class="list-group-item " >
+                        <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>{detail}
+                      </li>
+                    ]
+                    
+                    })}
+  
+              </li>
+              ]);
+            return (
+              <ul class="list-group list-group-flush" >
+                  {list}
+              </ul>
+            )
+        }
+      }  
+      class ActiveList2 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={
+            };
+        }
+        render() {
+            const list =  this.props.data.map( (item,index) => [
+                  <li class="list-group-item" >
+                    {item}
+                  </li>
+              ]);
+            return (
+              <ul class="list-group list-group-flush ">
+                {list}
+                <li  class="list-group-item">   郭尚仁 先生
+                (副總經理暨發言人)
+                E-Mail：<a href="mailto:sales@taisol.com">sales@taisol.com</a>
+                </li>
+              </ul>
+  
+            )
+        }
+      }  
+
+      return  [
+      <div class="content">
+
+        <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>與利害關係人對話 </h4>
+        <p><span>&nbsp;&nbsp;</span></p>
+        <p>企業追求永續發展，必須瞭解利害關係人的想法。透明的溝通不僅會減少公司內部管理成本，亦是追求永續發展的重要參考。我們相信，開放、無障礙的溝通方式，更能充分瞭解利害關係人的需求。
+        </p>
+        <ActiveTable1 data={data.table1} />
+        <p><span>&nbsp;&nbsp;</span></p>
+        <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span> 檢舉信箱作業辦法</h5>
+        <p><span>&nbsp;&nbsp;</span></p>
+        <ActiveList1 data={data.list1} />
+        <p><span>&nbsp;&nbsp;</span></p>
+        <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>員工申訴中心 </h5>
+        <p><span>&nbsp;&nbsp;</span></p>
+
+
+        <p>員工是公司主要的利害關係人之一，更是泰碩珍視的資產。
+        </p>
+        <p>基於對員工的承諾，泰碩相信每位員工皆應受到公平的對待與尊重； 保障國際公認人權，致力維護與尊重聯合國世界人權宣言和國際勞動 組織基本公約的核心勞動標準。 
+        </p>
+        <p>為了保障您的權益、讓您更安心工作，泰碩特別設置提供專責的員工 意見申訴管道。
+        </p>
+
+        <p>E-Mail: <a href="mailto:sales@taisol.com">sales@taisol.com</a> </p>
+        <p><span>&nbsp;&nbsp;</span></p>  
+        
+
+        <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>客戶及供應商投訴中心 </h5>
+        <p><span>&nbsp;&nbsp;</span></p>  
+        <p><b>違反從業道德行為舉報系統:</b></p>
+        <p>在泰碩電子股份有限公司，誠信正直是公司文化最重要之核心價值， 也是公司經營理念之首。泰碩公司一向承諾以誠信從事所有業務活動 ，絕不允許貪污及任何形式之舞弊行為。
+        </p>
+        <p>若您發現泰碩公司員工或任何代表泰碩公司的相關人士進行可疑行為 或可能違反泰碩公司的道德行為準則時，請告訴我們。
+        您的舉報事項，我們將交由公司副總經理直接處理。
+        </p>
+        <p>除法律另有規定外，對於您提供關於您的個人資料，我們將予以保密 ，並依法採取適當之保護措施，保護您的個人資料及隱私。 
+        </p>
+        <p><span>&nbsp;&nbsp;</span></p>
+        <p><b>提醒您：</b></p>
+        <ActiveList2 data={data.list2} />
+
+
+
+
+      </div>
       ];
     
    

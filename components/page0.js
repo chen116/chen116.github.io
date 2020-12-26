@@ -183,7 +183,7 @@ function Page0(props) {
     if (myPage != props.currentPage){return null;}
     return [
         <div class="content">
-            <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>董事會 </h5>
+            <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>董事會 </h4>
             <p><span>&nbsp;&nbsp;</span></p>
             <p class="content-p">
                 本公司之董事、監察人含2名女性、7名男性；分別在電子零組件或周邊產品業、橡膠業、銀行業、光電業、玻璃陶瓷業、通信網路業、水泥工業、證券業、電信業等，具有行銷企劃、經營管理、領導決策、產業知識、財務會計之專業經驗與素養。

@@ -116,116 +116,188 @@ function Page3(props) {
 
 
       };
-      const table1 = data.table1.map( (item,index) => [
-                                                <tr>
-                              <td> {item.name}</td>
-                                <td> 
-                                    <ul class="list-group list-group-flush ">{item.summary}
 
-                                      {data.table1[index].details.map(     (detail) =>
-                                          <li class="list-group-item" >
-                                          {detail}
-                                          </li>
-                                        )}
-                                    </ul>
-                                </td>
-                                </tr>
-                                ]
-        );
-
-
-        const table2 = data.table2.map( (item,index) => [
-                            <td> {item.title}</td>,
-                                <td> {item.name}</td>,
-                                <td> 
-                                    <ul class="list-group list-group-flush ">
-                                      {data.table2[index].exps.map( (item2) =>
-                                          <li class="list-group-item" >
-                                            {item2}
-                                          </li>
-                                        )}
-                                    </ul>
-                                </td>
-                                ]
-        );
-
-        const table3 = data.table2.map( (item,index) => [
-                                
-                                  Object.keys(item).map(function(keyName,keyIndex){
-                                      <td> {item.keyName}</td>
-                                  } )
-                               
-
-                              ]
-        );
-
-
-
-      
-
+      class ActiveTable1 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={};
+        }
+          render() {
+              const table =  this.props.data.map( (item,index) => [
+                      <tr>
+                        <td> {item.name}</td>
+                          <td> 
+                              <ul class="list-group list-group-flush ">{item.summary}
+                                {item.details.map((detail) =>
+                                  <li class="list-group-item" >
+                                    {detail}
+                                  </li>
+                                )}
+                              </ul>
+                          </td>
+                      </tr>
+                  ]);
+              return (
+                <table  class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                        <th rowspan="1">部門</th>
+                        <th rowspan="1">主要職掌</th>
+                    </tr>
+                  </thead>
+                <tbody>
+                   {table}
+                </tbody>
+                </table>
+              )
+          }
+        }
+      class ActiveTable2 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={};
+        }
+          render() {
+              const table =  this.props.data.map( (item,index) => [
+                <tr>
+                  <td> {item.title}</td>
+                  <td> {item.name}</td>
+                  <td> 
+                      <ul class="list-group list-group-flush ">
+                        { item.exps.map((sub_item,index2) =>
+                          <li class="list-group-item">
+                          {sub_item}
+                          </li>
+                        )}
+                      </ul>
+                  </td>
+                </tr> 
+              ]);
+              return (
+                <table  class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                        <th rowspan="1">職稱</th>
+                        <th rowspan="1">姓名</th>
+                        <th rowspan="1">主要經(學)歷</th>
+                    </tr>
+                  </thead>
+                <tbody>
+                    {table}
+                </tbody>
+                </table>
+              )
+          }
+        }
+      class ActiveTable3 extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={};
+        }
+          render() {
+              const table =  this.props.data.map( (item,index) => [
+                <tr>
+                  {Object.keys(item).map(function(keyName, keyIndex) {
+                      return <td>{item[keyName]}</td>
+                  })}
+                </tr>
+              ]);
+              return (
+                <table  class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th rowspan="2">姓名（註一）</th>
+                      <th colspan="2">本人持有股份</th>
+                      <th colspan="2">配偶、未成年子女持有股份</th>
+                      <th colspan="2">利用他人名義合計持有股份</th>
+                      <th colspan="2">前十大股東互相間具有財務會計準則公報第六號關係人或為配偶、二等親以內之親屬關係者，其名稱或姓名及關係（註三）</th>
+                      <th rowspan="2">備註</th>
+                    </tr>
+                    <tr>
+                          <th>股數</th>
+                          <th>持股比率(%)</th>
+                          <th>股數</th>
+                          <th>持股比率(%)</th>
+                          <th>股數</th>
+                          <th>持股比率(%)</th>
+                          <th>名稱(或姓名)</th>
+                          <th>關係</th>
+                        </tr>
+                  </thead>
+                <tbody>
+                    {table}
+                </tbody>
+                </table>
+              )
+          }
+        }
       return [
       <div class="content">
-        <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>組織及職掌 </h5>
+        <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>組織及職掌 </h4>
         <p><span>&nbsp;&nbsp;</span></p>
     
-  <div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h2 class="mb-0">
-        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          主要部門職稱及權責 
-        </button>
-      </h2>
-    </div>
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span>主要部門職稱及權責 
+                </button>
+              </h2>
+            </div>
 
-    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" >
-      <div class="card-body">
-        <table  class="table table-bordered table-hover">
-                            <thead>
-                            <tr>
-                                <th rowspan="1">部門</th>
-                                <th rowspan="1">主要職掌</th>
-                            </tr>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" >
+              <div class="card-body" style={{overflow: `auto`}}>
+              <img class="rounded" src="./assets/images/img20.gif"/>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 主要經營管理團隊
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <ActiveTable1 data={data.table1}/>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 主要經營管理團隊
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <ActiveTable2 data={data.table2}/>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <img class="rounded" src="./assets/images/smalllogo.jpg"/><span>&nbsp;&nbsp;</span> 主要股東名單
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <div class="card-body">
+                <ActiveTable3 data={data.table3}/>
+              </div>
+            </div>
+          </div>
 
-                            </thead>
-                            <tbody>
-                               {table1}
-                            </tbody>
-                        </table>
-       
+
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h2 class="mb-0">
-        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
-        </button>
-      </h2>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h2 class="mb-0">
-        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
-        </button>
-      </h2>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
       ];
 
     }

@@ -419,8 +419,8 @@ function Page2(props) {
     if (myPage != props.currentPage){return null;}
     return [
         <div class="content">
-            <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>
-            薪酬委員會  </h5>
+            <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>
+            薪酬委員會  </h4>
             <p><span>&nbsp;&nbsp;</span></p>
 
             <div class="accordion" id="accordionExample">

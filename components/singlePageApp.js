@@ -41,7 +41,14 @@
           <Page1 currentPage={this.state.foucusedPage}/>
           <Page2 currentPage={this.state.foucusedPage}/>
           <Page3 currentPage={this.state.foucusedPage}/>
+          <Page4 currentPage={this.state.foucusedPage}/>
+          <Page5 currentPage={this.state.foucusedPage}/>
+          <Page6 currentPage={this.state.foucusedPage}/>
           <Page7 currentPage={this.state.foucusedPage}/>
+          <Page8 currentPage={this.state.foucusedPage}/>
+          <Page9 currentPage={this.state.foucusedPage}/>
+          <Page10 currentPage={this.state.foucusedPage}/>
+          <Page11 currentPage={this.state.foucusedPage}/>
 
         </div>  
       )

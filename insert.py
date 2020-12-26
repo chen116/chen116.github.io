@@ -2,9 +2,9 @@ from os import listdir
 from os.path import isfile, join
 
 
-with open("index_template.html") as f:
+with open("index_template.html", encoding="utf8") as f:
     lines = f.readlines()
-    with open("index.html", "w") as f1:
+    with open("index.html", "w", encoding="utf8") as f1:
         f1.writelines(lines)
 
 
