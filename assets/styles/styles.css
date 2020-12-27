@@ -54,7 +54,12 @@ margin-bottom: 70px;
 .banner {
   padding-top:220px;
 }
-
+@media screen and (max-width: 1420px) {
+  .fixedTopHeader {
+    min-width: 1420px;
+    z-index: 999;
+  }
+}
 
  @media screen and (max-width: 1420px) {
   .fixedheader {
