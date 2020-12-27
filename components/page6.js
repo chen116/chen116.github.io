@@ -137,21 +137,23 @@ function Page6(props) {
             <div class="container">
               <div class="row">
                 <div class="col">
-                  <img src="http://w3.taisol.com.tw/image/notice2-5/A.JPG" class="card-img-top rounded-pill" alt="..." />
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/A.JPG" class=" card-img-top " alt="..." />
                 </div>
                 <div class="col">
-                <img src="http://w3.taisol.com.tw/image/notice2-5/B.JPG" class="card-img-top rounded-pill" alt="..." />
+                <img src="http://w3.taisol.com.tw/image/notice2-5/B.JPG" class=" card-img-top " alt="..." />
                 </div>
               </div>
               <div class="row">
+              </div>
+              <div class="row">
                 <div class="col">
-                <img src="http://w3.taisol.com.tw/image/notice2-5/C.JPG" class="card-img-top rounded-pill" alt="..." />
+                <img src="http://w3.taisol.com.tw/image/notice2-5/C.JPG" class=" card-img-bottom p-4" alt="..." />
                 </div>
                 <div class="col">
-                  <img src="http://w3.taisol.com.tw/image/notice2-5/F.JPG" class="card-img-top rounded-pill" alt="..." />
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/F.JPG" class=" card-img-bottom p-4" alt="..." />
                 </div>
                 <div class="col">
-                  <img src="http://w3.taisol.com.tw/image/notice2-5/D.JPG" class="card-img-top rounded-pill" alt="..." />
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/D.JPG" class=" card-img-bottom p-4" alt="..." />
                 </div>
               </div>
 
@@ -170,7 +172,7 @@ function Page6(props) {
 
               <div class="row justify-content-md-center">
                 <div class="col-md-auto">
-                  <img src="http://w3.taisol.com.tw/image/notice2-5/E.JPG" class="card-img-top rounded-pill" alt="..." />
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/E.JPG" class="card-img-top " alt="..." />
                 </div>
               </div>
 

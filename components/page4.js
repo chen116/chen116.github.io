@@ -50,7 +50,12 @@ function Page4(props) {
     return [
         <div class="content">
             <h4 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>規章 </h4>
-            <p><span>&nbsp;&nbsp;</span></p>  
+            <p><span>&nbsp;&nbsp;</span></p> 
+
+            <p>在泰碩，我們秉持著落實企業經營者的責任，並保障股東的合法權益及兼顧其他利害關係人的利益。我們相信良好的公司治理應係董事會與管理階層以符合公司與全體股東最大利益的方式達成營運目標，協助企業管理運作，以及提供有效的監督機制，以激勵企業善用資源、提升效率，進而提升競爭力，促進全民之社會福祉。</p>
+
+
+
             <ActiveList1 data={data.links} />
 
 

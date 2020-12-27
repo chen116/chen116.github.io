@@ -127,12 +127,12 @@ function Page3(props) {
                       <tr>
                         <td> {item.name}</td>
                           <td> 
-                              {item.summary}
+                              <p>{item.summary}</p>
                               
                                 {item.details.map((detail) =>
-                                  <li class="list-group-item " >
-                                    {detail}
-                                  </li>
+                                 <p>
+                                    <span>&nbsp;&nbsp;</span>{detail}
+                                  </p>
                                 )}
                                 
                                 

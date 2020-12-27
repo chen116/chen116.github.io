@@ -271,10 +271,10 @@ function Page10(props) {
 
         <div class="row justify-content-md-center">
           <div class="col">
-            <img src="http://w3.taisol.com.tw/image/Notice2-9A.JPG" class="card-img-top rounded-pill" alt="..." />
+            <img src="http://w3.taisol.com.tw/image/Notice2-9A.JPG" class="card-img-top " alt="..." />
           </div>
           <div class="col">
-            <img src="http://w3.taisol.com.tw/image/Notice2-9B.JPG" class="card-img-top rounded-pill" alt="..." />
+            <img src="http://w3.taisol.com.tw/image/Notice2-9B.JPG" class="card-img-top " alt="..." />
           </div>
         </div>
         <p><span>&nbsp;&nbsp;</span></p>
@@ -284,7 +284,7 @@ function Page10(props) {
         <ActiveList3 data={data.list3} />
         <div class="row justify-content-md-center">
         <div class="col-md-auto">
-          <img src="http://w3.taisol.com.tw/important/notice-2-9.jpg" class="card-img-top rounded-pill" alt="..." />
+          <img src="http://w3.taisol.com.tw/important/notice-2-9.jpg" class="card-img-top " alt="..." />
         </div>
         </div>
         <p><span>&nbsp;&nbsp;</span></p>
