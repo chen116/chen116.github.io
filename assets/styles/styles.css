@@ -44,7 +44,10 @@ h5 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
+.headerTopButton{
+  background: transparent;
+  color:grey;
+}
 .content {
 margin: 100px;
 margin-top: 25px;
