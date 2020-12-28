@@ -175,7 +175,7 @@ function Page11(props) {
                 {list}
                 <li  class="list-group-item">   郭尚仁 先生
                 (副總經理暨發言人)
-                E-Mail：<a href="mailto:talke@taisol.com">talk@taisol.com</a>
+                E-Mail：<a href="mailto:sales@taisol.com">sales@taisol.com</a>
                 </li>
               </ul>
   
@@ -207,7 +207,7 @@ function Page11(props) {
         <p>為了保障您的權益、讓您更安心工作，泰碩特別設置提供專責的員工 意見申訴管道。
         </p>
 
-        <p>E-Mail: <a href="mailto:sales@taisol.com">sales@taisol.com</a> </p>
+        <p>E-Mail: <a href="mailto:talk@taisol.com">talk@taisol.com</a> </p>
         <p><span>&nbsp;&nbsp;</span></p>  
         
 
