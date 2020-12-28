@@ -175,7 +175,7 @@ function Page11(props) {
                 {list}
                 <li  class="list-group-item">   郭尚仁 先生
                 (副總經理暨發言人)
-                E-Mail：<a href="mailto:sales@taisol.com">sales@taisol.com</a>
+                E-Mail：<a href="mailto:talke@taisol.com">talk@taisol.com</a>
                 </li>
               </ul>
   
