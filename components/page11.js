@@ -88,13 +88,15 @@ function Page11(props) {
                     <td> <b>{row.person}</b></td>
 
                   <td>
-                              <ul class="list-group list-group-flush">
+                              {/* <ul class="list-group list-group-flush"> */}
                                 {this.props.data[index].topics.map(     (topic) =>
-                                    <li class="list-group-item list-group-flush" >
+                                    // <li class="list-group-item list-group-flush" >
+                                    <li style={{listStyleType:`none`}} >
+
                                         {topic}
                                     </li >
                                 )}
-                                </ul>
+                                {/* </ul> */}
                     </td>
                     <td>
                                 {this.props.data[index].jobs.map(     (job) =>

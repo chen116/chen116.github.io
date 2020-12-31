@@ -76,7 +76,7 @@ function Page6(props) {
                 {item.title}<img class="rounded" src="./assets/images/investor04_7.jpg"/>
               </a> 
             </li>
-            ]);
+            ])
           return (
             <ul class="list-unstyled row">
               {list}
@@ -114,7 +114,7 @@ function Page6(props) {
             
             
             </ul>
-            <ActiveList1 data={data.list1} />
+            <ActiveList1 data={data.list1} />  
 
             <p><span>&nbsp;&nbsp;</span></p>
 
