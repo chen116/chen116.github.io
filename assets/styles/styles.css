@@ -71,6 +71,14 @@ margin-bottom: 70px;
   }
 }
 
+
+@media screen and (max-width: 1050px) {
+  .fixedfooter {
+    overflow: auto; 
+    min-width: 1420px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .fixedbody {
     overflow: auto; 
