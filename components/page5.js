@@ -25,22 +25,34 @@ function Page5(props) {
                   <td> {meeting.date}</td>
                   <td> {meeting.type}</td>
                   <td> 
-                      <ul class="list-group list-group-flush ">
+                      {/* <ul class="list-group list-group-flush ">
                         { meeting.items.map((sub_item,index2) =>
                           <li class="list-group-item">
                           {sub_item}
                           </li>
                         )}
-                      </ul>
+                      </ul> */}
+                     
+                        { meeting.items.map((sub_item,index2) =>
+                          <p>
+                          {sub_item}
+                          </p>
+                        )}
+                     
                   </td>
                   <td>
-                        <ul class="list-group list-group-flush ">
+                        {/* <ul class="list-group list-group-flush ">
                             { meeting.results.map((sub_item,index2) =>
                             <li class="list-group-item">
                             {sub_item}
                             </li>
                             )}
-                        </ul>                      
+                        </ul>                       */}
+                            { meeting.results.map((sub_item,index2) =>
+                            <p>
+                            {sub_item}
+                            </p>
+                            )}
                   </td>
                 </tr> 
               ]);

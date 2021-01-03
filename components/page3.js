@@ -166,13 +166,20 @@ function Page3(props) {
                   <td> {item.title}</td>
                   <td> {item.name}</td>
                   <td> 
-                      <ul class="list-group list-group-flush ">
+                      {/* <ul class="list-group list-group-flush ">
                         { item.exps.map((sub_item,index2) =>
                           <li class="list-group-item">
                           {sub_item}
                           </li>
                         )}
-                      </ul>
+                      </ul> */}
+                     
+                        { item.exps.map((sub_item,index2) =>
+                          <p >
+                          {sub_item}
+                          </p>
+                        )}
+                      
                   </td>
                 </tr> 
               ]);

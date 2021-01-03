@@ -94,7 +94,7 @@ function Page10(props) {
         render() {
             const list =  this.props.data.map( (item,index) => [
               <li class="list-group-item" >
-                <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>{item}
+                <img class="rounded" src="./assets/images/menu01.jpg"  /><span>&nbsp;&nbsp;</span>{item}
               </li>
               ]);
             return (
@@ -104,13 +104,13 @@ function Page10(props) {
                 </li>
                 <li class="list-group-item list-group-flush"><b>二、員工認股</b>
                   <li class="list-group-item list-group-flush" >
-                  <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>本公司為追求企業永續成長與員工共同分享企業經營成果，推行員工認股與分紅入股辦法，落
+                  <img class="rounded" src="./assets/images/menu01.jpg"  /><span>&nbsp;&nbsp;</span>本公司為追求企業永續成長與員工共同分享企業經營成果，推行員工認股與分紅入股辦法，落
                   　　實『員工即股東』之理念。
                   </li>
                 </li>
                 <li class="list-group-item list-group-flush"><b>三、退休制度</b>
                   <li class="list-group-item list-group-flush" >	
-                    <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>實施情形:
+                    <img class="rounded" src="./assets/images/menu01.jpg"  /><span>&nbsp;&nbsp;</span>實施情形:
                     <br />
                     本公司員工退休辦法悉依勞動基準法訂定，由公司每月按員工薪資總額之3％提撥退休準備金，
                     儲存於中央信託局退休金專戶；另，自民國九十四年七月一日起配合勞工退休金條例(以下簡稱
@@ -120,7 +120,7 @@ function Page10(props) {
                   </li>
                 
                   <li class="list-group-item list-group-flush" >	
-                    <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>退休之資格(依最新版本之勞基法):
+                    <img class="rounded" src="./assets/images/menu01.jpg"  /><span>&nbsp;&nbsp;</span>退休之資格(依最新版本之勞基法):
                     <br />
                     凡本公司之員工，合乎下列規定之一，即得自行申請退休或辦理強制退休：
                     <ul class="list-group list-group-flush" >(1)自請退休：
@@ -271,10 +271,10 @@ function Page10(props) {
 
         <div class="row justify-content-md-center">
           <div class="col">
-            <img src="http://w3.taisol.com.tw/image/Notice2-9A.JPG" class="card-img-top " alt="..." />
+            <img src="http://w3.taisol.com.tw/image/Notice2-9A.JPG" class="card-img-top img-thumbnail rounded " alt="..." />
           </div>
           <div class="col">
-            <img src="http://w3.taisol.com.tw/image/Notice2-9B.JPG" class="card-img-top " alt="..." />
+            <img src="http://w3.taisol.com.tw/image/Notice2-9B.JPG" class="card-img-top img-thumbnail rounded " alt="..." />
           </div>
         </div>
         <p><span>&nbsp;&nbsp;</span></p>
@@ -284,7 +284,7 @@ function Page10(props) {
         <ActiveList3 data={data.list3} />
         <div class="row justify-content-md-center">
         <div class="col-md-auto">
-          <img src="http://w3.taisol.com.tw/important/notice-2-9.jpg" class="card-img-top " alt="..." />
+          <img src="http://w3.taisol.com.tw/important/notice-2-9.jpg" class="card-img-top img-thumbnail rounded " alt="..." />
         </div>
         </div>
         <p><span>&nbsp;&nbsp;</span></p>

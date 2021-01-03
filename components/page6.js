@@ -134,30 +134,39 @@ function Page6(props) {
             <p>首年辦理耶誕圓夢鞋盒活動，泰碩與失親兒福利基金會、藍迪兒童之家合作，由社工老師一對一的了解每位失親或單親孩子的耶誕願望，再由泰碩來協助孩子們圓夢，2020年我們一共送出了118個耶誕圓夢鞋盒，在每個鞋盒內除了有孩子許願的禮物外，還附上由同仁及主管們親手撰寫的鼓勵卡片，希望透過良善的互動，溫暖孩子的童年，讓這群弱勢家庭的孩童年年都能過個有溫度的耶誕節。 </p>
             <p>透過這次活動，我們深刻的發現在台灣仍有很多需要被關懷的弱勢孩童，雖然第一屆志工團的力量有限，但我們堅信只要一直做著對的事，愛的力量便會無限的壯大，良善的循環將會一屆傳承一屆，將泰碩的愛心傳送千里。</p>
 
-            <div class="container">
+             <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <img src="http://w3.taisol.com.tw/image/notice2-5/A.JPG" class="img-thumbnail rounded " alt="..." />
+                  </div>
+                  <div class="col">
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/B.JPG" class="img-thumbnail rounded " alt="..." />
+                  </div>
+                  
+                </div>
+                <div class="row">
+                  <div class="col">
+                  <p><span>&nbsp;&nbsp;</span></p>
+                  </div>
+                </div>
+              </div> 
               <div class="row">
-                <div class="col">
-                  <img src="http://w3.taisol.com.tw/image/notice2-5/A.JPG" class=" card-img-top " alt="..." />
+                <div class="col-sm">
+                <img src="http://w3.taisol.com.tw/image/notice2-5/C.JPG" class="img-thumbnail rounded " alt="..." />
                 </div>
-                <div class="col">
-                <img src="http://w3.taisol.com.tw/image/notice2-5/B.JPG" class=" card-img-top " alt="..." />
+                <div class="col-sm">
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/F.JPG" class="img-thumbnail rounded " alt="..." />
                 </div>
-              </div>
-              <div class="row">
-              </div>
-              <div class="row">
-                <div class="col">
-                <img src="http://w3.taisol.com.tw/image/notice2-5/C.JPG" class=" card-img-bottom p-4" alt="..." />
-                </div>
-                <div class="col">
-                  <img src="http://w3.taisol.com.tw/image/notice2-5/F.JPG" class=" card-img-bottom p-4" alt="..." />
-                </div>
-                <div class="col">
-                  <img src="http://w3.taisol.com.tw/image/notice2-5/D.JPG" class=" card-img-bottom p-4" alt="..." />
+                <div class="col-sm">
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/D.JPG" class="img-thumbnail rounded " alt="..." />
                 </div>
               </div>
 
-            </div>
+           
+
+
+
+                 
 
             <p><span>&nbsp;&nbsp;</span></p>
             <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>環境關懷 </h5>
@@ -168,16 +177,12 @@ function Page6(props) {
               <p>2020年中秋節，泰碩首次購入新南田董米，以行動支持友善農友!</p>
               <p> 不同於一般稻米求豐收，田董米以「水鳥棲地保育」做為品牌使命，所以全年採用無農藥耕種，並以米糠作為肥料灌溉，用最自然的方式守護水田，進而提供珍貴水鳥們一個天然又安全的家，達到生態與農作共存的理念。</p>
               <p>展望未來，泰碩仍會持續以行動支持環保、關懷土地，將綠色幸福的理念，年年不斷的傳遞下去。</p>
-            <div class="container">
 
               <div class="row justify-content-md-center">
                 <div class="col-md-auto">
-                  <img src="http://w3.taisol.com.tw/image/notice2-5/E.JPG" class="card-img-top " alt="..." />
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/E.JPG" class="card-img-top img-thumbnail rounded " alt="..." />
                 </div>
-              </div>
-
-            </div>
-
+              </div> 
 
 
         </div>

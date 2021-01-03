@@ -1689,13 +1689,20 @@ function Page3(props) {
                   <td> {item.title}</td>
                   <td> {item.name}</td>
                   <td> 
-                      <ul class="list-group list-group-flush ">
+                      {/* <ul class="list-group list-group-flush ">
                         { item.exps.map((sub_item,index2) =>
                           <li class="list-group-item">
                           {sub_item}
                           </li>
                         )}
-                      </ul>
+                      </ul> */}
+                     
+                        { item.exps.map((sub_item,index2) =>
+                          <p >
+                          {sub_item}
+                          </p>
+                        )}
+                      
                   </td>
                 </tr> 
               ]);
@@ -1920,22 +1927,34 @@ function Page5(props) {
                   <td> {meeting.date}</td>
                   <td> {meeting.type}</td>
                   <td> 
-                      <ul class="list-group list-group-flush ">
+                      {/* <ul class="list-group list-group-flush ">
                         { meeting.items.map((sub_item,index2) =>
                           <li class="list-group-item">
                           {sub_item}
                           </li>
                         )}
-                      </ul>
+                      </ul> */}
+                     
+                        { meeting.items.map((sub_item,index2) =>
+                          <p>
+                          {sub_item}
+                          </p>
+                        )}
+                     
                   </td>
                   <td>
-                        <ul class="list-group list-group-flush ">
+                        {/* <ul class="list-group list-group-flush ">
                             { meeting.results.map((sub_item,index2) =>
                             <li class="list-group-item">
                             {sub_item}
                             </li>
                             )}
-                        </ul>                      
+                        </ul>                       */}
+                            { meeting.results.map((sub_item,index2) =>
+                            <p>
+                            {sub_item}
+                            </p>
+                            )}
                   </td>
                 </tr> 
               ]);
@@ -2127,30 +2146,39 @@ function Page6(props) {
             <p>首年辦理耶誕圓夢鞋盒活動，泰碩與失親兒福利基金會、藍迪兒童之家合作，由社工老師一對一的了解每位失親或單親孩子的耶誕願望，再由泰碩來協助孩子們圓夢，2020年我們一共送出了118個耶誕圓夢鞋盒，在每個鞋盒內除了有孩子許願的禮物外，還附上由同仁及主管們親手撰寫的鼓勵卡片，希望透過良善的互動，溫暖孩子的童年，讓這群弱勢家庭的孩童年年都能過個有溫度的耶誕節。 </p>
             <p>透過這次活動，我們深刻的發現在台灣仍有很多需要被關懷的弱勢孩童，雖然第一屆志工團的力量有限，但我們堅信只要一直做著對的事，愛的力量便會無限的壯大，良善的循環將會一屆傳承一屆，將泰碩的愛心傳送千里。</p>
 
-            <div class="container">
+             <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <img src="http://w3.taisol.com.tw/image/notice2-5/A.JPG" class="img-thumbnail rounded " alt="..." />
+                  </div>
+                  <div class="col">
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/B.JPG" class="img-thumbnail rounded " alt="..." />
+                  </div>
+                  
+                </div>
+                <div class="row">
+                  <div class="col">
+                  <p><span>&nbsp;&nbsp;</span></p>
+                  </div>
+                </div>
+              </div> 
               <div class="row">
-                <div class="col">
-                  <img src="http://w3.taisol.com.tw/image/notice2-5/A.JPG" class=" card-img-top " alt="..." />
+                <div class="col-sm">
+                <img src="http://w3.taisol.com.tw/image/notice2-5/C.JPG" class="img-thumbnail rounded " alt="..." />
                 </div>
-                <div class="col">
-                <img src="http://w3.taisol.com.tw/image/notice2-5/B.JPG" class=" card-img-top " alt="..." />
+                <div class="col-sm">
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/F.JPG" class="img-thumbnail rounded " alt="..." />
                 </div>
-              </div>
-              <div class="row">
-              </div>
-              <div class="row">
-                <div class="col">
-                <img src="http://w3.taisol.com.tw/image/notice2-5/C.JPG" class=" card-img-bottom p-4" alt="..." />
-                </div>
-                <div class="col">
-                  <img src="http://w3.taisol.com.tw/image/notice2-5/F.JPG" class=" card-img-bottom p-4" alt="..." />
-                </div>
-                <div class="col">
-                  <img src="http://w3.taisol.com.tw/image/notice2-5/D.JPG" class=" card-img-bottom p-4" alt="..." />
+                <div class="col-sm">
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/D.JPG" class="img-thumbnail rounded " alt="..." />
                 </div>
               </div>
 
-            </div>
+           
+
+
+
+                 
 
             <p><span>&nbsp;&nbsp;</span></p>
             <h5 style={{color:`blue`}}><img class="rounded" src="./assets/images/bullet.jpg"/><span>&nbsp;&nbsp;</span>環境關懷 </h5>
@@ -2161,16 +2189,12 @@ function Page6(props) {
               <p>2020年中秋節，泰碩首次購入新南田董米，以行動支持友善農友!</p>
               <p> 不同於一般稻米求豐收，田董米以「水鳥棲地保育」做為品牌使命，所以全年採用無農藥耕種，並以米糠作為肥料灌溉，用最自然的方式守護水田，進而提供珍貴水鳥們一個天然又安全的家，達到生態與農作共存的理念。</p>
               <p>展望未來，泰碩仍會持續以行動支持環保、關懷土地，將綠色幸福的理念，年年不斷的傳遞下去。</p>
-            <div class="container">
 
               <div class="row justify-content-md-center">
                 <div class="col-md-auto">
-                  <img src="http://w3.taisol.com.tw/image/notice2-5/E.JPG" class="card-img-top " alt="..." />
+                  <img src="http://w3.taisol.com.tw/image/notice2-5/E.JPG" class="card-img-top img-thumbnail rounded " alt="..." />
                 </div>
-              </div>
-
-            </div>
-
+              </div> 
 
 
         </div>
@@ -2521,7 +2545,7 @@ function Page10(props) {
         render() {
             const list =  this.props.data.map( (item,index) => [
               <li class="list-group-item" >
-                <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>{item}
+                <img class="rounded" src="./assets/images/menu01.jpg"  /><span>&nbsp;&nbsp;</span>{item}
               </li>
               ]);
             return (
@@ -2531,13 +2555,13 @@ function Page10(props) {
                 </li>
                 <li class="list-group-item list-group-flush"><b>二、員工認股</b>
                   <li class="list-group-item list-group-flush" >
-                  <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>本公司為追求企業永續成長與員工共同分享企業經營成果，推行員工認股與分紅入股辦法，落
+                  <img class="rounded" src="./assets/images/menu01.jpg"  /><span>&nbsp;&nbsp;</span>本公司為追求企業永續成長與員工共同分享企業經營成果，推行員工認股與分紅入股辦法，落
                   　　實『員工即股東』之理念。
                   </li>
                 </li>
                 <li class="list-group-item list-group-flush"><b>三、退休制度</b>
                   <li class="list-group-item list-group-flush" >	
-                    <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>實施情形:
+                    <img class="rounded" src="./assets/images/menu01.jpg"  /><span>&nbsp;&nbsp;</span>實施情形:
                     <br />
                     本公司員工退休辦法悉依勞動基準法訂定，由公司每月按員工薪資總額之3％提撥退休準備金，
                     儲存於中央信託局退休金專戶；另，自民國九十四年七月一日起配合勞工退休金條例(以下簡稱
@@ -2547,7 +2571,7 @@ function Page10(props) {
                   </li>
                 
                   <li class="list-group-item list-group-flush" >	
-                    <img class="rounded" src="./assets/images/menu01.jpg"/><span>&nbsp;&nbsp;</span>退休之資格(依最新版本之勞基法):
+                    <img class="rounded" src="./assets/images/menu01.jpg"  /><span>&nbsp;&nbsp;</span>退休之資格(依最新版本之勞基法):
                     <br />
                     凡本公司之員工，合乎下列規定之一，即得自行申請退休或辦理強制退休：
                     <ul class="list-group list-group-flush" >(1)自請退休：
@@ -2698,10 +2722,10 @@ function Page10(props) {
 
         <div class="row justify-content-md-center">
           <div class="col">
-            <img src="http://w3.taisol.com.tw/image/Notice2-9A.JPG" class="card-img-top " alt="..." />
+            <img src="http://w3.taisol.com.tw/image/Notice2-9A.JPG" class="card-img-top img-thumbnail rounded " alt="..." />
           </div>
           <div class="col">
-            <img src="http://w3.taisol.com.tw/image/Notice2-9B.JPG" class="card-img-top " alt="..." />
+            <img src="http://w3.taisol.com.tw/image/Notice2-9B.JPG" class="card-img-top img-thumbnail rounded " alt="..." />
           </div>
         </div>
         <p><span>&nbsp;&nbsp;</span></p>
@@ -2711,7 +2735,7 @@ function Page10(props) {
         <ActiveList3 data={data.list3} />
         <div class="row justify-content-md-center">
         <div class="col-md-auto">
-          <img src="http://w3.taisol.com.tw/important/notice-2-9.jpg" class="card-img-top " alt="..." />
+          <img src="http://w3.taisol.com.tw/important/notice-2-9.jpg" class="card-img-top img-thumbnail rounded " alt="..." />
         </div>
         </div>
         <p><span>&nbsp;&nbsp;</span></p>
