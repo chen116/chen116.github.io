@@ -76,8 +76,7 @@ function Page7(props) {
 <ul class="list-group list-group-flush" >
 {list2}
 <li  class="list-group-item">   郭尚仁 先生
-(副總經理暨發言人)
-E-Mail：<a href="mailto:sales@taisol.com">sales@taisol.com</a>
+(副總經理暨發言人) <img src="./assets/images/investor04_6.jpg"  />：<a href="mailto:sales@taisol.com">sales@taisol.com</a>
 </li>
 </ul>
 
