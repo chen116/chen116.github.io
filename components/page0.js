@@ -63,10 +63,10 @@ class Page0 extends React.Component {
             this.setState(function(state,props){
                 if (state.tableExpanded==0) {
                     $('.collapseTable').collapse('show')
-                    $('.collapseTableButton').collapse('hide')
+                    // $('.collapseTableButton').collapse('hide')
                 }else{
                     $('.collapseTable').collapse('hide')
-                    $('.collapseTableButton').collapse('show')
+                    // $('.collapseTableButton').collapse('show')
                 }
                 return {
                     tableExpanded: (state.tableExpanded+1)%2  
@@ -77,12 +77,40 @@ class Page0 extends React.Component {
             
         };
 
+        renderButtonList(array,index,type){
+            if(array.length>1)
+             return  [<button class="btn btn-light dropdown-toggle  collapseTableButton" type="button" data-toggle="collapse" data-target={"#collapseExample"+type+index} aria-expanded="false" aria-controls={"collapseExample"+type+index}>
+             {array[0]}...
+             </button>,
+                                     <div class="collapse collapseTable" id={"collapseExample"+type+index}>
+                                     <div class="card card-body">
+                                         {array.map(     (detail) =>
+                                             <li type="disc" >
+                                                 {detail}
+                                             </li >
+                                         )}
+                                     </div>
+                                 </div>
+            ]
+            return <button class="btn btn-light  " type="button"  >
+            {array[0]}
+            </button>
+        }
+
         render() {
+
+            
+
             const table = this.props.data.map( (item,index) => [
                 <tr><td>{item.title}</td><td>{item.from}</td><td>{item.name}</td><td>{item.sex}</td><td>{item.start_date}</td><td>{item.duration}</td><td>{item.first_start_date}</td><td>{item.stock1}</td> <td>{item.stock_per1}</td> <td>{item.stock2}</td> <td>{item.stock_per2}</td> <td>{item.stock3}</td><td>{item.stock_per3}</td><td>{item.stock4}</td><td>{item.stock_per4}</td>
                     <td >
-                        <button class="btn btn-secondary dropdown-toggle btn-sm collapseTableButton" type="button" data-toggle="collapse" data-target={"#collapseExample0"+index} aria-expanded="false" aria-controls={"collapseExample0"+index}>
-                        </button>
+                        {this.renderButtonList(item.exps,index,0)}
+
+
+
+                        {/* <button class="btn btn-secondary dropdown-toggle btn-sm collapseTableButton" type="button" data-toggle="collapse" data-target={"#collapseExample0"+index} aria-expanded="false" aria-controls={"collapseExample0"+index}>
+                        {item.exps[0]}
+                        </button> 
                         <div class="collapse collapseTable" id={"collapseExample0"+index}>
                             <div class="card card-body">
                                 {item.exps.map(     (detail) =>
@@ -91,10 +119,13 @@ class Page0 extends React.Component {
                                     </li >
                                 )}
                             </div>
-                        </div>
+                        </div>*/}
                     </td>
                     <td>
-                        <button id={"collapseTableButton1"+index} class="btn btn-secondary dropdown-toggle btn-sm collapseTableButton" type="button" data-toggle="collapse" data-target={"#collapseExample1"+index} aria-expanded="false" aria-controls={"collapseExample1"+index}>
+                    {this.renderButtonList(item.other_titles,index,1)}
+
+                        {/* <button id={"collapseTableButton1"+index} class="btn btn-secondary dropdown-toggle btn-sm collapseTableButton" type="button" data-toggle="collapse" data-target={"#collapseExample1"+index} aria-expanded="false" aria-controls={"collapseExample1"+index}>
+                        {item.other_titles[0]}
                         </button>
                         <div class="collapse collapseTable" id={"collapseExample1"+index}>
                             <div class="card card-body">
@@ -104,7 +135,7 @@ class Page0 extends React.Component {
                                     </li >
                                 )}
                             </div>
-                        </div>
+                        </div> */}
                     </td>
                     <td>{item.relative_title}</td>
                     <td>{item.relative_name}</td>

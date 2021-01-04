@@ -38,11 +38,14 @@ h5 {
 
 .footer {
   width: 100%;
-  height: 50px;
+  height: 40px;
   color: aliceblue;
   background-image: linear-gradient( rgb(10, 125, 192),rgb(33, 18, 99));
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+
+
 
 .headerTopButton{
   background: transparent;
