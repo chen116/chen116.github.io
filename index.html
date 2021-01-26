@@ -25,18 +25,22 @@
 
   <script>
     function count() {
-      console.log("counting:");
-  
+      console.log("countingd:");
+  let targetUrl = window.location.href;
+$.ajax('https://hitcounter.pythonanywhere.com/count', {
+    data: { url: targetUrl },
+    xhrFields: { withCredentials: true }
+}).then(count => console.log('Count:' + count));
 //   let targetUrl = 'http://w3.taisol.com.tw/group/cms/index.php/corporate_governance';
-  let targetUrl = 'https://chen116.github.io/';
-let query = '?url=' + encodeURIComponent(targetUrl);
-let xmlHttp = new XMLHttpRequest();
-xmlHttp.withCredentials = true;
-xmlHttp.open('GET', 'https://hitcounter.pythonanywhere.com/nocount' + query, false);
-xmlHttp.send(null);
-count = xmlHttp.responseText;
-    alert(count);
-    console.log("count:",count);
+//   let targetUrl = 'https://chen116.github.io/';
+// let query = '?url=' + encodeURIComponent(targetUrl);
+// let xmlHttp = new XMLHttpRequest();
+// xmlHttp.withCredentials = true;
+// xmlHttp.open('GET', 'https://hitcounter.pythonanywhere.com/nocount' + query, false);
+// xmlHttp.send(null);
+// count = xmlHttp.responseText;
+//     alert(count);
+//     console.log("count:",count);
   }
   </script>
 </head>
